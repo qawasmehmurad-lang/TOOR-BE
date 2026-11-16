@@ -845,6 +845,46 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      approve_merchant_application: {
+        Args: { p_application_id: string; p_store_slug: string }
+        Returns: string
+      }
+      courier_update_shipment: {
+        Args: {
+          p_new_status: string
+          p_proof_url?: string
+          p_shipment_id: string
+        }
+        Returns: boolean
+      }
+      create_weekly_store_settlement: {
+        Args: {
+          p_period_end: string
+          p_period_start: string
+          p_store_id: string
+        }
+        Returns: string
+      }
+      get_my_deliveries: {
+        Args: never
+        Returns: {
+          area: string
+          building: string
+          city: string
+          delivery_notes: string
+          latitude: number
+          longitude: number
+          order_id: string
+          order_number: string
+          order_status: Database["public"]["Enums"]["order_status"]
+          recipient_name: string
+          recipient_phone: string
+          shipment_id: string
+          shipment_status: string
+          street: string
+          total_jod: number
+        }[]
+      }
       place_order: {
         Args: { p_address_id: string; p_buyer_note?: string; p_items: Json }
         Returns: {
