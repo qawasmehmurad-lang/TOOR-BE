@@ -1,5 +1,5 @@
 import {useEffect,useMemo,useState} from 'react'
-import {Search,ShoppingBag,UserRound,Heart,Menu,ChevronLeft,ChevronDown,SlidersHorizontal,ArrowLeft,Plus,Minus,X,Star,Truck,ShieldCheck,RotateCcw,Clock3,Headphones,PackageCheck,Store,LogIn,BadgeCheck,Trash2,Camera,Users,Wallet,LayoutGrid,ImagePlus,ToggleRight} from 'lucide-react'
+import {Search,ShoppingBag,UserRound,Heart,Menu,ChevronLeft,ChevronDown,SlidersHorizontal,ArrowLeft,Plus,Minus,X,Star,Truck,ShieldCheck,RotateCcw,Clock3,Headphones,PackageCheck,Store,LogIn,BadgeCheck,Trash2,Camera,Users,Wallet,LayoutGrid,ImagePlus} from 'lucide-react'
 import './App.css'
 import { supabase, isSupabaseConfigured } from './lib/supabase'
 type Product={id:number;dbId?:string;name:string;category:string;price:number;old?:number;rating:number;reviews:number;badge?:string;image:string}
