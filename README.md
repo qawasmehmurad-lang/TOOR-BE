@@ -1,32 +1,29 @@
-# React + TypeScript + Vite
+# TOOR BE — تور بي
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Jordan-first multi-vendor marketplace. Arabic RTL, JOD currency, royal gold / black / white identity.
 
-Currently, two official plugins are available:
+## Stack
+- React + Vite + TypeScript
+- Supabase Auth, PostgreSQL, Storage and Row Level Security
+- Cash on delivery at launch
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Local development
+1. Run `npm install`.
+2. Copy `.env.example` to `.env`.
+3. Add the Supabase publishable key to `.env` (never use a service-role key in the browser).
+4. Run `npm run dev -- --host 0.0.0.0`.
+5. Run `npm run build` to verify the production bundle.
 
-## React Compiler
+## Marketplace rules
+- Roles: buyer, merchant, courier and admin.
+- Merchant accounts are free.
+- Merchants can access only their own catalogue and order line items; buyer addresses and contact details are not exposed to merchants.
+- Multi-store orders are consolidated through the platform hub.
+- Target delivery: 3 business days; weekly merchant settlements.
+- Standard return request window: 6 hours after delivery; exceptional damaged/wrong-item claims are handled separately.
+- Cash on delivery for initial release.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Security
+- Frontend uses only the Supabase publishable key.
+- Never commit `.env`, access tokens, service-role keys, or database passwords.
+- Keep RLS enabled on every exposed public-schema table.
