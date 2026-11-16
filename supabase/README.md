@@ -11,6 +11,7 @@ Applied hosted migrations:
 - `grant_private_policy_helpers`
 - `create_marketplace_storage_buckets`
 - `courier_delivery_workflow`
+- `delivery_otp_confirmation`
 - `merchant_approval_workflow`
 - `returns_window_and_weekly_settlements`
 - `index_audit_actor_columns`
