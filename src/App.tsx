@@ -1,122 +1,38 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import {useMemo,useState} from 'react'
+import {Search,ShoppingBag,UserRound,Heart,Menu,ChevronLeft,ChevronDown,SlidersHorizontal,ArrowLeft,Plus,Minus,X,Star,Truck,ShieldCheck,RotateCcw,Sparkles,Clock3,Headphones,PackageCheck,Store,LogIn,BadgeCheck,Trash2,Instagram,Facebook,Wallet,LayoutGrid} from 'lucide-react'
 import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
-}
-
-export default App
+type Product={id:number;name:string;category:string;price:number;old?:number;rating:number;reviews:number;badge?:string;image:string}
+const products:Product[]=[
+{id:1,name:'طقم نسائي أنيق قطعتين بقصة عصرية',category:'نسائي',price:18.9,old:26,rating:4.8,reviews:124,badge:'الأكثر مبيعاً',image:'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=700&q=85'},
+{id:2,name:'حقيبة كتف كلاسيكية بتفاصيل ذهبية',category:'حقائب',price:22.5,old:30,rating:4.9,reviews:86,badge:'خصم 25%',image:'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=700&q=85'},
+{id:3,name:'ساعة يد بتصميم فاخر',category:'إكسسوارات',price:34,rating:4.7,reviews:52,image:'https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=700&q=85'},
+{id:4,name:'حذاء رياضي يومي مريح وخفيف',category:'أحذية',price:27.9,old:35,rating:4.6,reviews:211,image:'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&q=85'},
+{id:5,name:'قميص رجالي قطن بقصة عصرية',category:'رجالي',price:15,rating:4.8,reviews:73,image:'https://images.unsplash.com/photo-1603252109303-2751441dd157?w=700&q=85'},
+{id:6,name:'مجموعة عناية بالبشرة اليومية',category:'مكياج وعناية',price:19.75,old:24,rating:4.9,reviews:158,badge:'اختيارنا',image:'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=700&q=85'},
+{id:7,name:'سماعات لاسلكية بصوت نقي',category:'إلكترونيات',price:29.9,rating:4.5,reviews:96,image:'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=700&q=85'},
+{id:8,name:'ديكور منزلي بلمسة دافئة',category:'المنزل',price:12.5,rating:4.7,reviews:44,image:'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=700&q=85'}]
+const categories=['الكل','نسائي','رجالي','أطفال','أحذية','حقائب','إكسسوارات','مكياج وعناية','عطور','إلكترونيات','المنزل']
+const money=(n:number)=>n.toFixed(2)+' د.أ'
+export default function App(){
+const[category,setCategory]=useState('الكل'),[query,setQuery]=useState(''),[favorites,setFavorites]=useState<number[]>([]),[cart,setCart]=useState<Record<number,number>>({}),[selected,setSelected]=useState<Product|null>(null),[drawer,setDrawer]=useState<'cart'|'menu'|'account'|null>(null),[sort,setSort]=useState('الأكثر رواجاً'),[toast,setToast]=useState('')
+const visible=useMemo(()=>products.filter(p=>(category==='الكل'||p.category===category)&&p.name.includes(query.trim())).sort((a,b)=>sort==='السعر الأقل'?a.price-b.price:sort==='السعر الأعلى'?b.price-a.price:b.reviews-a.reviews),[category,query,sort])
+const count=Object.values(cart).reduce((a,b)=>a+b,0),total=products.reduce((s,p)=>s+p.price*(cart[p.id]||0),0)
+const notify=(s:string)=>{setToast(s);window.setTimeout(()=>setToast(''),2200)}
+const add=(id:number)=>{setCart(v=>({...v,[id]:(v[id]||0)+1}));notify('أُضيف المنتج إلى سلتك')}
+return <div className="app-shell" dir="rtl">
+<div className="top-strip"><span><Truck/> توصيل إلى جميع محافظات الأردن</span><span>تسوّق براحة، واستلم عند بابك</span><span><ShieldCheck/> الدفع عند الاستلام</span></div>
+<header className="site-header"><button className="icon-btn mobile-only" onClick={()=>setDrawer('menu')}><Menu/></button><a className="brand" href="#"><span className="brand-mark">T</span><span>TOOR <b>BE</b><small>كل شيء أقرب إليك</small></span></a><nav className="desktop-nav"><a className="active" href="#home">الرئيسية</a><a href="#products">تسوّق الآن</a><a href="#categories">الأقسام</a><a href="#offers">العروض</a><a href="#about">عن تور بي</a></nav><div className="header-actions"><label className="search-box"><Search/><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="ابحث عن منتج أو قسم..."/></label><button className="icon-btn" onClick={()=>notify('لديك '+favorites.length+' منتجات في المفضلة')}><Heart/><i>{favorites.length||''}</i></button><button className="icon-btn" onClick={()=>setDrawer('account')}><UserRound/></button><button className="cart-button" onClick={()=>setDrawer('cart')}><ShoppingBag/><span>السلة</span><b>{count}</b></button></div></header>
+<main>
+<section className="hero" id="home"><div className="hero-copy"><span className="eyebrow"><Sparkles/> تجربة تسوّق أردنية مختلفة</span><h1>كل ما تحب.<br/><em>في مكان واحد.</em></h1><p>اكتشف تشكيلة واسعة من المنتجات المختارة بعناية، من متاجر محلية موثوقة، تصلك أينما كنت في الأردن.</p><div className="hero-actions"><a className="gold-btn" href="#products">ابدأ التسوّق <ArrowLeft/></a><a className="text-link" href="#categories">اكتشف الأقسام <ChevronLeft/></a></div><div className="hero-proof"><span className="proof-avatars"><i>م</i><i>س</i><i>ر</i><i>+</i></span><span><b>متاجر أردنية</b><small>تجربة محلية بمعايير عالية</small></span></div></div><div className="hero-visual"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=90" alt="تشكيلة أزياء عصرية"/><div className="floating-card"><BadgeCheck/><span><b>اختيارات مميزة</b><small>منتجات مختارة لك</small></span></div><div className="hero-stamp">TOOR BE<b>STYLE YOUR DAY</b></div></div></section>
+<section className="benefits"><div><Truck/><span><b>توصيل لكل الأردن</b><small>حتى باب منزلك</small></span></div><div><Wallet/><span><b>الدفع عند الاستلام</b><small>تسوّق وادفع براحتك</small></span></div><div><RotateCcw/><span><b>إرجاع سهل</b><small>سياسة واضحة ومريحة</small></span></div><div><ShieldCheck/><span><b>متاجر موثوقة</b><small>تجربة آمنة وموثوقة</small></span></div></section>
+<section className="section" id="categories"><div className="section-heading"><div><span className="eyebrow">تصفّح كما تحب</span><h2>تسوّق حسب <em>القسم</em></h2></div><a className="view-all" href="#products">جميع الأقسام <ChevronLeft/></a></div><div className="category-grid">{[['نسائي','photo-1483985988355-763728e1935b'],['رجالي','photo-1516257984-b1b4d707412e'],['أحذية','photo-1542291026-7eec264c27ff'],['حقائب','photo-1584917865442-de89df76afd3'],['مكياج وعناية','photo-1608248543803-ba4f8c70ae0b'],['إلكترونيات','photo-1505740420928-5e560c06d30e']].map(([n,img])=><button className="category-card" key={n} onClick={()=>{setCategory(n);document.getElementById('products')?.scrollIntoView({behavior:'smooth'})}}><img src={'https://images.unsplash.com/'+img+'?w=500&q=80'} alt=""/><span>{n}<ChevronLeft/></span></button>)}</div></section>
+<section className="promo-banner" id="offers"><div><span className="eyebrow">فرصتك لتجديد اختياراتك</span><h2>تفاصيل صغيرة،<br/><em>فرق كبير.</em></h2><p>اكتشف عروضاً مختارة بعناية لفترة محدودة.</p><a className="dark-btn" href="#products">اكتشف العروض <ArrowLeft/></a></div><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1000&q=85" alt="تشكيلة أزياء"/><span className="promo-seal">SPECIAL<br/><b>EDIT</b></span></section>
+<section className="section products-section" id="products"><div className="section-heading"><div><span className="eyebrow">مختارة لك</span><h2>اكتشف <em>الأكثر رواجاً</em></h2><p className="section-sub">منتجات يحبها المتسوقون في الأردن</p></div><button className="filter-btn" onClick={()=>setSort(s=>s==='الأكثر رواجاً'?'السعر الأقل':s==='السعر الأقل'?'السعر الأعلى':'الأكثر رواجاً')}><SlidersHorizontal/> {sort}<ChevronDown/></button></div><div className="category-pills">{categories.map(c=><button className={category===c?'selected':''} key={c} onClick={()=>setCategory(c)}>{c}</button>)}</div><div className="product-grid">{visible.map(p=><article className="product-card" key={p.id}><div className="product-image" onClick={()=>setSelected(p)}><img src={p.image} alt={p.name}/>{p.badge&&<span className="product-badge">{p.badge}</span>}<button className={favorites.includes(p.id)?'favorite active':'favorite'} onClick={e=>{e.stopPropagation();setFavorites(v=>v.includes(p.id)?v.filter(x=>x!==p.id):[...v,p.id])}}><Heart fill={favorites.includes(p.id)?'currentColor':'none'}/></button><button className="quick-add" onClick={e=>{e.stopPropagation();add(p.id)}}><Plus/></button></div><div className="product-info"><span className="product-category">{p.category}</span><h3 onClick={()=>setSelected(p)}>{p.name}</h3><div className="rating"><Star fill="currentColor"/><b>{p.rating}</b><small>({p.reviews})</small></div><div className="price-row"><strong>{money(p.price)}</strong>{p.old&&<del>{money(p.old)}</del>}</div></div></article>)}</div>{!visible.length&&<div className="empty-state">لا توجد منتجات مطابقة. جرّب كلمة بحث أخرى.</div>}<div className="products-footer"><span>عرض {visible.length} من {products.length} منتجات تجريبية</span><button className="outline-btn" onClick={()=>{setCategory('الكل');setQuery('')}}>عرض جميع المنتجات <ArrowLeft/></button></div></section>
+<section className="seller-cta" id="about"><div className="seller-icon"><Store/></div><div><span className="eyebrow">هل تملك متجراً؟</span><h2>مكان منتجاتك <em>بين الأفضل.</em></h2><p>انضم إلى تور بي واعرض منتجاتك لعملاء من جميع أنحاء الأردن. حساب التاجر مجاني.</p></div><button className="gold-btn" onClick={()=>setDrawer('account')}>ابدأ البيع معنا <ArrowLeft/></button></section>
+<section className="trust-row"><div><PackageCheck/><b>تجربة تسوق متكاملة</b><small>من الطلب حتى الاستلام</small></div><div><Clock3/><b>توصيل مستهدف خلال 3 أيام عمل</b><small>حسب المنطقة وتوفر المنتج</small></div><div><Headphones/><b>نحن هنا لمساعدتك</b><small>دعم ومتابعة لطلبك</small></div></section>
+</main>
+<footer className="footer"><div className="footer-main"><div className="footer-brand"><a className="brand" href="#"><span className="brand-mark">T</span><span>TOOR <b>BE</b><small>كل شيء أقرب إليك</small></span></a><p>وجهتك للتسوّق الذكي من المتاجر المحلية في الأردن.</p><div className="socials"><a href="#"><Instagram/></a><a href="#"><Facebook/></a></div></div><div><b>روابط سريعة</b><a href="#home">الرئيسية</a><a href="#products">تسوّق الآن</a><a href="#categories">الأقسام</a><a href="#offers">العروض</a></div><div><b>خدمة العملاء</b><a href="#about">من نحن</a><a href="#about">سياسة الإرجاع</a><a href="#about">الشحن والتوصيل</a><a href="#about">تواصل معنا</a></div><div><b>حسابك</b><button onClick={()=>setDrawer('account')}>تسجيل الدخول</button><button onClick={()=>setDrawer('account')}>إنشاء حساب</button><button onClick={()=>setDrawer('cart')}>سلة المشتريات</button></div></div><div className="footer-bottom"><span>© 2026 TOOR BE. جميع الحقوق محفوظة.</span><span>صُنع بعناية في الأردن ♥</span><span>الدفع نقداً عند الاستلام · JOD</span></div></footer>
+{selected&&<div className="modal-backdrop" onClick={()=>setSelected(null)}><div className="product-modal" onClick={e=>e.stopPropagation()}><button className="close-btn" onClick={()=>setSelected(null)}><X/></button><img src={selected.image} alt={selected.name}/><div className="modal-info"><span className="product-category">{selected.category}</span><h2>{selected.name}</h2><div className="rating"><Star fill="currentColor"/><b>{selected.rating}</b><small>({selected.reviews} تقييم)</small></div><strong className="modal-price">{money(selected.price)}</strong><p>منتج مختار من متاجر تور بي. تفاصيل المقاسات والألوان والمخزون ستظهر عند ربط بيانات المتجر.</p><button className="gold-btn full" onClick={()=>{add(selected.id);setSelected(null)}}>أضف إلى السلة <ShoppingBag/></button></div></div></div>}
+{drawer&&<div className="drawer-backdrop" onClick={()=>setDrawer(null)}><aside className="drawer" onClick={e=>e.stopPropagation()}><div className="drawer-head"><h2>{drawer==='cart'?'سلة مشترياتك':drawer==='menu'?'القائمة':'حسابك في تور بي'}</h2><button className="close-btn" onClick={()=>setDrawer(null)}><X/></button></div>{drawer==='cart'?<>{count? <><div className="cart-items">{products.filter(p=>cart[p.id]).map(p=><div className="cart-line" key={p.id}><img src={p.image} alt=""/><div><b>{p.name}</b><small>{money(p.price)}</small><div className="quantity"><button onClick={()=>setCart(v=>({...v,[p.id]:Math.max(0,(v[p.id]||0)-1)}))}><Minus/></button><span>{cart[p.id]}</span><button onClick={()=>add(p.id)}><Plus/></button></div></div><button className="remove" onClick={()=>setCart(v=>({...v,[p.id]:0}))}><Trash2/></button></div>)}</div><div className="cart-summary"><div><span>المجموع الفرعي</span><b>{money(total)}</b></div><div><span>التوصيل</span><span>يحدد عند التأكيد</span></div><button className="gold-btn full" onClick={()=>notify('سيتم تفعيل إتمام الطلب بعد ربط الحسابات')}>متابعة إتمام الطلب <ArrowLeft/></button><small>الدفع نقداً عند الاستلام</small></div></>:<div className="empty-cart"><ShoppingBag/><h3>سلتك فارغة حالياً</h3><p>أضف المنتجات التي أعجبتك وابدأ التسوّق.</p><button className="gold-btn" onClick={()=>setDrawer(null)}>اكتشف المنتجات</button></div>}</>:drawer==='menu'?<nav className="drawer-menu">{['الرئيسية','تسوّق الآن','الأقسام','العروض','عن تور بي'].map((x,i)=><a href={['#home','#products','#categories','#offers','#about'][i]} onClick={()=>setDrawer(null)} key={x}>{x}<ChevronLeft/></a>)}</nav>:<div className="account-panel"><div className="account-symbol"><UserRound/></div><h3>مرحباً بك في تور بي</h3><p>سجّل الدخول لمتابعة طلباتك وحفظ عناوينك ومنتجاتك المفضلة.</p><button className="gold-btn full" onClick={()=>notify('سيتم تفعيل تسجيل الدخول في المرحلة التالية')}><LogIn/> تسجيل الدخول</button><button className="outline-btn full" onClick={()=>notify('سيتم تفعيل إنشاء الحساب في المرحلة التالية')}>إنشاء حساب جديد</button><div className="account-help"><ShieldCheck/> بياناتك محمية وتُستخدم لإدارة طلباتك فقط.</div></div>}</aside></div>}
+{toast&&<div className="toast"><BadgeCheck/>{toast}</div>}<nav className="mobile-bottom"><a className="on" href="#home"><LayoutGrid/><span>الرئيسية</span></a><a href="#categories"><Store/><span>الأقسام</span></a><button onClick={()=>setDrawer('cart')}><ShoppingBag/><span>السلة</span>{count>0&&<i>{count}</i>}</button><button onClick={()=>setDrawer('account')}><UserRound/><span>حسابي</span></button></nav>
+</div>}
