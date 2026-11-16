@@ -298,6 +298,7 @@ export type Database = {
           id: string
           line_total_jod: number
           merchant_status: string
+          variant_id: string | null
           order_id: string
           product_id: string | null
           product_image_url: string | null
@@ -311,6 +312,7 @@ export type Database = {
           id?: string
           line_total_jod: number
           merchant_status?: string
+          variant_id?: string | null
           order_id: string
           product_id?: string | null
           product_image_url?: string | null
@@ -324,6 +326,7 @@ export type Database = {
           id?: string
           line_total_jod?: number
           merchant_status?: string
+          variant_id?: string | null
           order_id?: string
           product_id?: string | null
           product_image_url?: string | null
@@ -484,6 +487,8 @@ export type Database = {
           product_id: string
           sku: string | null
           stock_quantity: number
+          color: string | null
+          size: string | null
         }
         Insert: {
           id?: string
@@ -492,6 +497,8 @@ export type Database = {
           product_id: string
           sku?: string | null
           stock_quantity?: number
+          color?: string | null
+          size?: string | null
         }
         Update: {
           id?: string
