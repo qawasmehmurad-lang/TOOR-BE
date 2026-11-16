@@ -851,6 +851,7 @@ export type Database = {
       }
       courier_update_shipment: {
         Args: {
+          p_delivery_otp?: string
           p_new_status: string
           p_proof_url?: string
           p_shipment_id: string
@@ -889,6 +890,7 @@ export type Database = {
         Args: { p_address_id: string; p_buyer_note?: string; p_items: Json }
         Returns: {
           delivery_fee_jod: number
+          delivery_otp: string
           order_id: string
           order_number: string
           subtotal_jod: number
