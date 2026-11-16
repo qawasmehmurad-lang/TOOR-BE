@@ -507,6 +507,8 @@ export type Database = {
           product_id?: string
           sku?: string | null
           stock_quantity?: number
+          color?: string | null
+          size?: string | null
         }
         Relationships: [
           {
