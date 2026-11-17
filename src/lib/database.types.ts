@@ -14,6 +14,48 @@ export type Database = {
   }
   public: {
     Tables: {
+      ad_banners: {
+        Row: {
+          created_at: string
+          created_by: string | null
+          display_seconds: number
+          id: string
+          image_url: string
+          is_active: boolean
+          link_url: string
+          sort_order: number
+          subtitle: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          created_by?: string | null
+          display_seconds?: number
+          id?: string
+          image_url: string
+          is_active?: boolean
+          link_url?: string
+          sort_order?: number
+          subtitle?: string
+          title?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          created_by?: string | null
+          display_seconds?: number
+          id?: string
+          image_url?: string
+          is_active?: boolean
+          link_url?: string
+          sort_order?: number
+          subtitle?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       addresses: {
         Row: {
           area: string
@@ -117,6 +159,183 @@ export type Database = {
           },
         ]
       }
+      coupon_assignments: {
+        Row: {
+          assigned_at: string
+          coupon_id: string
+          user_id: string
+        }
+        Insert: {
+          assigned_at?: string
+          coupon_id: string
+          user_id: string
+        }
+        Update: {
+          assigned_at?: string
+          coupon_id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "coupon_assignments_coupon_id_fkey"
+            columns: ["coupon_id"]
+            isOneToOne: false
+            referencedRelation: "coupons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "coupon_assignments_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      coupon_products: {
+        Row: {
+          coupon_id: string
+          product_id: string
+        }
+        Insert: {
+          coupon_id: string
+          product_id: string
+        }
+        Update: {
+          coupon_id?: string
+          product_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "coupon_products_coupon_id_fkey"
+            columns: ["coupon_id"]
+            isOneToOne: false
+            referencedRelation: "coupons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "coupon_products_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "products"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      coupon_redemptions: {
+        Row: {
+          coupon_id: string
+          discount_jod: number
+          id: string
+          order_id: string
+          redeemed_at: string
+          user_id: string
+        }
+        Insert: {
+          coupon_id: string
+          discount_jod: number
+          id?: string
+          order_id: string
+          redeemed_at?: string
+          user_id: string
+        }
+        Update: {
+          coupon_id?: string
+          discount_jod?: number
+          id?: string
+          order_id?: string
+          redeemed_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "coupon_redemptions_coupon_id_fkey"
+            columns: ["coupon_id"]
+            isOneToOne: false
+            referencedRelation: "coupons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "coupon_redemptions_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: true
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "coupon_redemptions_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      coupons: {
+        Row: {
+          code: string
+          created_at: string
+          created_by: string
+          description: string | null
+          discount_type: string
+          discount_value: number
+          expires_at: string
+          id: string
+          is_active: boolean
+          max_discount_jod: number | null
+          minimum_cart_jod: number
+          per_user_limit: number
+          scope: string
+          starts_at: string
+          title: string
+          usage_limit: number | null
+        }
+        Insert: {
+          code: string
+          created_at?: string
+          created_by: string
+          description?: string | null
+          discount_type: string
+          discount_value: number
+          expires_at: string
+          id?: string
+          is_active?: boolean
+          max_discount_jod?: number | null
+          minimum_cart_jod?: number
+          per_user_limit?: number
+          scope: string
+          starts_at?: string
+          title: string
+          usage_limit?: number | null
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          created_by?: string
+          description?: string | null
+          discount_type?: string
+          discount_value?: number
+          expires_at?: string
+          id?: string
+          is_active?: boolean
+          max_discount_jod?: number | null
+          minimum_cart_jod?: number
+          per_user_limit?: number
+          scope?: string
+          starts_at?: string
+          title?: string
+          usage_limit?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "coupons_created_by_fkey"
+            columns: ["created_by"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       favorites: {
         Row: {
           created_at: string
@@ -143,6 +362,183 @@ export type Database = {
           },
           {
             foreignKeyName: "favorites_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      loyalty_accounts: {
+        Row: {
+          balance: number
+          lifetime_earned: number
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          balance?: number
+          lifetime_earned?: number
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          balance?: number
+          lifetime_earned?: number
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "loyalty_accounts_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      loyalty_redemptions: {
+        Row: {
+          created_at: string
+          id: string
+          merchant_note: string | null
+          order_id: string | null
+          points_spent: number
+          reward_id: string
+          status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          merchant_note?: string | null
+          order_id?: string | null
+          points_spent: number
+          reward_id: string
+          status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          merchant_note?: string | null
+          order_id?: string | null
+          points_spent?: number
+          reward_id?: string
+          status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "loyalty_redemptions_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "loyalty_redemptions_reward_id_fkey"
+            columns: ["reward_id"]
+            isOneToOne: false
+            referencedRelation: "loyalty_rewards"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "loyalty_redemptions_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      loyalty_rewards: {
+        Row: {
+          created_at: string
+          id: string
+          is_active: boolean
+          points_cost: number
+          product_id: string
+          reward_value_jod: number
+          store_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          points_cost?: number
+          product_id: string
+          reward_value_jod?: number
+          store_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_active?: boolean
+          points_cost?: number
+          product_id?: string
+          reward_value_jod?: number
+          store_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "loyalty_rewards_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: true
+            referencedRelation: "products"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "loyalty_rewards_store_id_fkey"
+            columns: ["store_id"]
+            isOneToOne: false
+            referencedRelation: "stores"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      loyalty_transactions: {
+        Row: {
+          created_at: string
+          description: string | null
+          id: string
+          kind: string
+          order_id: string | null
+          points_change: number
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          kind: string
+          order_id?: string | null
+          points_change: number
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          kind?: string
+          order_id?: string | null
+          points_change?: number
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "loyalty_transactions_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "loyalty_transactions_user_id_fkey"
             columns: ["user_id"]
             isOneToOne: false
             referencedRelation: "profiles"
@@ -203,6 +599,51 @@ export type Database = {
             columns: ["user_id"]
             isOneToOne: false
             referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      merchant_program_acceptances: {
+        Row: {
+          accepted_at: string
+          coupons_accepted: boolean
+          loyalty_accepted: boolean
+          owner_id: string
+          store_id: string
+          terms_version: string
+          updated_at: string
+        }
+        Insert: {
+          accepted_at?: string
+          coupons_accepted?: boolean
+          loyalty_accepted?: boolean
+          owner_id: string
+          store_id: string
+          terms_version: string
+          updated_at?: string
+        }
+        Update: {
+          accepted_at?: string
+          coupons_accepted?: boolean
+          loyalty_accepted?: boolean
+          owner_id?: string
+          store_id?: string
+          terms_version?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "merchant_program_acceptances_owner_id_fkey"
+            columns: ["owner_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "merchant_program_acceptances_store_id_fkey"
+            columns: ["store_id"]
+            isOneToOne: true
+            referencedRelation: "stores"
             referencedColumns: ["id"]
           },
         ]
@@ -298,7 +739,6 @@ export type Database = {
           id: string
           line_total_jod: number
           merchant_status: string
-          variant_id: string | null
           order_id: string
           product_id: string | null
           product_image_url: string | null
@@ -306,13 +746,13 @@ export type Database = {
           quantity: number
           store_id: string
           unit_price_jod: number
+          variant_id: string | null
           variant_label: string | null
         }
         Insert: {
           id?: string
           line_total_jod: number
           merchant_status?: string
-          variant_id?: string | null
           order_id: string
           product_id?: string | null
           product_image_url?: string | null
@@ -320,13 +760,13 @@ export type Database = {
           quantity: number
           store_id: string
           unit_price_jod: number
+          variant_id?: string | null
           variant_label?: string | null
         }
         Update: {
           id?: string
           line_total_jod?: number
           merchant_status?: string
-          variant_id?: string | null
           order_id?: string
           product_id?: string | null
           product_image_url?: string | null
@@ -334,6 +774,7 @@ export type Database = {
           quantity?: number
           store_id?: string
           unit_price_jod?: number
+          variant_id?: string | null
           variant_label?: string | null
         }
         Relationships: [
@@ -358,6 +799,13 @@ export type Database = {
             referencedRelation: "stores"
             referencedColumns: ["id"]
           },
+          {
+            foreignKeyName: "order_items_variant_id_fkey"
+            columns: ["variant_id"]
+            isOneToOne: false
+            referencedRelation: "product_variants"
+            referencedColumns: ["id"]
+          },
         ]
       }
       orders: {
@@ -365,6 +813,7 @@ export type Database = {
           address_id: string | null
           buyer_id: string
           buyer_note: string | null
+          coupon_id: string | null
           created_at: string
           delivered_at: string | null
           delivery_fee_jod: number
@@ -382,6 +831,7 @@ export type Database = {
           address_id?: string | null
           buyer_id: string
           buyer_note?: string | null
+          coupon_id?: string | null
           created_at?: string
           delivered_at?: string | null
           delivery_fee_jod?: number
@@ -399,6 +849,7 @@ export type Database = {
           address_id?: string | null
           buyer_id?: string
           buyer_note?: string | null
+          coupon_id?: string | null
           created_at?: string
           delivered_at?: string | null
           delivery_fee_jod?: number
@@ -425,6 +876,13 @@ export type Database = {
             columns: ["buyer_id"]
             isOneToOne: false
             referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "orders_coupon_id_fkey"
+            columns: ["coupon_id"]
+            isOneToOne: false
+            referencedRelation: "coupons"
             referencedColumns: ["id"]
           },
         ]
@@ -481,34 +939,34 @@ export type Database = {
       }
       product_variants: {
         Row: {
+          color: string | null
           id: string
           option_name: string
           option_value: string
           product_id: string
+          size: string | null
           sku: string | null
           stock_quantity: number
-          color: string | null
-          size: string | null
         }
         Insert: {
+          color?: string | null
           id?: string
           option_name: string
           option_value: string
           product_id: string
+          size?: string | null
           sku?: string | null
           stock_quantity?: number
-          color?: string | null
-          size?: string | null
         }
         Update: {
+          color?: string | null
           id?: string
           option_name?: string
           option_value?: string
           product_id?: string
+          size?: string | null
           sku?: string | null
           stock_quantity?: number
-          color?: string | null
-          size?: string | null
         }
         Relationships: [
           {
@@ -896,13 +1354,31 @@ export type Database = {
         }[]
       }
       place_order: {
-        Args: { p_address_id: string; p_buyer_note?: string; p_items: Json }
+        Args: {
+          p_address_id: string
+          p_buyer_note?: string
+          p_coupon_code?: string
+          p_items: Json
+        }
         Returns: {
           delivery_fee_jod: number
           delivery_otp: string
           order_id: string
           order_number: string
           subtotal_jod: number
+          total_jod: number
+        }[]
+      }
+      preview_coupon: {
+        Args: { p_code: string; p_items: Json }
+        Returns: number
+      }
+      redeem_loyalty_reward: {
+        Args: { p_address_id: string; p_reward_id: string }
+        Returns: {
+          delivery_otp: string
+          order_number: string
+          points_spent: number
           total_jod: number
         }[]
       }
