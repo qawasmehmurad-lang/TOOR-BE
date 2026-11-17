@@ -542,3 +542,44 @@ main{background:#fff}
 @media(max-width:600px){.merchant-location-card .location-actions{grid-template-columns:1fr 1fr}}
 
 .visual-categories button.view-all{border:0;background:transparent;padding:0;cursor:pointer;font-family:inherit}
+
+
+/* Cart screen: keep the bottom navigation flush with both screen edges.
+   The checkout summary sits immediately above it; both respect device safe areas. */
+.cart-mode .mobile-bottom{
+  position:fixed;
+  right:0;
+  left:0;
+  bottom:0;
+  width:100%;
+  max-width:none;
+  box-sizing:border-box;
+  transform:none;
+  margin:0;
+  z-index:90;
+}
+.cart-mode .cart-bottom-checkout{
+  position:fixed;
+  right:0;
+  left:0;
+  bottom:65px;
+  width:100%;
+  max-width:none;
+  box-sizing:border-box;
+  transform:none;
+  z-index:80;
+}
+@media(max-width:760px){
+  .cart-mode .mobile-bottom{
+    height:calc(61px + env(safe-area-inset-bottom, 0px));
+    padding-bottom:env(safe-area-inset-bottom, 0px);
+  }
+  .cart-mode .cart-bottom-checkout{
+    bottom:calc(61px + env(safe-area-inset-bottom, 0px));
+    padding-left:max(13px, env(safe-area-inset-left, 0px));
+    padding-right:max(13px, env(safe-area-inset-right, 0px));
+  }
+  .cart-mode .cart-page{
+    padding-bottom:calc(190px + env(safe-area-inset-bottom, 0px));
+  }
+}
