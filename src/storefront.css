@@ -462,3 +462,71 @@ main{background:#fff}
 @media(max-width:600px){.cart-mode>main{min-height:calc(100vh - 65px)}.cart-mode .cart-page{min-height:calc(100vh - 65px);padding-bottom:185px}.cart-topbar{min-height:72px;padding:9px 14px}.cart-topbar h1{font-size:17px}.cart-topbar>div span{font-size:9px}.cart-back,.cart-edit{font-size:10px}.cart-benefit-strip{font-size:10px;min-height:43px;padding:7px 10px}.cart-toolbar{padding:0 13px;min-height:48px}.cart-toolbar>span{font-size:9px}.cart-store-group{padding:0 11px}.cart-store-heading{height:48px}.cart-store-heading label{font-size:11px}.cart-product-row{grid-template-columns:21px 102px minmax(0,1fr);gap:9px;min-height:137px;padding:12px 0}.cart-product-image{width:102px;height:115px}.cart-product-name{font-size:11px;line-height:1.75}.cart-variant{font-size:9px}.cart-price-line{gap:6px}.cart-price-line strong{font-size:14px}.cart-price-line del,.cart-price-line em{font-size:9px}.cart-mode .quantity{height:29px}.cart-mode .quantity button{height:27px;width:28px}.cart-mode .quantity span{font-size:10px;min-width:21px}.cart-remove{font-size:9px}.cart-remove svg{width:14px}.cart-coupon-entry{padding:11px}.cart-coupon-entry input{font-size:10px}.cart-promo-strip{min-height:51px;padding:8px 11px;font-size:9px;gap:7px}.cart-promo-icon{width:24px;height:24px;font-size:13px}.cart-promo-strip button{font-size:9px}.cart-bottom-checkout{bottom:65px;padding:10px 13px 9px}.cart-total-line{font-size:10px;margin-bottom:8px}.cart-total-line strong{font-size:14px}.cart-bottom-actions{gap:13px}.cart-primary-checkout{min-height:47px;font-size:13px}.cart-bottom-actions>strong{font-size:16px}.cart-bottom-checkout>small{font-size:8px;margin-top:6px}.cart-checkout-panel{padding:14px 12px}.cart-checkout-heading h2{font-size:16px}}
 
 .account-avatar{overflow:hidden}.account-avatar img{width:100%;height:100%;object-fit:cover}.account-address-card p{font-size:10px;line-height:2;color:#555}.account-address-card .outline-btn{min-height:36px;padding:0 12px;font-size:10px}
+/* TOOR BE — storefront home redesign: ad-first transparent overlay */
+.app-shell{position:relative}
+.new-store-header{position:relative;top:auto;left:auto;right:auto;width:100%;height:64px;z-index:60;padding:7px clamp(10px,3vw,34px);background:#fff;border:0;box-shadow:none;display:flex;align-items:center}
+.new-store-header.home-overlay-header{position:absolute;top:0;left:0;right:0;background:linear-gradient(180deg,rgba(0,0,0,.22),rgba(0,0,0,0));color:#fff}
+.new-store-header .header-actions{width:100%;display:flex;align-items:center;gap:8px}
+.new-store-header .search-box{flex:1;width:auto;max-width:680px;height:43px;border:1px solid rgba(255,255,255,.52);border-radius:7px;background:rgba(255,255,255,.16);backdrop-filter:blur(5px);color:#fff;gap:8px;padding:0 11px}
+.new-store-header .search-box input{background:transparent;color:inherit;font-size:11px;min-width:0}
+.new-store-header .search-box input::placeholder{color:rgba(255,255,255,.86)}
+.new-store-header .search-box>svg,.new-store-header .search-box button{color:inherit}
+.new-store-header:not(.home-overlay-header) .search-box{background:#f5f4f1;color:#333;border-color:#e5e0d6}
+.new-store-header:not(.home-overlay-header) .search-box input{color:#222}
+.new-store-header:not(.home-overlay-header) .search-box input::placeholder{color:#888}
+.new-store-header .header-actions .icon-btn{flex:0 0 39px;width:39px;height:39px;border:1px solid rgba(255,255,255,.5);border-radius:7px;background:rgba(255,255,255,.14);color:#fff}
+.new-store-header:not(.home-overlay-header) .header-actions .icon-btn{border-color:#e6e0d2;background:#fff;color:#24211b}
+.new-store-header .header-actions .icon-btn svg{width:19px;height:19px}
+.new-store-header .header-actions .cart-button{height:39px;min-width:42px;padding:0 10px;border-radius:7px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.52);color:#fff;display:flex;justify-content:center;gap:5px}
+.new-store-header:not(.home-overlay-header) .header-actions .cart-button{background:#d4af37;color:#111;border-color:#d4af37}
+.new-store-header .header-actions .cart-button span{display:none}
+.new-store-header .header-actions .cart-button b{min-width:18px;height:18px;display:grid;place-items:center;border-radius:20px;background:#d4af37;color:#111;font-size:9px}
+.new-store-header:not(.home-overlay-header) .header-actions .cart-button b{background:#111;color:#fff}
+.store-department-tabs{height:39px;position:relative;z-index:55;justify-content:flex-start;padding:0 clamp(10px,3vw,34px);gap:clamp(8px,2vw,24px);background:#fff;color:#28251f;border:0;box-shadow:none}
+.home-overlay-header+.store-department-tabs{position:absolute;top:64px;left:0;right:0;width:100%;height:39px;background:rgba(255,255,255,.08);backdrop-filter:blur(2px);color:#fff;border:0}
+.store-department-tabs button{color:inherit;font-size:11px;padding:0 9px}
+.store-department-tabs button.active,.store-department-tabs button:hover{color:#f2d77b}
+.store-department-tabs button.active:after{bottom:3px;background:#d4af37;height:2px}
+.fashion-hero.ad-image-carousel{height:clamp(320px,42vw,510px);min-height:0;width:100%;margin:0;padding:0;position:relative;overflow:hidden;background:#e9e7e1;display:block}
+.ad-image-track{height:100%;width:100%;display:flex;direction:ltr;transition:transform .55s cubic-bezier(.22,.61,.36,1);will-change:transform}
+.ad-image-slide{display:block;position:relative;flex:0 0 100%;width:100%;height:100%;overflow:hidden}
+.ad-image-slide img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.ad-image-empty{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:linear-gradient(125deg,#f7f5ef,#e7e1d3);color:#80652d}
+.ad-image-empty span{font-size:18px;font-weight:700}.ad-image-empty small{font-size:11px;color:#777}
+.ad-image-carousel .ad-dots{position:absolute;z-index:5;bottom:13px;left:0;right:0;display:flex;justify-content:center;gap:7px;pointer-events:auto}
+.ad-image-carousel .ad-dots button{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#ffffff9c;box-shadow:0 1px 5px #0004}
+.ad-image-carousel .ad-dots button.active{width:21px;border-radius:7px;background:#d4af37}
+.video-ad-space{width:100%;height:auto;aspect-ratio:16/5;max-height:290px;min-height:155px;margin:0;padding:0;overflow:hidden;background:#e8e6e0;display:block}
+.video-ad-space video{display:block;width:100%;height:100%;object-fit:cover;background:#e8e6e0}
+.video-ad-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(115deg,#f3f1eb,#e6e2d8);color:#92732e;font-size:13px;font-weight:700}
+.video-ad-placeholder svg{width:26px;height:26px}
+.visual-categories{margin-top:0}
+.ad-admin-section{background:#fff;border:1px solid #eee8db;padding:15px;margin:14px 0;border-radius:8px}
+.ad-admin-section h4{font-size:14px;margin:0 0 9px;color:#2a261e}
+.ad-admin-section>p{font-size:11px;color:#777;line-height:1.8}
+.ad-admin-form{margin-top:10px}
+.ad-replace-label{display:inline-flex;align-items:center;justify-content:center;padding:8px 12px;margin:6px 0;background:#f5f1e7;color:#725a24;border:1px solid #e8dfc9;border-radius:5px;font-size:10px;cursor:pointer}
+.ad-replace-label input{display:none}
+.ad-admin-card{position:relative}
+.video-admin-section{display:grid;gap:10px}
+.video-admin-section .admin-video-preview{width:100%;max-height:220px;object-fit:contain;background:#111;border-radius:6px}
+.video-admin-section .outline-btn{width:100%}
+@media(max-width:600px){
+ .new-store-header{height:59px;padding:6px 9px}
+ .new-store-header .header-actions{gap:6px}
+ .new-store-header .search-box{height:39px;padding:0 8px;gap:6px;border-radius:6px}
+ .new-store-header .search-box input{font-size:10px}
+ .new-store-header .search-box>svg{width:16px;flex:0 0 16px}
+ .new-store-header .search-box button svg{width:16px}
+ .new-store-header .header-actions .icon-btn{flex-basis:35px;width:35px;height:35px;border-radius:6px}
+ .new-store-header .header-actions .cart-button{min-width:38px;height:35px;padding:0 7px;border-radius:6px}
+ .new-store-header .header-actions .cart-button svg{width:17px}
+ .store-department-tabs{height:35px;padding:0 7px;gap:7px}
+ .home-overlay-header+.store-department-tabs{top:59px;height:35px}
+ .store-department-tabs button{font-size:10px;padding:0 7px}
+ .fashion-hero.ad-image-carousel{height:clamp(300px,92vw,390px)}
+ .ad-image-slide img{object-position:center}
+ .ad-image-carousel .ad-dots{bottom:9px}
+ .video-ad-space{aspect-ratio:16/7;min-height:135px;max-height:210px}
+ .ad-image-empty span{font-size:15px}.ad-image-empty small{font-size:10px}
+}
