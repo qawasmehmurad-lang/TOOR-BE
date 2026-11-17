@@ -635,3 +635,31 @@ main{background:#fff}
 .product-image>img{object-fit:contain!important;background:#f5f4f0}
 .product-modal-media>img{object-fit:contain!important;background:#f5f4f0}
 @media(max-width:760px){.admin-ad-form{padding:12px}.admin-ad-manager .admin-ad-card{grid-template-columns:88px 1fr}.admin-ad-manager .admin-ad-card img{width:88px;height:68px}}
+
+
+/* Gold coupon ticker and redeem card */
+.coupon-ticker{height:27px;overflow:hidden;position:relative;display:flex;align-items:center;background:transparent;z-index:12;margin:0 0 4px}
+.coupon-ticker-track{display:flex;align-items:center;gap:54px;width:max-content;white-space:nowrap;animation:toor-coupon-marquee 34s linear infinite}
+.coupon-ticker-track button{border:0;background:transparent;color:#b18a2e;font-size:10px;font-weight:900;letter-spacing:.1px;text-shadow:0 0 5px #d8b65a66;padding:2px 0;cursor:pointer}
+.coupon-ticker:hover .coupon-ticker-track{animation-play-state:paused}
+@keyframes toor-coupon-marquee{from{transform:translateX(0)}to{transform:translateX(50%)}}
+.coupon-popup-backdrop{position:fixed;inset:0;z-index:150;background:#08080866;display:flex;align-items:center;justify-content:center;padding:14px}
+.coupon-ticket{position:relative;width:min(285px,84vw);padding:17px 18px 15px;text-align:center;background:linear-gradient(145deg,#fffdf6,#f3ead4);border:1px solid #c5a04b;border-radius:9px;box-shadow:0 18px 55px #0004;color:#211b10;overflow:hidden}
+.coupon-ticket:before,.coupon-ticket:after{content:"";position:absolute;top:48%;width:20px;height:20px;border-radius:50%;background:#08080866}
+.coupon-ticket:before{right:-11px}.coupon-ticket:after{left:-11px}
+.coupon-ticket-icon{font-size:22px;margin:0 0 4px}
+.coupon-ticket>small{display:block;color:#8b6c2c;font-size:9px}
+.coupon-ticket h3{font-size:13px;line-height:1.7;margin:7px 0;color:#292012}
+.coupon-ticket>strong{display:block;font-size:20px;color:#a77b20;margin:5px 0}
+.coupon-ticket p{font-size:10px;margin:9px 0 5px;color:#63583f}
+.coupon-code-copy{display:block;margin:7px auto 10px;padding:7px 20px;background:#fff;border:1px dashed #b18a2e;color:#8b6416;font-weight:900;letter-spacing:2px;font-size:13px}
+.coupon-shop-now{display:block;width:100%;margin-top:12px;padding:9px;border:0;border-radius:4px;background:#17130c;color:#f5d783;font-size:11px;font-weight:800}
+.coupon-popup-close{position:absolute;top:5px;left:7px;border:0;background:transparent;color:#796333;font-size:21px;line-height:1}
+.product-modal-media{position:relative}
+.product-main-image{position:relative;z-index:1}
+.product-spin-preview{position:absolute;right:14px;top:14px;z-index:4;width:86px;height:112px;border:1px solid #c3a052;border-radius:7px;background:#fffdf5eF;overflow:hidden;box-shadow:0 4px 16px #0002;pointer-events:none}
+.product-spin-preview>img{position:absolute;inset:17px 4px 4px;width:calc(100% - 8px);height:calc(100% - 21px);object-fit:contain;opacity:0;animation:toor-angle-cycle 3.75s infinite}
+.product-spin-preview>img:first-of-type{animation-delay:0s!important}
+.spin-preview-label{position:absolute;z-index:2;top:3px;right:0;left:0;text-align:center;color:#9b7629;font-size:8px;font-weight:900}
+@keyframes toor-angle-cycle{0%,18%{opacity:1}22%,100%{opacity:0}}
+@media(max-width:760px){.coupon-ticker{height:23px;margin:0}.coupon-ticker-track{animation-duration:29s}.coupon-ticker-track button{font-size:9px}.product-spin-preview{width:66px;height:88px;right:8px;top:8px}.product-modal-media{position:relative}}
