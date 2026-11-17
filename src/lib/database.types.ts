@@ -609,6 +609,7 @@ export type Database = {
           coupons_accepted: boolean
           loyalty_accepted: boolean
           owner_id: string
+          platform_terms_accepted: boolean
           store_id: string
           terms_version: string
           updated_at: string
@@ -618,6 +619,7 @@ export type Database = {
           coupons_accepted?: boolean
           loyalty_accepted?: boolean
           owner_id: string
+          platform_terms_accepted?: boolean
           store_id: string
           terms_version: string
           updated_at?: string
@@ -627,6 +629,7 @@ export type Database = {
           coupons_accepted?: boolean
           loyalty_accepted?: boolean
           owner_id?: string
+          platform_terms_accepted?: boolean
           store_id?: string
           terms_version?: string
           updated_at?: string
