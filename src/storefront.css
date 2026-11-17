@@ -530,3 +530,13 @@ main{background:#fff}
  .video-ad-space{aspect-ratio:16/7;min-height:135px;max-height:210px}
  .ad-image-empty span{font-size:15px}.ad-image-empty small{font-size:10px}
 }
+
+/* Merchant account page: same compact profile-card language as the buyer account. */
+.merchant-location-card{display:grid;gap:10px}
+.merchant-location-card .account-card-title{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.merchant-location-card .account-card-title button{display:inline-flex;align-items:center;gap:4px;border:0;background:transparent;color:#92732e;font:inherit;font-size:11px}
+.merchant-location-card>p{margin:0;color:#39352d;font-size:12px;line-height:1.9}
+.merchant-location-card>small{color:#8b7441;font-size:10px}
+.merchant-location-card .location-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.merchant-location-card .gold-btn{min-height:39px;border:0;border-radius:6px;font:inherit;font-size:11px;font-weight:700}
+@media(max-width:600px){.merchant-location-card .location-actions{grid-template-columns:1fr 1fr}}
