@@ -454,7 +454,7 @@ main{background:#fff}
 .cart-checkout-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
 .cart-checkout-heading h2{font-size:18px}.cart-checkout-heading button{border:0;background:none;color:#8c6c2a;display:flex;align-items:center;font-size:11px}
 .cart-checkout-panel .checkout-form{max-width:650px;margin:auto;display:grid;gap:11px}
-.cart-checkout-panel .checkout-form input,.cart-checkout-panel .checkout-form textarea{width:100%;min-height:45px;border:1px solid #e3e0d8;border-radius:3px;padding:10px 12px;font:12px inherit}
+.cart-checkout-panel .checkout-form input,.cart-checkout-panel .checkout-form textarea{width:100%;min-height:45px;border:1px solid #e3e0d8;border-radius:3px;padding:10px 12px;font-family:inherit;font-size:12px}
 .cart-checkout-panel .checkout-form textarea{min-height:80px}
 .cart-checkout-panel .location-actions{display:flex;gap:8px;flex-wrap:wrap}
 .cart-checkout-panel .location-actions button{flex:1}
