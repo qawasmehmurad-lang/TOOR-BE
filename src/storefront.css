@@ -639,10 +639,10 @@ main{background:#fff}
 
 /* Gold coupon ticker and redeem card */
 .coupon-ticker{height:27px;overflow:hidden;position:relative;display:flex;align-items:center;background:transparent;z-index:12;margin:0 0 4px}
-.coupon-ticker-track{display:flex;align-items:center;gap:54px;width:max-content;white-space:nowrap;animation:toor-coupon-marquee 34s linear infinite}
+.coupon-ticker-track{display:flex;direction:rtl;align-items:center;gap:54px;width:max-content;white-space:nowrap;animation:toor-coupon-marquee 34s linear infinite}
 .coupon-ticker-track button{border:0;background:transparent;color:#b18a2e;font-size:10px;font-weight:900;letter-spacing:.1px;text-shadow:0 0 5px #d8b65a66;padding:2px 0;cursor:pointer}
 .coupon-ticker:hover .coupon-ticker-track{animation-play-state:paused}
-@keyframes toor-coupon-marquee{from{transform:translateX(0)}to{transform:translateX(50%)}}
+@keyframes toor-coupon-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .coupon-popup-backdrop{position:fixed;inset:0;z-index:150;background:#08080866;display:flex;align-items:center;justify-content:center;padding:14px}
 .coupon-ticket{position:relative;width:min(285px,84vw);padding:17px 18px 15px;text-align:center;background:linear-gradient(145deg,#fffdf6,#f3ead4);border:1px solid #c5a04b;border-radius:9px;box-shadow:0 18px 55px #0004;color:#211b10;overflow:hidden}
 .coupon-ticket:before,.coupon-ticket:after{content:"";position:absolute;top:48%;width:20px;height:20px;border-radius:50%;background:#08080866}
