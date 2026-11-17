@@ -28,3 +28,26 @@ on conflict (id) do update
 set public = true,
     file_size_limit = 104857600,
     allowed_mime_types = array['image/jpeg','image/png','image/webp','image/avif','video/mp4','video/webm','video/ogg'];
+
+update public.ad_banners
+set display_seconds = greatest(display_seconds, 4.0)
+where display_seconds < 4.0;
+
+create or replace function private.enforce_ad_banner_limit()
+returns trigger
+language plpgsql
+set search_path = public, private
+as $$
+begin
+  perform pg_advisory_xact_lock(hashtext('public.ad_banners_limit'));
+  if tg_op = 'INSERT' and (select count(*) from public.ad_banners) >= 10 then
+    raise exception 'A maximum of 10 image advertisements is allowed.';
+  end if;
+  return new;
+end;
+$$;
+
+drop trigger if exists enforce_ad_banner_limit on public.ad_banners;
+create trigger enforce_ad_banner_limit
+before insert on public.ad_banners
+for each row execute function private.enforce_ad_banner_limit();
