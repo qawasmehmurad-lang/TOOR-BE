@@ -67,3 +67,100 @@
  .product-modal-media>img{height:clamp(250px,68vw,390px);max-height:none}
  .modal-info{padding:18px}
 }
+
+/* TOOR BE storefront refresh — gold, black, white and light grey */
+:root{--gold:#D4AF37;--gold-light:#FFF0A6;--gold-deep:#9B741C;--ink:#080808;--paper:#fff;--soft:#EDEDED;--line:#e7e3d8}
+.app-shell{max-width:100%;background:#fff}
+.top-strip{background:#080808;color:#f6f2e7;height:30px;gap:30px}
+.top-strip svg{color:#D4AF37}
+.new-store-header{background:#080808;color:#fff;border-bottom:1px solid #292929;height:76px;padding:0 4.5%;position:relative}
+.new-store-header .brand{color:#fff}
+.new-store-header .brand-mark{border-color:#D4AF37;color:#D4AF37}
+.new-store-header .brand b{color:#D4AF37}
+.new-store-header .brand small{color:#aaa}
+.new-store-header .desktop-nav{color:#e8e5dc}
+.new-store-header .desktop-nav a.active,.new-store-header .desktop-nav a:hover{color:#D4AF37}
+.new-store-header .desktop-nav a.active:after{background:#D4AF37;height:3px}
+.new-store-header .header-actions .icon-btn{color:#fff}
+.new-store-header .search-box{background:#fff;border:0;height:43px;border-radius:8px;width:270px;color:#222}
+.new-store-header .search-box input{font-size:11px;color:#222}
+.new-store-header .search-box button,.mobile-search button{border:0;background:transparent;color:#777;display:grid;place-items:center;padding:4px}
+.new-store-header .search-box button svg,.mobile-search button svg{width:20px}
+.new-store-header .cart-button{background:#D4AF37;color:#080808}
+.new-store-header .cart-button b{background:#080808;color:#FFF0A6}
+.mobile-search-row{display:none}
+.store-department-tabs{height:44px;background:#080808;color:#fff;display:flex;align-items:center;justify-content:space-around;padding:0 3%;gap:14px;overflow:auto;scrollbar-width:none}
+.store-department-tabs::-webkit-scrollbar{display:none}
+.store-department-tabs button{height:100%;white-space:nowrap;background:transparent;border:0;color:#eee;font-size:12px;position:relative;padding:0 8px}
+.store-department-tabs button.active,.store-department-tabs button:hover{color:#FFF0A6}
+.store-department-tabs button.active:after{content:"";position:absolute;bottom:5px;right:8px;left:8px;height:3px;background:#D4AF37;border-radius:4px}
+.fashion-hero{height:clamp(300px,42vw,510px);min-height:0;display:block;padding:0;position:relative;overflow:hidden;background:#181512}
+.fashion-hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.fashion-hero-shade{position:absolute;inset:0;background:linear-gradient(270deg,rgba(8,8,8,.94) 0%,rgba(8,8,8,.72) 38%,rgba(8,8,8,.04) 82%)}
+.fashion-hero-copy{position:absolute;z-index:2;right:7%;top:50%;transform:translateY(-50%);color:#fff;text-align:right;max-width:47%}
+.fashion-kicker{display:inline-block;background:linear-gradient(100deg,#9B741C,#FFF0A6,#D4AF37);color:#080808;padding:8px 18px;font-size:clamp(10px,1.2vw,15px);font-weight:700;transform:skew(-7deg)}
+.fashion-hero-copy h1{font-size:clamp(52px,10vw,120px);line-height:1;margin:14px 0 4px;font-weight:800;letter-spacing:-4px}
+.fashion-hero-copy h1 strong{color:#fff;font-size:1.2em}
+.fashion-hero-copy p{font-size:clamp(14px,2vw,24px);font-weight:600;color:#f4f0e6;margin:10px 0 24px}
+.fashion-hero-copy .gold-btn{background:linear-gradient(110deg,#9B741C,#FFF0A6 50%,#D4AF37);color:#080808;border-radius:28px;min-height:46px}
+.fashion-hero-dots{position:absolute;bottom:17px;left:0;right:0;display:flex;justify-content:center;gap:9px;z-index:2}
+.fashion-hero-dots i{width:7px;height:7px;border-radius:50%;background:#ffffff8a}
+.fashion-hero-dots i:first-child{width:22px;border-radius:5px;background:#fff}
+.quick-collections{display:flex;gap:10px;overflow:auto;padding:12px 12px 14px;background:#f5f5f5;scrollbar-width:none}
+.quick-collections::-webkit-scrollbar{display:none}
+.quick-collection-card{position:relative;flex:0 0 175px;height:190px;border:0;padding:0;border-radius:9px;overflow:hidden;background:#ddd}
+.quick-collection-card img{width:100%;height:100%;object-fit:cover}
+.quick-collection-card:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#000c)}
+.quick-collection-card span{position:absolute;z-index:1;bottom:14px;right:10px;left:10px;color:#fff;font-weight:700;font-size:13px;text-align:center}
+.visual-categories{padding:26px 14px 20px}
+.visual-categories .section-heading{margin-bottom:20px}
+.visual-categories .section-heading h2{font-size:24px}
+.round-category-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px 12px}
+.round-category{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;gap:8px;color:#111;padding:0;min-width:0}
+.round-category>span{width:min(100%,112px);aspect-ratio:1;border-radius:42%;overflow:hidden;border:1px solid #e4dfd3;background:#f1f1f1;display:block}
+.round-category img{width:100%;height:100%;object-fit:cover}
+.round-category b{font-size:clamp(10px,1.1vw,13px);font-weight:600;line-height:1.55;text-align:center;min-height:32px}
+.products-section{padding-top:38px}
+.products-section .section-heading h2 em,.section-heading h2 em{color:#9B741C}
+.gold-btn{background:linear-gradient(110deg,#9B741C,#FFF0A6 48%,#D4AF37);color:#080808}
+.category-pills button.selected{background:#080808;color:#FFF0A6;border-color:#D4AF37}
+.product-badge{background:#080808;color:#FFF0A6}
+.favorite.active{color:#9B741C}
+.mobile-bottom{background:#fff;border-top:1px solid #dedbd2}
+.mobile-bottom .on{color:#9B741C}
+.mobile-bottom i{background:#D4AF37;color:#080808}
+@media(max-width:760px){
+ .top-strip{height:25px;gap:0;font-size:7px}.top-strip span:nth-child(2){display:flex}
+ .new-store-header{height:60px;padding:0 10px;gap:6px}
+ .new-store-header .brand{font-size:19px;gap:6px}.new-store-header .brand-mark{width:30px;height:30px;font-size:21px}
+ .new-store-header .header-actions{gap:0}.new-store-header .header-actions .search-box{display:none}
+ .new-store-header .header-actions .icon-btn{width:32px;height:34px}
+ .new-store-header .header-actions .cart-button{width:36px;height:35px}
+ .mobile-search-row{display:flex;align-items:center;gap:8px;background:#080808;padding:5px 12px 11px}
+ .mobile-search{height:42px;background:#fff;border-radius:8px;display:flex;align-items:center;gap:8px;padding:0 10px;flex:1;color:#555}
+ .mobile-search>svg{width:19px;flex-shrink:0}
+ .mobile-search input{border:0;outline:0;min-width:0;width:100%;font-size:11px;background:transparent}
+ .mobile-favorite{width:38px;height:38px;border:1px solid #51472d;background:transparent;color:#FFF0A6;border-radius:8px;display:grid;place-items:center}
+ .store-department-tabs{height:42px;justify-content:flex-start;gap:20px;padding:0 12px}
+ .store-department-tabs button{font-size:11px;padding:0 3px}
+ .fashion-hero{height:255px}
+ .fashion-hero-image{object-position:42% center}
+ .fashion-hero-shade{background:linear-gradient(270deg,rgba(8,8,8,.94),rgba(8,8,8,.62) 49%,rgba(8,8,8,.08))}
+ .fashion-hero-copy{right:5%;max-width:55%}
+ .fashion-kicker{font-size:9px;padding:6px 10px}
+ .fashion-hero-copy h1{font-size:54px;letter-spacing:-2px;margin:11px 0 3px}
+ .fashion-hero-copy p{font-size:12px;margin:8px 0 15px}
+ .fashion-hero-copy .gold-btn{min-height:37px;padding:0 13px;font-size:10px}
+ .quick-collections{gap:8px;padding:9px 8px 11px}
+ .quick-collection-card{flex-basis:142px;height:150px;border-radius:8px}
+ .quick-collection-card span{font-size:11px}
+ .visual-categories{padding:20px 9px 14px}
+ .visual-categories .section-heading{padding:0 6px}
+ .visual-categories .section-heading h2{font-size:20px}
+ .round-category-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:14px 5px}
+ .round-category{gap:5px}
+ .round-category>span{width:100%;max-width:76px;border-radius:38%}
+ .round-category b{font-size:9px;line-height:1.45;min-height:28px}
+ .products-section{padding:36px 10px 45px}
+}
+@media(min-width:761px) and (max-width:1050px){.round-category-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.quick-collection-card{flex-basis:160px}}
