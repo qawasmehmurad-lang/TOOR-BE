@@ -540,3 +540,5 @@ main{background:#fff}
 .merchant-location-card .location-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .merchant-location-card .gold-btn{min-height:39px;border:0;border-radius:6px;font:inherit;font-size:11px;font-weight:700}
 @media(max-width:600px){.merchant-location-card .location-actions{grid-template-columns:1fr 1fr}}
+
+.visual-categories button.view-all{border:0;background:transparent;padding:0;cursor:pointer;font-family:inherit}
