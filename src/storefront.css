@@ -663,3 +663,5 @@ main{background:#fff}
 .spin-preview-label{position:absolute;z-index:2;top:3px;right:0;left:0;text-align:center;color:#9b7629;font-size:8px;font-weight:900}
 @keyframes toor-angle-cycle{0%,18%{opacity:1}22%,100%{opacity:0}}
 @media(max-width:760px){.coupon-ticker{height:23px;margin:0}.coupon-ticker-track{animation-duration:29s}.coupon-ticker-track button{font-size:9px}.product-spin-preview{width:66px;height:88px;right:8px;top:8px}.product-modal-media{position:relative}}
+
+.coupon-ticket{animation:toor-coupon-enter .24s ease-out both}@keyframes toor-coupon-enter{from{opacity:0;transform:translateX(42px) scale(.97)}to{opacity:1;transform:translateX(0) scale(1)}}
