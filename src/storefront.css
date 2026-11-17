@@ -665,3 +665,34 @@ main{background:#fff}
 @media(max-width:760px){.coupon-ticker{height:23px;margin:0}.coupon-ticker-track{animation-duration:29s}.coupon-ticker-track button{font-size:9px}.product-spin-preview{width:66px;height:88px;right:8px;top:8px}.product-modal-media{position:relative}}
 
 .coupon-ticket{animation:toor-coupon-enter .24s ease-out both}@keyframes toor-coupon-enter{from{opacity:0;transform:translateX(42px) scale(.97)}to{opacity:1;transform:translateX(0) scale(1)}}
+
+
+/* Refined floating coupon promotion: fixed to the viewport, never pushes page content. */
+.coupon-ticker{display:none!important}
+.coupon-floating-pill{position:fixed;z-index:115;top:82px;left:50%;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:9px;max-width:min(88vw,430px);min-height:35px;padding:6px 14px;border:1px solid #c6a24b;border-radius:999px;background:rgba(255,252,242,.94);backdrop-filter:blur(12px);box-shadow:0 5px 22px #1b160d20;color:#473817;font:inherit;font-size:11px;font-weight:800;white-space:nowrap;cursor:pointer}
+.coupon-floating-pill>span:nth-child(2){overflow:hidden;text-overflow:ellipsis}
+.coupon-floating-pill small{flex:0 0 auto;padding:3px 7px;border-radius:20px;background:#d4af37;color:#21190a;font-size:9px;font-weight:900}
+.coupon-floating-icon{width:20px;height:20px;display:grid;place-items:center;flex:0 0 20px;border-radius:50%;background:#d4af37;color:#21190a;font-size:13px}
+.ad-image-slide{isolation:isolate}
+.ad-copy-overlay{position:absolute;z-index:2;right:clamp(14px,4vw,48px);bottom:clamp(18px,4vw,38px);width:max-content;max-width:min(58%,520px);padding:12px 16px;border:1px solid #ffffff4a;border-right:3px solid #d4af37;border-radius:8px;background:linear-gradient(110deg,#17140dcc,#17140d9c);backdrop-filter:blur(7px);color:#fff;box-shadow:0 8px 26px #0002;text-align:right;pointer-events:none}
+.ad-copy-overlay b{display:block;margin:0 0 4px;color:#f5dc94;font-size:clamp(13px,1.8vw,21px);line-height:1.5;font-weight:900}
+.ad-copy-overlay p{margin:0;color:#fff;font-size:clamp(10px,1.15vw,13px);line-height:1.7}
+.new-store-header .header-actions .cart-button{order:0}
+.new-store-header .header-actions .search-box{order:1;flex:1 1 280px}
+.new-store-header .header-actions .favorite-header{order:2}
+.new-store-header .header-actions>.icon-btn:not(.favorite-header){order:3}
+.new-store-header .search-box{background:rgba(255,255,255,.12)!important;border-color:rgba(255,255,255,.48)!important;color:inherit}
+.new-store-header .search-box input{color:inherit!important}
+.new-store-header:not(.home-overlay-header) .search-box{background:transparent!important;border-color:#d4af37!important;color:#4a402b}
+.new-store-header:not(.home-overlay-header) .search-box input::placeholder{color:#8b806b}
+.video-admin-section{display:grid;gap:10px}
+.video-admin-section>p{margin:0;color:#776d58;font-size:10px;line-height:1.8}
+.video-admin-section .admin-video-preview{display:block;width:100%;max-height:220px;object-fit:contain;background:#111;border-radius:7px}
+@media(max-width:600px){
+ .coupon-floating-pill{top:68px;min-height:32px;max-width:92vw;padding:5px 10px;gap:7px;font-size:10px}
+ .ad-copy-overlay{right:10px;bottom:14px;max-width:82%;padding:8px 11px;border-radius:6px}
+ .ad-copy-overlay b{font-size:12px}.ad-copy-overlay p{font-size:9px}
+ .new-store-header .header-actions{gap:6px}
+ .new-store-header .header-actions .cart-button{order:0}
+ .new-store-header .header-actions .search-box{order:1;flex:1 1 150px}
+}
