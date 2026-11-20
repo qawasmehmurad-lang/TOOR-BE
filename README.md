@@ -27,3 +27,10 @@ Jordan-first multi-vendor marketplace. Arabic RTL, JOD currency, royal gold / bl
 - Frontend uses only the Supabase publishable key.
 - Never commit `.env`, access tokens, service-role keys, or database passwords.
 - Keep RLS enabled on every exposed public-schema table.
+
+
+## Project and release documents
+- Approved requirements: [docs/PRODUCT_BASELINE.md](docs/PRODUCT_BASELINE.md)
+- Security and release audit: [docs/SECURITY_AND_RELEASE_AUDIT.md](docs/SECURITY_AND_RELEASE_AUDIT.md)
+- Cloudflare Pages deployment: [docs/DEPLOY_CLOUDFLARE_PAGES.md](docs/DEPLOY_CLOUDFLARE_PAGES.md)
+- Merchant agreement version 1.2 includes the fixed 10% platform commission.
