@@ -27,7 +27,9 @@ Project: existing Supabase project `reuglumqogdpxsdvaupe` (Frankfurt / eu-centra
 - Supabase Auth leaked-password protection is still disabled. Enable it in Supabase Dashboard → Authentication → Settings / Password Security.
 - The live Supabase migration history contains the initial schema and security migrations, but the repository currently lacks the first 12 historical migration files. Do not run `supabase db reset` or recreate the project from repository migrations until a baseline schema snapshot or the missing migrations are restored.
 - End-to-end checkout, courier OTP delivery, returns and settlement payout still require real test accounts and test orders.
-- Confirm merchant terms version 1.2 has been accepted by every active merchant before launch.
+- The existing merchant acceptance record is still version 1.1; the active merchant must sign in and re-accept version 1.2 before accepting orders.
+- No active courier accounts exist yet. Create a normal buyer account for the delivery person, then activate it from the admin dashboard.
+- There are no orders or order items yet. A customer test order and courier OTP handoff are still required.
 - Confirm the delivery fee and courier coverage/operating policy before public launch.
 - Configure production hosting, environment variables, domain and transactional email delivery after the owner completes the required account steps.
 
