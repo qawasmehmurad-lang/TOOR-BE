@@ -56,6 +56,33 @@ export type Database = {
         }
         Relationships: []
       }
+      ad_video_settings: {
+        Row: {
+          created_by: string | null
+          id: boolean
+          is_active: boolean
+          storage_path: string | null
+          updated_at: string
+          video_url: string | null
+        }
+        Insert: {
+          created_by?: string | null
+          id?: boolean
+          is_active?: boolean
+          storage_path?: string | null
+          updated_at?: string
+          video_url?: string | null
+        }
+        Update: {
+          created_by?: string | null
+          id?: boolean
+          is_active?: boolean
+          storage_path?: string | null
+          updated_at?: string
+          video_url?: string | null
+        }
+        Relationships: []
+      }
       addresses: {
         Row: {
           area: string
@@ -739,6 +766,8 @@ export type Database = {
       }
       order_items: {
         Row: {
+          commission_jod: number
+          commission_percent: number
           id: string
           line_total_jod: number
           merchant_status: string
@@ -753,6 +782,8 @@ export type Database = {
           variant_label: string | null
         }
         Insert: {
+          commission_jod?: number
+          commission_percent?: number
           id?: string
           line_total_jod: number
           merchant_status?: string
@@ -767,6 +798,8 @@ export type Database = {
           variant_label?: string | null
         }
         Update: {
+          commission_jod?: number
+          commission_percent?: number
           id?: string
           line_total_jod?: number
           merchant_status?: string
@@ -1439,6 +1472,10 @@ export type Database = {
           street: string
           total_jod: number
         }[]
+      }
+      mark_store_settlement_paid: {
+        Args: { p_settlement_id: string }
+        Returns: boolean
       }
       place_order: {
         Args: {
