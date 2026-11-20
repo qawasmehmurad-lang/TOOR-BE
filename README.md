@@ -33,4 +33,5 @@ Jordan-first multi-vendor marketplace. Arabic RTL, JOD currency, royal gold / bl
 - Approved requirements: [docs/PRODUCT_BASELINE.md](docs/PRODUCT_BASELINE.md)
 - Security and release audit: [docs/SECURITY_AND_RELEASE_AUDIT.md](docs/SECURITY_AND_RELEASE_AUDIT.md)
 - Cloudflare Pages deployment: [docs/DEPLOY_CLOUDFLARE_PAGES.md](docs/DEPLOY_CLOUDFLARE_PAGES.md)
+- End-to-end acceptance tests: [docs/ACCEPTANCE_TEST_PLAN.md](docs/ACCEPTANCE_TEST_PLAN.md)
 - Merchant agreement version 1.2 includes the fixed 10% platform commission.
