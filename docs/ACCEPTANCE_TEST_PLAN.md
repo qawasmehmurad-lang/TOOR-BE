@@ -25,6 +25,7 @@ Use test accounts and test products only. Do not use real customer addresses or 
 - Sign in as that merchant and accept the current version 1.2 platform terms (10% commission).
 - Add a product with images, price, stock, colors and sizes.
 - Confirm only that merchant can edit the product and its own order items.
+- Confirm merchant order cards show product/order status only and never expose buyer address or phone.
 - Confirm the merchant cannot change store ownership, commission, order amount or buyer address.
 
 ## D. Courier journey
