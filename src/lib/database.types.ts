@@ -1116,6 +1116,7 @@ export type Database = {
           price_jod: number
           sku: string | null
           slug: string
+          spin_video_url: string | null
           status: Database["public"]["Enums"]["product_status"]
           stock_quantity: number
           store_id: string
@@ -1132,6 +1133,7 @@ export type Database = {
           price_jod: number
           sku?: string | null
           slug: string
+          spin_video_url?: string | null
           status?: Database["public"]["Enums"]["product_status"]
           stock_quantity?: number
           store_id: string
@@ -1148,6 +1150,7 @@ export type Database = {
           price_jod?: number
           sku?: string | null
           slug?: string
+          spin_video_url?: string | null
           status?: Database["public"]["Enums"]["product_status"]
           stock_quantity?: number
           store_id?: string
