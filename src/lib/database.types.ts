@@ -495,6 +495,7 @@ export type Database = {
           product_id: string
           reward_value_jod: number
           store_id: string
+          expires_at: string | null
         }
         Insert: {
           created_at?: string
@@ -504,6 +505,7 @@ export type Database = {
           product_id: string
           reward_value_jod?: number
           store_id: string
+          expires_at?: string | null
         }
         Update: {
           created_at?: string
@@ -513,6 +515,7 @@ export type Database = {
           product_id?: string
           reward_value_jod?: number
           store_id?: string
+          expires_at?: string | null
         }
         Relationships: [
           {
