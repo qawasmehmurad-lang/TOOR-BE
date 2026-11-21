@@ -495,7 +495,7 @@ export type Database = {
           product_id: string
           reward_value_jod: number
           store_id: string
-          expires_at: string | null
+          expires_at: string
         }
         Insert: {
           created_at?: string
