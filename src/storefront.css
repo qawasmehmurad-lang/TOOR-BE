@@ -1031,3 +1031,7 @@ main{background:#fff}
  .fashion-hero{height:230px}
  .fashion-hero .ad-image-track,.fashion-hero .ad-image-empty{padding-top:0}
 }
+
+/* Keep the reference's left-to-right control placement while preserving Arabic input direction */
+.home-overlay-header .header-actions{direction:ltr}
+.home-overlay-header .search-box{direction:rtl}
