@@ -733,3 +733,5 @@ main{background:#fff}
 }
 
 .variant-stock-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:12px 0}.variant-stock-grid label,.variant-default-stock{display:flex;flex-direction:column;gap:6px;padding:10px;background:#151515;border:1px solid #373127;border-radius:10px;color:#e6d8b8;font-size:12px}.variant-stock-grid input,.variant-default-stock input{width:100%;min-width:0;background:#090909;color:#fff;border:1px solid #49402e;border-radius:8px;padding:9px}.variant-default-stock{margin:10px 0 14px}@media(max-width:480px){.variant-stock-grid{grid-template-columns:1fr}}
+
+.store-logo-editor{margin-bottom:16px}.store-logo-preview{width:92px;height:92px;object-fit:contain;border-radius:18px;background:#f5f5f5;padding:8px;margin:10px 0}
