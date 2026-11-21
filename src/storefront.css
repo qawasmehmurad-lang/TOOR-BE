@@ -906,3 +906,43 @@ main{background:#fff}
 .free-delivery-note svg{width:20px;height:20px;flex:0 0 20px;color:#987022}
 .trends-rated-section{padding-top:30px;border-top:1px solid #eee8dc}
 .trends-rated-section .product-badge{background:linear-gradient(120deg,#fff2bf,#d5ad55);color:#4b3510}
+
+
+/* TOOR BE mobile search/header and campaign layout restoration */
+@media(max-width:760px){
+ .site-header.new-store-header{position:sticky!important;top:0!important;z-index:120!important;height:66px!important;padding:0 10px!important;background:#fff!important;box-shadow:0 3px 14px #0000000d}
+ .site-header.new-store-header.home-overlay-header{position:sticky!important;top:0!important;inset:auto!important}
+ .site-header.new-store-header .header-actions{display:flex!important;width:100%!important;min-width:0!important;gap:5px!important;align-items:center!important}
+ .site-header.new-store-header .search-box{display:flex!important;flex:1 1 auto!important;width:auto!important;min-width:0!important;height:43px!important;padding:0 9px!important;border-radius:10px!important;background:#f7f7f7!important;border:1px solid #e5e2dc!important}
+ .site-header.new-store-header .search-box input{display:block!important;min-width:0!important;font-size:11px!important}
+ .site-header.new-store-header .search-box>button{display:grid!important;flex:0 0 25px!important;width:25px!important;height:30px!important;border:0!important;background:transparent!important;color:#292720!important;place-items:center!important}
+ .site-header.new-store-header .search-box>button svg{width:17px!important;height:17px!important}
+ .site-header.new-store-header .cart-button{flex:0 0 39px!important;width:39px!important}
+ .site-header.new-store-header .icon-btn{flex:0 0 34px!important;width:34px!important;height:38px!important}
+ .site-header.new-store-header .icon-btn svg,.site-header.new-store-header .cart-button svg{width:21px!important;height:21px!important}
+ .site-header.new-store-header .favorite-header{display:grid!important}
+ .site-header.new-store-header .icon-btn[aria-label="حسابي"]{display:none!important}
+ .site-header.new-store-header .header-actions>.cart-button{order:0}
+ .site-header.new-store-header .header-actions>.search-box{order:1}
+ .site-header.new-store-header .header-actions>.favorite-header{order:2}
+ .ad-image-carousel{margin-top:0!important}
+}
+.free-shipping-glow{position:relative;z-index:5;display:flex;align-items:center;justify-content:center;gap:9px;min-height:35px;margin:8px 12px 5px;padding:3px 8px;color:#9a742b;font-size:10px;font-weight:800;line-height:1.7;text-align:center;background:transparent;overflow:hidden;text-shadow:0 0 5px #e7c76c99;animation:toor-free-glow 2.8s ease-in-out infinite}
+.free-shipping-glow:after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 28%,#f0d98b99 48%,transparent 67%);transform:translateX(-120%);animation:toor-free-shimmer 3.6s ease-in-out infinite;pointer-events:none}
+.free-shipping-glow>*{position:relative;z-index:1;flex:0 0 auto}
+.free-shipping-glow span{flex:0 1 auto}
+.free-shipping-glow svg{width:17px;height:17px}
+.free-shipping-glow button{border:0;background:transparent;color:#8a6726;padding:4px;display:grid;place-items:center}
+.free-shipping-glow button svg{width:15px;height:15px}
+@keyframes toor-free-glow{0%,100%{opacity:.78;text-shadow:0 0 4px #d9b65a66}50%{opacity:1;text-shadow:0 0 10px #e9c75f,0 0 18px #d7a83f88}}
+@keyframes toor-free-shimmer{0%,35%{transform:translateX(-120%)}75%,100%{transform:translateX(120%)}}
+.coupon-floating-pill{border-radius:12px!important;min-width:54px!important;width:auto!important;max-width:180px!important;justify-content:center!important;gap:7px!important}
+.coupon-floating-pill>span:not(.coupon-floating-icon){display:none!important}
+.coupon-floating-pill .coupon-floating-icon{font-size:14px!important;font-weight:900!important}
+.coupon-floating-pill small{font-size:10px!important;padding:4px 7px!important;border-radius:7px!important}
+@media(max-width:650px){
+ .product-modal-media .product-main-image{height:clamp(300px,56dvh,570px)!important;min-height:300px!important;max-height:56dvh!important;object-fit:contain!important;background:#fff!important}
+ .product-modal .modal-info h2{font-size:16px!important;line-height:1.65!important}
+ .product-modal .modal-info{gap:8px!important}
+ .free-shipping-glow{font-size:9px;margin:5px 8px}
+}
