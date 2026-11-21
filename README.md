@@ -35,3 +35,7 @@ Jordan-first multi-vendor marketplace. Arabic RTL, JOD currency, royal gold / bl
 - Cloudflare Pages deployment: [docs/DEPLOY_CLOUDFLARE_PAGES.md](docs/DEPLOY_CLOUDFLARE_PAGES.md)
 - End-to-end acceptance tests: [docs/ACCEPTANCE_TEST_PLAN.md](docs/ACCEPTANCE_TEST_PLAN.md)
 - Merchant agreement version 1.2 includes the fixed 10% platform commission.
+
+## إعدادات التوثيق والتواصل
+
+- [إعداد توثيق واتساب والبريد التسويقي](docs/WHATSAPP_AND_EMAIL_SETUP.md)
