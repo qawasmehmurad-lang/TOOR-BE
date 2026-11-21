@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { supabase } from './lib/supabase'
-import { ArrowRight, CheckCircle2, Clock3, MessageCircle, Plus, RefreshCw, Send, Shield, X } from 'lucide-react'
+import { Clock3, MessageCircle, Plus, RefreshCw, Send, Shield, X } from 'lucide-react'
 import './support-center.css'
 
 type Report = { id:string; subject:string; category:string; description:string; status:string; priority:string; created_at:string; reporter_id:string }
