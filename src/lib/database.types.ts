@@ -61,6 +61,7 @@ export type Database = {
           created_by: string | null
           id: boolean
           is_active: boolean
+          link_url: string
           storage_path: string | null
           updated_at: string
           video_url: string | null
@@ -69,6 +70,7 @@ export type Database = {
           created_by?: string | null
           id?: boolean
           is_active?: boolean
+          link_url?: string
           storage_path?: string | null
           updated_at?: string
           video_url?: string | null
@@ -77,6 +79,7 @@ export type Database = {
           created_by?: string | null
           id?: boolean
           is_active?: boolean
+          link_url?: string
           storage_path?: string | null
           updated_at?: string
           video_url?: string | null
@@ -1423,6 +1426,135 @@ export type Database = {
             columns: ["owner_id"]
             isOneToOne: true
             referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      support_report_messages: {
+        Row: {
+          created_at: string
+          id: string
+          is_internal: boolean
+          message: string
+          report_id: string
+          sender_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          is_internal?: boolean
+          message: string
+          report_id: string
+          sender_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          is_internal?: boolean
+          message?: string
+          report_id?: string
+          sender_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "support_report_messages_report_id_fkey"
+            columns: ["report_id"]
+            isOneToOne: false
+            referencedRelation: "support_reports"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "support_report_messages_sender_id_fkey"
+            columns: ["sender_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      support_reports: {
+        Row: {
+          assigned_admin_id: string | null
+          category: string
+          created_at: string
+          description: string
+          id: string
+          order_id: string | null
+          priority: string
+          product_id: string | null
+          reporter_id: string
+          resolved_at: string | null
+          status: string
+          store_id: string | null
+          subject: string
+          updated_at: string
+        }
+        Insert: {
+          assigned_admin_id?: string | null
+          category?: string
+          created_at?: string
+          description: string
+          id?: string
+          order_id?: string | null
+          priority?: string
+          product_id?: string | null
+          reporter_id: string
+          resolved_at?: string | null
+          status?: string
+          store_id?: string | null
+          subject: string
+          updated_at?: string
+        }
+        Update: {
+          assigned_admin_id?: string | null
+          category?: string
+          created_at?: string
+          description?: string
+          id?: string
+          order_id?: string | null
+          priority?: string
+          product_id?: string | null
+          reporter_id?: string
+          resolved_at?: string | null
+          status?: string
+          store_id?: string | null
+          subject?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "support_reports_assigned_admin_id_fkey"
+            columns: ["assigned_admin_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "support_reports_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "support_reports_product_id_fkey"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "products"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "support_reports_reporter_id_fkey"
+            columns: ["reporter_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "support_reports_store_id_fkey"
+            columns: ["store_id"]
+            isOneToOne: false
+            referencedRelation: "stores"
             referencedColumns: ["id"]
           },
         ]
