@@ -954,13 +954,13 @@ main{background:#fff}
 .site-header.storefront-sticky{position:sticky!important;top:0!important;z-index:90!important;transform:none!important}
 .new-store-header.storefront-sticky{height:66px!important;min-height:66px!important;background:#080808!important}
 .new-store-header .header-actions{display:flex!important;align-items:center!important;width:100%;gap:9px!important;min-width:0}
-.new-store-header .header-actions>.search-box{display:flex!important;flex:1 1 auto!important;width:auto!important;min-width:90px!important;max-width:none!important;height:43px!important;background:#f7f7f7!important;border:1px solid #dedede!important;border-radius:9px!important;padding:0 10px!important;order:0}
+.new-store-header .header-actions>.header-back{order:0;flex:0 0 30px;color:#fff!important}
+.new-store-header .header-actions>.search-box{display:flex!important;flex:1 1 auto!important;width:auto!important;min-width:90px!important;max-width:none!important;height:43px!important;background:#f7f7f7!important;border:1px solid #dedede!important;border-radius:9px!important;padding:0 10px!important;order:1}
 .new-store-header .header-actions>.search-box input{display:block!important;min-width:0!important;width:100%!important;font-size:12px!important}
 .new-store-header .header-actions>.search-box button{display:grid!important;flex:0 0 auto!important}
-.new-store-header .header-actions>.header-back{order:4;flex:0 0 30px;color:#fff!important}
-.new-store-header .header-actions>.cart-button{order:1;flex:0 0 40px;width:40px!important;height:39px!important;padding:0!important;justify-content:center!important;position:relative}
-.new-store-header .header-actions>.header-share{order:2;flex:0 0 34px;color:#fff!important}
-.new-store-header .header-actions>.header-menu{order:3;flex:0 0 30px;color:#fff!important}
+.new-store-header .header-actions>.cart-button{order:2;flex:0 0 40px;width:40px!important;height:39px!important;padding:0!important;justify-content:center!important;position:relative}
+.new-store-header .header-actions>.header-share{order:3;flex:0 0 34px;color:#fff!important}
+.new-store-header .header-actions>.header-menu{order:4;flex:0 0 30px;color:#fff!important}
 .new-store-header .header-actions>.icon-btn svg{width:22px;height:22px}
 .ad-image-carousel{margin-top:0!important}
 .cart-coupons-rewards{margin:14px 0;padding:14px;border:1px solid #e9e3d4;border-radius:13px;background:#fff}
@@ -979,15 +979,15 @@ main{background:#fff}
 @media(max-width:760px){
  .new-store-header.storefront-sticky{height:59px!important;min-height:59px!important;padding:0 7px!important}
  .new-store-header .header-actions{gap:4px!important}
- .new-store-header .header-actions>.search-box{height:40px!important;min-width:80px!important;padding:0 7px!important}
+ .new-store-header .header-actions>.search-box{order:1;height:40px!important;min-width:80px!important;padding:0 7px!important}
  .new-store-header .header-actions>.search-box input{font-size:10px!important}
  .new-store-header .header-actions>.search-box>svg{width:18px!important;flex:0 0 18px}
  .new-store-header .header-actions>.search-box button{padding:2px!important}
  .new-store-header .header-actions>.search-box button svg{width:17px!important}
- .new-store-header .header-actions>.header-back{flex-basis:25px!important;width:25px!important}
- .new-store-header .header-actions>.cart-button{flex-basis:36px!important;width:36px!important;height:35px!important}
- .new-store-header .header-actions>.header-share{flex-basis:30px!important;width:30px!important}
- .new-store-header .header-actions>.header-menu{flex-basis:25px!important;width:25px!important}
+ .new-store-header .header-actions>.header-back{order:0;flex-basis:25px!important;width:25px!important}
+ .new-store-header .header-actions>.cart-button{order:2;flex-basis:36px!important;width:36px!important;height:35px!important}
+ .new-store-header .header-actions>.header-share{order:3;flex-basis:30px!important;width:30px!important}
+ .new-store-header .header-actions>.header-menu{order:4;flex-basis:25px!important;width:25px!important}
  .new-store-header .header-actions>.icon-btn svg{width:20px!important;height:20px!important}
  .cart-coupons-rewards{padding:11px;margin:11px 0}
  .cart-available-coupon{align-items:flex-start}
