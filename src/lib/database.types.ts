@@ -1102,6 +1102,7 @@ export type Database = {
           product_id: string
           size: string | null
           sku: string | null
+          spin_video_url: string | null
           stock_quantity: number
         }
         Insert: {
@@ -1113,6 +1114,7 @@ export type Database = {
           product_id: string
           size?: string | null
           sku?: string | null
+          spin_video_url?: string | null
           stock_quantity?: number
         }
         Update: {
@@ -1124,6 +1126,7 @@ export type Database = {
           product_id?: string
           size?: string | null
           sku?: string | null
+          spin_video_url?: string | null
           stock_quantity?: number
         }
         Relationships: [
