@@ -948,3 +948,47 @@ main{background:#fff}
 }
 
 .reward-duration-field{display:grid;gap:7px;margin:12px 0;color:var(--text,#242424);font-size:13px;font-weight:600}.reward-duration-field input{width:100%;min-height:44px;padding:10px 12px;border:1px solid #d9d2c3;border-radius:10px;background:#fff;color:#171717;font:inherit}
+
+
+/* Fixed storefront search row: visible only on store, categories and trends */
+.site-header.storefront-sticky{position:sticky!important;top:0!important;z-index:90!important;transform:none!important}
+.new-store-header.storefront-sticky{height:66px!important;min-height:66px!important;background:#080808!important}
+.new-store-header .header-actions{display:flex!important;align-items:center!important;width:100%;gap:9px!important;min-width:0}
+.new-store-header .header-actions>.search-box{display:flex!important;flex:1 1 auto!important;width:auto!important;min-width:90px!important;max-width:none!important;height:43px!important;background:#f7f7f7!important;border:1px solid #dedede!important;border-radius:9px!important;padding:0 10px!important;order:0}
+.new-store-header .header-actions>.search-box input{display:block!important;min-width:0!important;width:100%!important;font-size:12px!important}
+.new-store-header .header-actions>.search-box button{display:grid!important;flex:0 0 auto!important}
+.new-store-header .header-actions>.header-back{order:4;flex:0 0 30px;color:#fff!important}
+.new-store-header .header-actions>.cart-button{order:1;flex:0 0 40px;width:40px!important;height:39px!important;padding:0!important;justify-content:center!important;position:relative}
+.new-store-header .header-actions>.header-share{order:2;flex:0 0 34px;color:#fff!important}
+.new-store-header .header-actions>.header-menu{order:3;flex:0 0 30px;color:#fff!important}
+.new-store-header .header-actions>.icon-btn svg{width:22px;height:22px}
+.ad-image-carousel{margin-top:0!important}
+.cart-coupons-rewards{margin:14px 0;padding:14px;border:1px solid #e9e3d4;border-radius:13px;background:#fff}
+.cart-coupons-rewards>header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.cart-coupons-rewards>header b{font-size:14px;color:#171717}
+.cart-coupons-rewards>header small,.cart-coupons-rewards .section-sub{font-size:11px;color:#777}
+.cart-available-coupons,.cart-available-rewards{display:grid;gap:9px}
+.cart-available-rewards{margin-top:14px;padding-top:12px;border-top:1px solid #eee}
+.cart-available-rewards> b{font-size:12px;margin-bottom:3px}
+.cart-available-coupon{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px;border:1px dashed #d7bd78;border-radius:10px;background:#fffdf7}
+.cart-available-coupon>div{display:grid;gap:4px;min-width:0}
+.cart-available-coupon b{font-size:12px;color:#222}
+.cart-available-coupon strong{font-size:13px;color:#9b741c}
+.cart-available-coupon small{font-size:10px;color:#777}
+.cart-available-coupon .outline-btn{min-height:34px;padding:0 10px;white-space:nowrap;font-size:10px}
+@media(max-width:760px){
+ .new-store-header.storefront-sticky{height:59px!important;min-height:59px!important;padding:0 7px!important}
+ .new-store-header .header-actions{gap:4px!important}
+ .new-store-header .header-actions>.search-box{height:40px!important;min-width:80px!important;padding:0 7px!important}
+ .new-store-header .header-actions>.search-box input{font-size:10px!important}
+ .new-store-header .header-actions>.search-box>svg{width:18px!important;flex:0 0 18px}
+ .new-store-header .header-actions>.search-box button{padding:2px!important}
+ .new-store-header .header-actions>.search-box button svg{width:17px!important}
+ .new-store-header .header-actions>.header-back{flex-basis:25px!important;width:25px!important}
+ .new-store-header .header-actions>.cart-button{flex-basis:36px!important;width:36px!important;height:35px!important}
+ .new-store-header .header-actions>.header-share{flex-basis:30px!important;width:30px!important}
+ .new-store-header .header-actions>.header-menu{flex-basis:25px!important;width:25px!important}
+ .new-store-header .header-actions>.icon-btn svg{width:20px!important;height:20px!important}
+ .cart-coupons-rewards{padding:11px;margin:11px 0}
+ .cart-available-coupon{align-items:flex-start}
+}
