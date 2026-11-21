@@ -901,3 +901,8 @@ main{background:#fff}
  .product-modal .product-modal-actions{margin-top:8px!important;gap:6px!important}
  .product-modal .product-modal-actions button{min-height:39px!important}
 }
+
+.free-delivery-note{display:flex;align-items:center;gap:9px;margin:10px 0;padding:12px 14px;border:1px solid #d8bd70;border-radius:11px;background:linear-gradient(115deg,#fff9e6,#f0dfae);color:#6e5017;font-size:11px;font-weight:800;line-height:1.8}
+.free-delivery-note svg{width:20px;height:20px;flex:0 0 20px;color:#987022}
+.trends-rated-section{padding-top:30px;border-top:1px solid #eee8dc}
+.trends-rated-section .product-badge{background:linear-gradient(120deg,#fff2bf,#d5ad55);color:#4b3510}
