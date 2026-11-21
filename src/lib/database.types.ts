@@ -1064,6 +1064,7 @@ export type Database = {
         Row: {
           color: string | null
           id: string
+          image_url: string | null
           option_name: string
           option_value: string
           product_id: string
@@ -1074,6 +1075,7 @@ export type Database = {
         Insert: {
           color?: string | null
           id?: string
+          image_url?: string | null
           option_name: string
           option_value: string
           product_id: string
@@ -1084,6 +1086,7 @@ export type Database = {
         Update: {
           color?: string | null
           id?: string
+          image_url?: string | null
           option_name?: string
           option_value?: string
           product_id?: string
