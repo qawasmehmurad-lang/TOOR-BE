@@ -1491,3 +1491,138 @@ body{padding-bottom:0!important}
 
 .product-review-comment{display:-webkit-box!important;-webkit-box-orient:vertical!important;-webkit-line-clamp:2!important;overflow:hidden!important;min-height:22px!important;margin-top:4px!important;color:#a9a18f!important;font-size:8px!important;line-height:1.6!important;animation:tbReviewRise .5s ease-out both!important}
 @media(max-width:760px){.product-review-comment{font-size:6px!important;line-height:1.45!important;min-height:18px!important;margin-top:3px!important}}
+
+
+
+/* TOOR BE — refined cart, product reviews and modal presentation */
+.cart-topbar{
+ background:linear-gradient(110deg,#080808 0%,#12100b 52%,#080808 100%)!important;
+ color:#f2d77c!important;border:1px solid rgba(212,175,55,.28)!important;
+ box-shadow:0 8px 22px #0008!important;border-radius:0 0 13px 13px!important
+}
+.cart-topbar h1,.cart-topbar span,.cart-topbar button,.cart-topbar svg{color:#f0d273!important}
+.cart-topbar .cart-back,.cart-topbar .cart-edit{background:transparent!important;border-color:rgba(212,175,55,.38)!important}
+.cart-topbar .cart-edit:disabled{opacity:.35!important}
+.cart-empty-state{margin-bottom:18px!important;padding-bottom:16px!important}
+.cart-suggestions,.suggestions-section{margin:26px 0 34px!important;padding:0!important}
+.suggestions-section .section-heading{margin-bottom:14px!important}
+.suggestions-section .product-grid{margin-top:0!important}
+.suggestions-section .product-info .outline-btn{min-height:30px!important;margin-top:7px!important;font-size:9px!important}
+.favorites-heading{align-items:center!important;margin-bottom:16px!important}
+.favorites-heading>div{width:100%!important}
+.favorites-heading h2{color:#f1d77f!important;margin:0!important;font-size:clamp(20px,4vw,27px)!important}
+.favorites-heading .eyebrow,.favorites-heading .section-sub,.favorites-heading>.filter-btn{display:none!important}
+.products-section:has(.favorites-heading)>.category-pills{display:none!important}
+.trust-row-lowered{margin-top:clamp(38px,7vw,78px)!important}
+
+.home-auth-entry{
+ background:transparent!important;border:0!important;box-shadow:none!important;
+ padding:12px 2px!important;margin-top:20px!important;margin-bottom:24px!important
+}
+.home-auth-entry button{position:relative!important;overflow:hidden!important;transition:transform .22s ease,box-shadow .22s ease,filter .22s ease!important}
+.home-auth-entry button:active{transform:translateY(1px) scale(.97)!important}
+.home-auth-entry .gold-btn{box-shadow:0 0 0 1px #d4af3740,0 5px 20px #d4af3725!important}
+.home-auth-entry .gold-btn:hover{box-shadow:0 0 18px #d4af3760,0 7px 22px #d4af3735!important;filter:brightness(1.08)!important}
+.home-auth-entry .outline-btn:hover{box-shadow:0 0 16px #d4af3738!important;border-color:#e7c65f!important}
+.seller-cta{grid-template-columns:minmax(0,1fr) auto!important}
+.seller-start-button{width:auto!important;min-width:132px!important;max-width:168px!important;justify-self:end!important;flex:0 0 auto!important}
+.seller-start-button:hover{transform:translateY(-2px)!important;box-shadow:0 0 20px #d4af3755!important}
+.trust-row-lowered{transform:translateY(0)!important}
+
+.review-ticker{
+ position:relative!important;display:block!important;width:100%!important;height:28px!important;min-height:28px!important;
+ overflow:hidden!important;padding:4px 2px!important;margin:6px 0 2px!important;
+ border:0!important;border-top:1px solid rgba(212,175,55,.15)!important;
+ background:transparent!important;color:#bfb39a!important;text-align:right!important;
+ font:inherit!important;cursor:pointer!important
+}
+.review-ticker>span{
+ position:absolute!important;inset:4px 2px auto auto!important;width:calc(100% - 4px)!important;
+ display:block!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important;
+ opacity:0;transform:translateY(13px);animation:tbReviewTicker 12s ease-in-out infinite!important;
+ color:#bdb39e!important;font-size:8px!important;line-height:19px!important
+}
+.review-ticker>span:nth-child(2){animation-delay:3s!important}
+.review-ticker>span:nth-child(3){animation-delay:6s!important}
+.review-ticker>span:nth-child(4){animation-delay:9s!important}
+.review-ticker>span:nth-child(5){animation-delay:12s!important}
+.review-ticker>span:nth-child(6){animation-delay:15s!important}
+.review-ticker>span:nth-child(7){animation-delay:18s!important}
+.review-ticker>span:nth-child(8){animation-delay:21s!important}
+.review-ticker>span:nth-child(9){animation-delay:24s!important}
+.review-ticker>span:nth-child(10){animation-delay:27s!important}
+.review-ticker>span:nth-child(11){animation-delay:30s!important}
+.review-ticker>span:nth-child(12){animation-delay:33s!important}
+@keyframes tbReviewTicker{0%{opacity:0;transform:translateY(13px)}5%,22%{opacity:1;transform:translateY(0)}28%,100%{opacity:0;transform:translateY(-13px)}}
+.product-review-comment{height:27px!important;min-height:27px!important;margin-top:5px!important}
+.product-review-comment>span{font-size:7px!important}
+.product-rating-summary{cursor:pointer!important}
+.product-modal{
+ background:#0b0b0b!important;color:#f4efdf!important;border:1px solid rgba(212,175,55,.34)!important;
+ box-shadow:0 24px 80px #000c!important;max-height:min(92dvh,900px)!important;overflow:hidden!important
+}
+.product-modal-media{background:#111!important;min-width:0!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important}
+.product-modal-media .product-main-image{
+ display:block!important;width:100%!important;height:clamp(280px,55dvh,580px)!important;max-height:58dvh!important;
+ min-height:240px!important;object-fit:contain!important;object-position:center!important;
+ background:#111!important;padding:10px!important
+}
+.product-modal-media .product-spin-video{max-width:100%!important;object-fit:contain!important}
+.product-modal .modal-info{min-width:0!important;max-width:100%!important;overflow-x:hidden!important;overflow-y:auto!important;padding:clamp(14px,3vw,24px)!important;gap:10px!important}
+.product-modal .modal-info h2{font-size:clamp(16px,2.5vw,22px)!important;line-height:1.55!important;overflow-wrap:anywhere!important}
+.product-modal .modal-price{display:block!important;width:100%!important;color:#f2d477!important;font-size:clamp(18px,3vw,24px)!important;line-height:1.6!important;white-space:normal!important;overflow-wrap:anywhere!important}
+.product-modal .modal-price del{font-size:13px!important;color:#a49a83!important;margin-left:7px!important}
+.product-modal .variant-picker,.product-modal .variant-group,.product-modal .variant-options{min-width:0!important;max-width:100%!important}
+.product-modal .variant-options{display:flex!important;flex-wrap:wrap!important;gap:7px!important}
+.product-modal .variant-options button{max-width:100%!important;white-space:normal!important;overflow-wrap:anywhere!important}
+.product-modal .modal-review-summary{display:flex!important;align-items:center!important;gap:7px!important;width:max-content!important;max-width:100%!important;padding:3px 0!important;border:0!important;background:transparent!important;color:#e8c76c!important}
+.modal-review-summary svg{width:14px!important;height:14px!important}
+.modal-review-summary b{color:#f0d273!important;font-size:12px!important}
+.modal-review-summary small{color:#aaa18e!important;font-size:9px!important}
+.review-ticker-modal{height:34px!important;min-height:34px!important;margin:0 0 5px!important}
+.review-ticker-modal>span{font-size:9px!important;line-height:24px!important}
+.product-modal-actions{display:grid!important;grid-template-columns:1fr!important;gap:9px!important;padding:12px!important;background:#090909!important;border-top:1px solid rgba(212,175,55,.28)!important}
+.product-modal-social-actions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+.product-modal-social-actions button{display:flex!important;align-items:center!important;justify-content:center!important;gap:7px!important;min-width:0!important;min-height:42px!important;padding:7px 8px!important;font-size:10px!important;white-space:normal!important}
+.product-modal-social-actions svg{width:15px!important;height:15px!important;flex:0 0 auto!important}
+.review-modal-backdrop{position:fixed!important;inset:0!important;z-index:10050!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:18px!important;background:rgba(0,0,0,.82)!important;backdrop-filter:blur(8px)!important}
+.review-modal{position:relative!important;width:min(100%,440px)!important;max-height:85dvh!important;overflow:auto!important;padding:24px 20px 20px!important;border:1px solid rgba(212,175,55,.45)!important;border-radius:16px!important;background:linear-gradient(145deg,#19170f,#0a0a0a 70%)!important;color:#f3ead2!important;box-shadow:0 22px 70px #000d!important;display:grid!important;gap:12px!important}
+.review-modal .eyebrow{color:#d4af37!important;font-size:10px!important}
+.review-modal h3{margin:0!important;color:#f3d77c!important;font-size:20px!important}
+.review-modal p{margin:0!important;color:#c5bba6!important;font-size:12px!important;line-height:1.8!important}
+.review-modal-close{position:absolute!important;top:12px!important;left:12px!important;width:32px!important;height:32px!important;border-radius:50%!important;border:1px solid #8b702e!important;background:#15130d!important;color:#f0d273!important}
+.review-star-picker{display:flex!important;justify-content:center!important;gap:10px!important;direction:ltr!important}
+.review-star-picker button{border:0!important;background:transparent!important;color:#776b4d!important;padding:5px!important}
+.review-star-picker button.active{color:#f0c95d!important;filter:drop-shadow(0 0 6px #d4af3750)!important}
+.review-star-picker svg{width:30px!important;height:30px!important}
+.review-modal>small{color:#b8aa8b!important;text-align:center!important;font-size:10px!important}
+.review-modal textarea{width:100%!important;min-height:120px!important;resize:vertical!important;padding:12px!important;border:1px solid rgba(212,175,55,.35)!important;border-radius:9px!important;background:#111!important;color:#f3ead2!important;font:inherit!important;font-size:12px!important}
+.review-modal .gold-btn{min-height:44px!important}
+.reviews-list-modal{width:min(100%,540px)!important}
+.reviews-list{display:grid!important;gap:9px!important;overflow:auto!important}
+.review-list-item{padding:12px!important;border:1px solid rgba(212,175,55,.18)!important;border-radius:10px!important;background:#111!important}
+.review-list-item>div{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important}
+.review-list-item b{color:#f1d57c!important;font-size:12px!important}
+.review-list-item span{color:#e8c45b!important;letter-spacing:2px!important;white-space:nowrap!important}
+.review-list-item p{margin:8px 0!important;color:#ddd3bf!important;font-size:11px!important;line-height:1.8!important;overflow-wrap:anywhere!important}
+.review-list-item small{color:#938a78!important;font-size:9px!important}
+@media(max-width:760px){
+ .cart-topbar{position:relative!important;min-height:66px!important;padding:10px 9px!important;gap:7px!important}
+ .cart-topbar h1{font-size:15px!important}
+ .cart-topbar .cart-back,.cart-topbar .cart-edit{font-size:9px!important;padding:7px!important}
+ .cart-suggestions .product-grid,.suggestions-section .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+ .seller-start-button{width:auto!important;min-width:112px!important;max-width:140px!important;min-height:40px!important;justify-self:end!important}
+ .trust-row-lowered{margin-top:42px!important}
+ .product-modal{width:min(96vw,620px)!important;max-height:94dvh!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important}
+ .product-modal-media{width:100%!important;flex:0 0 auto!important;max-height:none!important}
+ .product-modal-media .product-main-image{height:clamp(230px,39dvh,390px)!important;min-height:220px!important;max-height:40dvh!important}
+ .product-modal .modal-info{width:100%!important;overflow:visible!important;padding:13px!important}
+ .product-modal-actions{position:sticky!important;bottom:0!important;z-index:3!important}
+ .review-ticker-modal{height:32px!important;min-height:32px!important}
+ .review-modal{padding:22px 16px 16px!important}
+}
+@media(max-width:380px){
+ .seller-cta{grid-template-columns:minmax(0,1fr) auto!important}
+ .seller-start-button{width:auto!important;min-width:104px!important;max-width:120px!important}
+ .product-modal-social-actions button{font-size:9px!important}
+}
