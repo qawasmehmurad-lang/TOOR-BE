@@ -54,3 +54,19 @@ Use test accounts and test products only. Do not use real customer addresses or 
 
 ## G. Release gate
 Do not open public registration until all critical buyer, merchant, courier, COD, OTP, commission and settlement tests pass. Confirm Auth email delivery, password leak protection, backup plan, delivery fee and return policy before production.
+
+## H. Favorites and returns
+- Sign in as a buyer, favorite a live product, close/reopen the app and confirm the favorite remains selected.
+- Sign out and sign in as a different buyer; confirm the first buyer's favorites are not visible.
+- Confirm a buyer cannot create, read, or delete another buyer's favorite through the API.
+- Complete and deliver a test order; confirm the buyer can request a return from order history.
+- Confirm a standard return request is accepted only within six hours of delivery.
+- Confirm a damaged/wrong-item claim after six hours is submitted for review, not automatically approved.
+- Confirm undelivered orders cannot be returned and an order item cannot be attached to a different order.
+
+## I. Upload and blocked-account safeguards
+- Upload 1, 5 and 10 product images; verify all are stored and displayed in the correct order.
+- Attempt to upload more than 10 images and verify the app blocks the request.
+- Verify processed product images above 5 MB are rejected before Storage upload.
+- Mark a dedicated test buyer as blocked and verify order creation is rejected by the database.
+- Verify an authenticated buyer cannot create an order for another buyer profile.
