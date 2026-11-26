@@ -49,3 +49,4 @@ Project: existing Supabase project `reuglumqogdpxsdvaupe` (Frankfurt / eu-centra
 - Security advisor still reports leaked-password protection disabled. This remains a required dashboard-side action before public launch.
 - Performance advisor reports unused indexes and multiple permissive read/admin policies. These are not removed automatically: the project has almost no production traffic, and several policies intentionally allow public active-catalogue reads alongside administrator management.
 - No live customer order was created as part of these checks; checkout, courier OTP, return handling and settlements still need an end-to-end test with dedicated test accounts.
+- Added the buyer-side return request form to delivered orders. It uses the existing database trigger that validates order ownership, delivered status, the six-hour standard return window, and exceptional damaged/wrong-item claims.
