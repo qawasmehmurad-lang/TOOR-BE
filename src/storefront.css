@@ -1632,3 +1632,80 @@ body{padding-bottom:0!important}
 .product-modal-media .product-thumbnails{display:flex!important;justify-content:center!important;gap:8px!important;max-width:100%!important;overflow-x:auto!important;padding:8px!important}
 .product-modal-media .product-thumbnails img{width:54px!important;height:54px!important;object-fit:contain!important;background:#181818!important}
 .product-modal-media .product-thumbnails button{flex:0 0 58px!important;width:58px!important;height:58px!important}
+
+
+/* TOOR BE home storefront refinement */
+.home-category-scroll{
+ display:flex!important;align-items:center!important;gap:9px!important;width:100%!important;
+ overflow-x:auto!important;overscroll-behavior-x:contain!important;scrollbar-width:none!important;
+ padding:13px 16px!important;margin:0!important;background:#090909!important;
+ border:0!important;border-bottom:1px solid rgba(212,175,55,.16)!important;
+ -webkit-overflow-scrolling:touch!important
+}
+.home-category-scroll::-webkit-scrollbar{display:none!important}
+.home-category-scroll button{
+ flex:0 0 auto!important;display:flex!important;align-items:center!important;gap:5px!important;
+ min-height:36px!important;padding:0 13px!important;border:1px solid rgba(212,175,55,.22)!important;
+ border-radius:22px!important;background:linear-gradient(145deg,#17150f,#0d0d0d)!important;
+ color:#d9c58f!important;font-size:11px!important;white-space:nowrap!important
+}
+.home-category-scroll button svg{width:13px!important;height:13px!important;color:#d4af37!important}
+.home-category-scroll button.active,.home-category-scroll button:active{
+ background:linear-gradient(145deg,#3a2d10,#171208)!important;border-color:#d4af37!important;color:#ffe9a1!important
+}
+.home-products-section{padding-top:20px!important}
+.home-products-section>.section-heading{margin-bottom:16px!important}
+.home-products-section>.product-grid{
+ display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ align-items:start!important;column-gap:12px!important;row-gap:16px!important;
+ padding-bottom:clamp(90px,22vw,170px)!important
+}
+.home-products-section>.product-grid>.product-card{min-width:0!important}
+.home-products-section>.product-grid>.product-card:nth-child(even){margin-top:50%!important}
+.home-products-section .product-image{height:clamp(180px,48vw,330px)!important}
+.home-products-section .product-info h3{font-size:11px!important;line-height:1.6!important}
+.home-products-section .product-info .price-row strong{font-size:12px!important}
+.home-products-section .product-info .product-rating-summary b{font-size:10px!important}
+.home-products-section .product-info .product-review-comment{height:28px!important;min-height:28px!important}
+.home-coupon-strip{display:none!important}
+.home-auth-entry{margin:18px 14px 22px!important}
+.trust-row-lowered{
+ display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+ gap:13px!important;width:min(100% - 28px,720px)!important;margin:24px auto 18px!important;
+ padding:20px 12px!important;text-align:center!important;background:transparent!important;
+ border:0!important;outline:0!important;box-shadow:none!important
+}
+.trust-row-lowered>div{
+ display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+ gap:5px!important;width:100%!important;text-align:center!important
+}
+.trust-row-lowered>div svg{color:#d4af37!important}
+.trust-row-lowered>div b{color:#f0d273!important}
+.trust-row-lowered>div small{color:#aaa397!important}
+.coupon-ticket-list{width:min(430px,92vw)!important;max-height:86dvh!important;overflow-y:auto!important;padding:20px 16px!important}
+.coupon-popup-cards{display:grid!important;gap:9px!important;margin:13px 0!important}
+.coupon-popup-item{
+ display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;
+ padding:11px!important;border:1px dashed #b18b38!important;border-radius:9px!important;
+ background:linear-gradient(135deg,#fffdf6,#f0e4c5)!important;text-align:right!important
+}
+.coupon-popup-item>div{display:grid!important;gap:4px!important;min-width:0!important}
+.coupon-popup-item b{font-size:11px!important;color:#342817!important}
+.coupon-popup-item strong{font-size:17px!important;color:#8c641a!important}
+.coupon-popup-item small{font-size:9px!important;color:#76613b!important}
+.coupon-popup-item span{font-size:10px!important;letter-spacing:1px!important;color:#3d321e!important;font-weight:800!important}
+.coupon-popup-item button{flex:0 0 auto!important;min-height:34px!important;padding:0 10px!important;border:0!important;border-radius:6px!important;background:#17140d!important;color:#f4d77c!important;font-size:9px!important}
+@media(max-width:760px){
+ .home-category-scroll{padding:11px 12px!important;gap:7px!important}
+ .home-category-scroll button{min-height:34px!important;padding:0 11px!important;font-size:10px!important}
+ .home-products-section{padding:16px 12px!important}
+ .home-products-section>.product-grid{column-gap:9px!important;row-gap:12px!important;padding-bottom:105px!important}
+ .home-products-section .product-image{height:clamp(155px,48vw,225px)!important}
+ .home-products-section .product-info{padding:7px 6px 9px!important}
+ .home-products-section .product-info h3{font-size:9px!important;min-height:36px!important}
+ .home-products-section .product-info .price-row strong{font-size:10px!important}
+ .home-products-section .product-info .product-review-comment{font-size:7px!important}
+ .trust-row-lowered{width:calc(100% - 28px)!important;margin:20px auto 14px!important;padding:16px 8px!important}
+ .coupon-popup-item{align-items:flex-start!important}
+ .coupon-popup-item button{font-size:8px!important;padding:0 8px!important}
+}
