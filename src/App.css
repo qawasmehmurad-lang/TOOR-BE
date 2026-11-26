@@ -259,3 +259,57 @@
  .courier-stat-grid article b{font-size:23px}
  .courier-stat-grid article span{font-size:8px}
 }
+
+
+/* Approved reference refinement: clean white workspace + right black gold navigation */
+.dashboard-drawer{background:#f7f7f5}
+.dashboard-drawer .drawer-head{background:#fff;border-bottom:1px solid #e6e3db}
+.dashboard-panel{direction:rtl;background:#f7f7f5;grid-template-columns:236px minmax(0,1fr);gap:18px 22px;padding:24px 26px 34px}
+.dashboard-action-grid{grid-area:nav;position:relative;align-self:stretch;min-height:100%;padding:82px 13px 16px;background:linear-gradient(160deg,#171717 0%,#090909 100%);border:1px solid #292929;border-radius:14px;box-shadow:0 10px 28px #00000018}
+.dashboard-action-grid:before{content:"TOOR BE";position:absolute;top:20px;right:18px;left:18px;padding:0 0 17px;border-bottom:1px solid #ffffff20;color:#f1d37d;font-size:19px;font-weight:900;letter-spacing:1.8px;text-align:center}
+.dashboard-action-grid:after{content:"ADMIN PANEL";position:absolute;top:49px;right:0;left:0;color:#a7a7a7;font-size:8px;font-weight:700;letter-spacing:2px;text-align:center}
+.merchant-dashboard-nav:after{content:"MERCHANT PANEL"}
+.courier-dashboard-nav:after{content:"COURIER PANEL"}
+.dashboard-action-grid button{min-height:45px;padding:0 12px;font-size:11px;border-radius:7px}
+.dashboard-action-grid button:not(.active):hover{background:#ffffff12;color:#fff}
+.dashboard-action-grid button.active{background:linear-gradient(105deg,#e7c76f,#c99b32);border-color:#f4dc91;color:#17130a;box-shadow:0 4px 13px #d1aa4a28}
+.dashboard-panel:has(.dashboard-role-head) .dashboard-role-head{padding:4px 0 17px;border-bottom:1px solid #e5e2da}
+.dashboard-role-mark{background:#111;border:1px solid #cda747;color:#f0d47c}
+.dashboard-role-head h3{font-size:22px}
+.dashboard-overview{grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}
+.dashboard-metric{min-height:112px;padding:16px 17px;border-radius:9px;border:1px solid #e8e5de;box-shadow:0 2px 8px #00000007}
+.dashboard-metric:before{height:4px}
+.dashboard-metric b{font-size:29px;color:#151515}
+.dashboard-metric:nth-child(4n + 1){background:linear-gradient(145deg,#d8ad43,#f1d77d);border-color:#d5ad4e}
+.dashboard-metric:nth-child(4n + 1) span,.dashboard-metric:nth-child(4n + 1) small{color:#4b3912}
+.dashboard-metric:nth-child(4n + 1) b{color:#17130a}
+.dashboard-overview.merchant-overview{grid-template-columns:repeat(3,minmax(0,1fr))}
+.dashboard-section{min-width:0}
+.dashboard-intro,.dashboard-card{border-radius:9px;box-shadow:0 2px 8px #00000007}
+.dashboard-intro{border-right:3px solid #c9a044}
+.dashboard-intro .eyebrow{color:#a17a22}
+.dashboard-card{margin:10px 0;padding:16px}
+.dashboard-card .gold-btn,.dashboard-section>.gold-btn{background:linear-gradient(105deg,#d1a642,#f0d783 52%,#c6972f);color:#17130a;border:1px solid #d4ad52;font-weight:800}
+.dashboard-card .outline-btn,.dashboard-section .outline-btn{border-color:#d8c58f;color:#73581b}
+.dashboard-panel .dashboard-select:focus,.dashboard-panel input:focus,.dashboard-panel textarea:focus{outline:2px solid #d8b85e;outline-offset:1px}
+.courier-stat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.courier-stat-grid article:first-child{background:linear-gradient(145deg,#d8ad43,#f1d77d);border-color:#d5ad4e}
+.courier-stat-grid article:first-child b,.courier-stat-grid article:first-child span{color:#49360d}
+.dashboard-drawer .merchant-program-terms{border-top:3px solid #caa34b}
+.dashboard-panel .empty-note{border-radius:9px;background:#fff}
+@media(max-width:1050px){
+ .dashboard-panel{grid-template-columns:205px minmax(0,1fr);padding:18px;gap:15px}
+ .dashboard-overview{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+ .dashboard-panel{grid-template-columns:minmax(0,1fr);padding:12px 10px 24px;gap:11px}
+ .dashboard-action-grid{min-height:0;padding:68px 8px 8px;grid-template-columns:repeat(3,minmax(0,1fr));border-radius:10px}
+ .dashboard-action-grid:before{top:10px;right:10px;left:10px;padding-bottom:9px;font-size:16px}
+ .dashboard-action-grid:after{top:34px;font-size:7px}
+ .dashboard-action-grid button{min-height:52px;font-size:8px}
+ .dashboard-overview,.dashboard-overview.merchant-overview{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .dashboard-metric{min-height:88px;padding:11px}
+ .dashboard-metric b{font-size:23px}
+ .dashboard-role-head h3{font-size:16px}
+ .courier-stat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
