@@ -1340,3 +1340,26 @@ html,body,#root,.app-shell,main{background:#0a0a0a!important;color:#f5f2e9!impor
  .account-metrics{gap:5px!important}
  .account-metrics button{min-height:82px!important}
 }
+
+
+/* Notification inbox and unread indicator */
+.header-notifications{position:relative!important}
+.header-notifications>i{position:absolute!important;top:-5px!important;right:-5px!important;min-width:17px!important;height:17px!important;padding:0 4px!important;border-radius:12px!important;background:#d4af37!important;color:#090909!important;border:1px solid #080808!important;font:800 9px/15px Alexandria,sans-serif!important;text-align:center!important;font-style:normal!important}
+.notification-inbox{display:flex!important;flex-direction:column!important;gap:10px!important;min-height:55vh!important;padding-top:10px!important}
+.notification-inbox-head{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;padding:12px!important;background:#141414!important;border:1px solid var(--tb-border)!important;border-radius:12px!important}
+.notification-inbox-head>div{display:grid!important;gap:4px!important}
+.notification-inbox-head b{color:#f0d273!important;font-size:13px!important}
+.notification-inbox-head small{color:#aaa397!important;font-size:9px!important;line-height:1.7!important}
+.notification-inbox-head .outline-btn,.notification-item .outline-btn{min-height:32px!important;padding:0 10px!important;font-size:9px!important;white-space:nowrap!important}
+.notification-item{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;padding:13px!important;background:#141414!important;border:1px solid rgba(255,255,255,.08)!important;border-radius:11px!important}
+.notification-item.unread{border-color:rgba(212,175,55,.5)!important;background:linear-gradient(110deg,#19170f,#141414)!important}
+.notification-item>div{display:grid!important;gap:6px!important;min-width:0!important}
+.notification-item b{font-size:11px!important;color:#f5f2e9!important;line-height:1.7!important}
+.notification-item p{font-size:10px!important;color:#c4bdaf!important;line-height:1.9!important;margin:0!important;overflow-wrap:anywhere!important}
+.notification-item small{font-size:8px!important;color:#938b7c!important}
+@media(max-width:760px){
+ .notification-inbox{min-height:60vh!important}
+ .notification-item{align-items:flex-start!important;padding:11px!important}
+ .notification-item b{font-size:10px!important}
+ .notification-item p{font-size:9px!important}
+}
