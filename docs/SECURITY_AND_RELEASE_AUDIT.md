@@ -27,8 +27,8 @@ Project: existing Supabase project `reuglumqogdpxsdvaupe` (Frankfurt / eu-centra
 - Supabase Auth leaked-password protection is still disabled. Enable it in Supabase Dashboard → Authentication → Settings / Password Security.
 - The live Supabase migration history contains the initial schema and security migrations, but the repository currently lacks the first 12 historical migration files. Do not run `supabase db reset` or recreate the project from repository migrations until a baseline schema snapshot or the missing migrations are restored.
 - End-to-end checkout, courier OTP delivery, returns and settlement payout still require real test accounts and test orders.
-- The existing merchant acceptance record is still version 1.1; the active merchant must sign in and re-accept version 1.2 before accepting orders.
-- No active courier accounts exist yet. Create a normal buyer account for the delivery person, then activate it from the admin dashboard.
+- One active merchant acceptance for version 1.2 is currently recorded. Confirm the intended merchant account can sign in and that its own store is active before the first order.
+- One active courier account is currently recorded. Confirm the intended courier can sign in, receive an assigned test shipment and complete delivery with the buyer OTP.
 - There are no orders or order items yet. A customer test order and courier OTP handoff are still required.
 - Confirm the delivery fee and courier coverage/operating policy before public launch.
 - Configure production hosting, environment variables, domain and transactional email delivery after the owner completes the required account steps.
@@ -50,3 +50,12 @@ Project: existing Supabase project `reuglumqogdpxsdvaupe` (Frankfurt / eu-centra
 - Performance advisor reports unused indexes and multiple permissive read/admin policies. These are not removed automatically: the project has almost no production traffic, and several policies intentionally allow public active-catalogue reads alongside administrator management.
 - No live customer order was created as part of these checks; checkout, courier OTP, return handling and settlements still need an end-to-end test with dedicated test accounts.
 - Added the buyer-side return request form to delivered orders. It uses the existing database trigger that validates order ownership, delivered status, the six-hour standard return window, and exceptional damaged/wrong-item claims.
+
+
+## Follow-up verification — 2026-11-27
+
+- Read-only live database counts: 0 orders, 0 order items, 1 active courier, 1 merchant acceptance on terms version 1.2, and 0 pending merchant applications.
+- The admin ad-media bucket accepts JPEG/PNG/WebP/AVIF images and MP4/WebM/OGG video, with a 100 MB upload limit. The storefront upload controls now match those supported video MIME types and validate external ad links as HTTP(S).
+- Added the in-app notification inbox, unread indicator, read-one/read-all actions and admin role-targeted announcements. External browser/mobile push delivery is not configured and remains dependent on a push provider and credentials.
+- Latest GitHub Actions run for the current branch passed TypeScript/production build and lint after correcting the announcement role-array type.
+- Checkout, delivery OTP, returns and settlement still require an end-to-end test order; do not treat zero test orders as a verified buyer-to-courier workflow.
