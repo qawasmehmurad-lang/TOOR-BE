@@ -1626,3 +1626,9 @@ body{padding-bottom:0!important}
  .seller-start-button{width:auto!important;min-width:104px!important;max-width:120px!important}
  .product-modal-social-actions button{font-size:9px!important}
 }
+
+
+.product-modal-media .product-spin-preview{display:none!important}
+.product-modal-media .product-thumbnails{display:flex!important;justify-content:center!important;gap:8px!important;max-width:100%!important;overflow-x:auto!important;padding:8px!important}
+.product-modal-media .product-thumbnails img{width:54px!important;height:54px!important;object-fit:contain!important;background:#181818!important}
+.product-modal-media .product-thumbnails button{flex:0 0 58px!important;width:58px!important;height:58px!important}
