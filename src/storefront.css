@@ -1285,3 +1285,58 @@ body{background:#0a0a0a!important}
  backdrop-filter:blur(8px)!important;box-shadow:none!important
 }
 .home-overlay-header .header-actions .icon-btn{background:rgba(10,10,10,.28)!important;border-color:rgba(212,175,55,.28)!important}
+
+
+/* Final luxury polish: prevent late legacy selectors from whitening core screens */
+:root{color-scheme:dark}
+html,body,#root,.app-shell,main{background:#0a0a0a!important;color:#f5f2e9!important}
+.app-shell{max-width:none!important}
+.site-header.new-store-header.home-overlay-header{position:absolute!important;top:0!important;left:0!important;right:0!important;background:rgba(8,8,8,.025)!important;border:0!important;backdrop-filter:none!important;box-shadow:none!important;z-index:45!important}
+.home-overlay-header .header-actions .icon-btn{background:rgba(8,8,8,.08)!important;border-color:rgba(212,175,55,.18)!important;backdrop-filter:none!important}
+.fashion-hero.ad-image-carousel{width:100%!important;margin:0!important;border-radius:0!important;min-height:clamp(300px,48vw,620px)!important}
+.ad-image-track,.ad-image-slide{min-height:inherit!important;height:inherit!important}
+.ad-image-slide{display:block!important;position:relative!important;width:100%!important}
+.ad-image-slide>img{display:block!important;width:100%!important;height:100%!important;min-height:inherit!important;object-fit:cover!important;object-position:center!important}
+.ad-image-slide:after{content:"";position:absolute;inset:48% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.32));pointer-events:none}
+.admin-ad-plus{position:fixed!important;right:16px!important;bottom:calc(88px + env(safe-area-inset-bottom))!important;z-index:95!important;width:48px!important;height:48px!important;border:1px solid #f0d77b!important;border-radius:50%!important;background:linear-gradient(140deg,#f0d77b,#b88c26)!important;color:#080808!important;box-shadow:0 8px 26px #0009!important;display:grid!important;place-items:center!important}
+.admin-ad-plus svg{width:24px!important;height:24px!important}
+.account-page,.cart-page,.cart-checkout-panel,.cart-coupons-rewards,.account-panel-card,.account-profile-head,.account-metrics,.account-metrics button,.account-tools-grid button,.account-order-shortcuts button,.cart-store-group,.cart-product-row,.cart-page-line,.cart-page-summary,.cart-empty-state,.cart-benefit-strip,.cart-toolbar,.cart-coupon-entry,.cart-available-coupon,.cart-checkout-total,.checkout-form,.order-card,.orders-panel,.empty-cart,.account-panel,.product-modal,.modal-info,.product-modal-media,.review-form,.coupon-popup-backdrop,.coupon-ticket,.policy-dialog,.search-page,.search-page-field,.search-suggestions button{background:#141414!important;color:#f5f2e9!important;border-color:var(--tb-border)!important}
+.account-page,.cart-page{background:#0a0a0a!important}
+.account-profile-head{background:linear-gradient(120deg,#181818,#101010)!important}
+.account-identity b,.account-card-title>b,.cart-page>h2,.cart-page-line b,.cart-product-name,.cart-coupons-rewards>header b,.cart-empty-state h2,.modal-info h2,.review-form>b,.cart-checkout-heading h2{color:#f5f2e9!important}
+.account-identity small,.account-panel-card p,.account-order-card small,.cart-empty-state p,.cart-coupons-rewards>header small,.cart-coupons-rewards .section-sub,.cart-available-coupon small,.cart-benefit-strip,.cart-toolbar,.cart-page-line small,.modal-info p,.review-form small{color:#aaa397!important}
+.account-metrics button{border-color:var(--tb-border)!important;color:#f5f2e9!important}
+.account-metrics button b,.cart-page-line strong,.cart-page-summary>b,.cart-bottom-actions>strong,.cart-total-line strong{color:#f0d273!important}
+.account-panel-card,.cart-store-group,.cart-product-row,.cart-coupons-rewards,.cart-coupon-entry,.cart-checkout-panel,.cart-checkout-total,.review-form{border:1px solid var(--tb-border)!important;border-radius:13px!important;box-shadow:0 8px 24px #0005!important}
+.cart-available-coupon{border:1px dashed #d4af3780!important;background:#19170f!important}
+.cart-available-coupon b,.cart-available-coupon strong{color:#f0d273!important}
+.cart-coupon-entry input,.checkout-form input,.checkout-form textarea,.review-form select,.review-form textarea,.account-page input,.account-page select,.account-page textarea{background:#1b1b1b!important;color:#fff!important;border:1px solid var(--tb-border)!important}
+.cart-page-summary,.cart-bottom-checkout{background:rgba(12,12,12,.97)!important;border-color:var(--tb-border)!important}
+.cart-empty-state>svg,.empty-cart>svg{color:#f0d273!important}
+.product-modal-media{background:#101010!important}
+.product-thumbnails button,.variant-options button{background:#1b1b1b!important;color:#eee!important;border-color:var(--tb-border)!important}
+.variant-group>b,.product-category{color:#d4af37!important}
+.product-modal-actions{background:rgba(10,10,10,.97)!important;border-color:var(--tb-border)!important}
+.policy-dialog{background:#141414!important;color:#f5f2e9!important}
+.policy-dialog p,.policy-dialog li{color:#c7c0b2!important}
+.policy-close{background:#1b1b1b!important;color:#f0d273!important;border-color:var(--tb-border)!important}
+.coupon-ticket{background:linear-gradient(145deg,#1b1b1b,#0c0c0c)!important;color:#f5f2e9!important;border:1px solid var(--tb-border)!important}
+.coupon-ticket h3,.coupon-ticket p,.coupon-ticket small{color:#eee!important}
+.search-page{min-height:70vh}
+.search-page-field input{background:transparent!important;color:#fff!important}
+.search-suggestions button{border-bottom:1px solid var(--tb-border)!important}
+.video-ad-space{background:#0b0b0b!important}
+.video-ad-link,.video-ad-link video{display:block!important;width:100%!important;max-height:65vh!important;object-fit:cover!important}
+.admin-ad-manager .admin-ad-form{border-radius:13px!important}
+.admin-ad-manager .video-admin-section{border-top:1px solid var(--tb-border)!important}
+@media(max-width:760px){
+ .fashion-hero.ad-image-carousel{min-height:clamp(260px,78vw,420px)!important;height:clamp(260px,78vw,420px)!important}
+ .ad-image-track,.ad-image-slide{height:100%!important;min-height:100%!important}
+ .admin-ad-plus{right:12px!important;bottom:calc(82px + env(safe-area-inset-bottom))!important;width:44px!important;height:44px!important}
+ .account-page,.cart-page{padding-bottom:100px!important}
+ .cart-checkout-panel{padding:12px!important}
+ .cart-empty-state{min-height:55vh;padding:35px 16px!important}
+ .cart-empty-state h2{font-size:18px!important}
+ .account-metrics{gap:5px!important}
+ .account-metrics button{min-height:82px!important}
+}
