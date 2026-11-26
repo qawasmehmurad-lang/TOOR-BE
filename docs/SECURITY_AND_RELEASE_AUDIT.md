@@ -37,3 +37,15 @@ Project: existing Supabase project `reuglumqogdpxsdvaupe` (Frankfurt / eu-centra
 - No existing orders, products, users, stores or storage objects were deleted by this audit.
 - Do not expose Supabase service-role keys in the browser or mobile application.
 - All schema changes in this audit were additive or privilege-restricting.
+
+## Follow-up verification — 2026-11-26
+
+- The live project now has 33 public tables; Row Level Security is enabled on all 33.
+- Added indexes for all five foreign-key columns identified as missing by the performance advisor on support reports and support messages.
+- The signed-in buyer favorites interface now reads and writes the existing `favorites` table using stable product UUIDs; the table's owner-only RLS policy remains in force.
+- Added a database-level `BEFORE INSERT` guard on `orders`: a buyer must have an existing, unblocked profile, and an authenticated caller cannot create an order for another user's profile. This also protects order creation through security-definer RPCs.
+- GitHub Actions run 125 passed both the TypeScript/production build and lint checks for the favorites change. Run 126 (including the order guard migration) is still being checked at the time of this update.
+- Security advisor still reports nine authenticated-callable `SECURITY DEFINER` functions. Their current definitions were inspected: each enforces the relevant administrator, courier, buyer, or ownership check internally; do not revoke their execute grants without replacing the application workflows.
+- Security advisor still reports leaked-password protection disabled. This remains a required dashboard-side action before public launch.
+- Performance advisor reports unused indexes and multiple permissive read/admin policies. These are not removed automatically: the project has almost no production traffic, and several policies intentionally allow public active-catalogue reads alongside administrator management.
+- No live customer order was created as part of these checks; checkout, courier OTP, return handling and settlements still need an end-to-end test with dedicated test accounts.
