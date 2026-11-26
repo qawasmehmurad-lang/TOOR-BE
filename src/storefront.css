@@ -1487,3 +1487,7 @@ body{padding-bottom:0!important}
  .seller-cta{grid-template-columns:1fr!important}
  .seller-start-button{width:100%!important}
 }
+
+
+.product-review-comment{display:-webkit-box!important;-webkit-box-orient:vertical!important;-webkit-line-clamp:2!important;overflow:hidden!important;min-height:22px!important;margin-top:4px!important;color:#a9a18f!important;font-size:8px!important;line-height:1.6!important;animation:tbReviewRise .5s ease-out both!important}
+@media(max-width:760px){.product-review-comment{font-size:6px!important;line-height:1.45!important;min-height:18px!important;margin-top:3px!important}}
