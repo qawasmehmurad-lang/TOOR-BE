@@ -1363,3 +1363,9 @@ html,body,#root,.app-shell,main{background:#0a0a0a!important;color:#f5f2e9!impor
  .notification-item b{font-size:10px!important}
  .notification-item p{font-size:9px!important}
 }
+
+.announcement-form{display:flex!important;flex-direction:column!important;gap:12px!important}
+.announcement-form label{display:flex!important;flex-direction:column!important;gap:7px!important;color:#e8dfca!important;font-size:10px!important}
+.announcement-form input,.announcement-form textarea,.announcement-form select{width:100%!important;min-height:43px!important;padding:10px 12px!important;border:1px solid var(--tb-border)!important;border-radius:9px!important;background:#1b1b1b!important;color:#fff!important;font:inherit!important}
+.announcement-form textarea{min-height:110px!important;resize:vertical!important;line-height:1.8!important}
+.announcement-form small{color:#aaa397!important;font-size:9px!important;line-height:1.8!important}
