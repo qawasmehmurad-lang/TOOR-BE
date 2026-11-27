@@ -553,3 +553,55 @@ body::before{
 @media(prefers-reduced-motion:reduce){
   body::before{animation-duration:.7s}
 }
+
+
+/* Branded delivery service selector with a clear gold selected check. */
+.delivery-speed-picker{
+  display:grid!important;gap:10px!important;margin:16px 0!important;padding:15px!important;
+  border:1px solid rgba(201,164,75,.3)!important;border-radius:16px!important;
+  background:linear-gradient(145deg,#17150f,#0d0d0d)!important;
+}
+.delivery-speed-heading{display:grid!important;gap:5px!important;margin-bottom:3px!important}
+.delivery-speed-heading>b{color:#f1d38a!important;font-size:13px!important;font-weight:800!important}
+.delivery-speed-heading>small{color:#999184!important;font-size:10px!important;line-height:1.7!important}
+.delivery-speed-picker label{
+  position:relative!important;display:flex!important;align-items:center!important;gap:11px!important;
+  min-height:83px!important;padding:13px!important;border:1px solid #34312a!important;
+  border-radius:13px!important;background:linear-gradient(120deg,#191919,#111)!important;
+  cursor:pointer!important;transition:border-color .18s ease,background .18s ease,box-shadow .18s ease!important;
+}
+.delivery-speed-picker label.selected{
+  border:1.5px solid #d4af37!important;
+  background:linear-gradient(120deg,rgba(201,164,75,.16),rgba(201,164,75,.045))!important;
+  box-shadow:inset 0 0 0 1px rgba(212,175,55,.08),0 0 16px rgba(201,164,75,.07)!important;
+}
+.delivery-speed-picker label>input{
+  position:absolute!important;width:1px!important;height:1px!important;
+  opacity:0!important;pointer-events:none!important;
+}
+.delivery-speed-check{
+  display:grid!important;place-items:center!important;flex:0 0 25px!important;
+  width:25px!important;height:25px!important;border:1.5px solid #655a43!important;
+  border-radius:50%!important;background:#101010!important;color:transparent!important;
+  font-size:15px!important;font-weight:900!important;line-height:1!important;
+}
+.delivery-speed-picker label.selected .delivery-speed-check{
+  border-color:#e6c45e!important;background:linear-gradient(145deg,#f3d77e,#b98a2d)!important;
+  color:#17130a!important;box-shadow:0 0 10px rgba(212,175,55,.28)!important;
+}
+.delivery-speed-details{display:grid!important;gap:4px!important;flex:1!important;min-width:0!important}
+.delivery-speed-details>strong{color:#f5eddb!important;font-size:12px!important;font-weight:800!important}
+.delivery-speed-details>small{color:#aaa397!important;font-size:9px!important;line-height:1.6!important}
+.delivery-speed-picker label.selected .delivery-speed-details>strong{color:#f3d77e!important}
+.delivery-speed-price{display:grid!important;justify-items:end!important;gap:5px!important;flex:0 0 auto!important}
+.delivery-speed-price>b{color:#e7c16a!important;font-size:13px!important;font-weight:900!important;white-space:nowrap!important}
+.delivery-speed-price>small{color:#918979!important;font-size:8px!important;white-space:nowrap!important}
+.delivery-speed-picker label:focus-within{outline:2px solid rgba(231,193,106,.65)!important;outline-offset:3px!important}
+@media(max-width:420px){
+  .delivery-speed-picker{padding:12px!important;gap:9px!important}
+  .delivery-speed-picker label{gap:8px!important;padding:10px!important;min-height:78px!important}
+  .delivery-speed-check{flex-basis:23px!important;width:23px!important;height:23px!important}
+  .delivery-speed-details>strong{font-size:11px!important}
+  .delivery-speed-details>small{font-size:8px!important}
+  .delivery-speed-price>b{font-size:11px!important}
+}
