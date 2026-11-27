@@ -6,3 +6,6 @@ grant execute on function public.get_my_deliveries() to authenticated;
 
 revoke all on function public.courier_update_shipment(uuid,text,text,text) from anon, public;
 grant execute on function public.courier_update_shipment(uuid,text,text,text) to authenticated;
+
+revoke all on function public.regenerate_delivery_otp(uuid) from anon, public;
+grant execute on function public.regenerate_delivery_otp(uuid) to authenticated;
