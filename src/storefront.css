@@ -2753,3 +2753,16 @@ body{padding-bottom:0!important}
  .app-shell .cart-checkout-heading{align-items:center!important}
  .app-shell .cart-checkout-heading h2{font-size:15px!important}
 }
+
+
+/* Site-wide refinement: keep structural separators understated without changing the palette. */
+.app-shell :where(article,section,aside,form,header,footer,nav,details,summary){
+ border-color:rgba(212,175,55,.13);
+}
+.app-shell :where(.drawer,.drawer-panel,.modal,.modal-content,.product-modal,.review-modal,.admin-ad-form,.video-admin-section,.coupon-admin-form,.account-panel-card,.dashboard-card,.dashboard-intro){
+ border-color:rgba(212,175,55,.14)!important;
+ box-shadow:0 8px 24px rgba(0,0,0,.13)!important;
+}
+.app-shell :where(.drawer,.modal,.product-modal,.review-modal,.admin-ad-form,.video-admin-section,.coupon-admin-form){
+ border-radius:14px!important;
+}
