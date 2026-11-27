@@ -3846,3 +3846,75 @@ body{padding-bottom:0!important}
   outline:0!important;
   box-shadow:none!important;
 }
+
+
+/* Completed orders are accessed from the same compact benefit tiles as shipping and rewards. */
+.account-benefit-menu{
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+}
+.completed-orders-detail{
+  display:grid!important;
+  gap:9px!important;
+}
+.completed-order-row{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto!important;
+  align-items:center!important;
+  gap:7px 12px!important;
+  margin-top:8px!important;
+  padding:12px!important;
+  border:1px solid rgba(212,175,55,.22)!important;
+  border-radius:10px!important;
+  background:linear-gradient(140deg,#19170f,#111)!important;
+}
+.completed-order-row>div{
+  display:grid!important;
+  gap:4px!important;
+  min-width:0!important;
+}
+.completed-order-row>div>b{
+  color:#f0d273!important;
+  font-size:11px!important;
+}
+.completed-order-row>div>small{
+  color:#aaa397!important;
+  font-size:9px!important;
+}
+.completed-order-row>strong{
+  color:#f0d273!important;
+  font-size:10px!important;
+  white-space:nowrap!important;
+}
+.completed-order-row>button{
+  grid-column:1/-1!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:5px!important;
+  min-height:34px!important;
+  border:1px solid rgba(212,175,55,.3)!important;
+  border-radius:8px!important;
+  background:#17130a!important;
+  color:#f0d273!important;
+  font:inherit!important;
+  font-size:10px!important;
+}
+.completed-order-row>button svg{
+  width:14px!important;
+  height:14px!important;
+}
+.account-tools-grid>button:has(>svg+span){
+  align-content:center!important;
+}
+.account-tools-grid>button>span{
+  display:block!important;
+  font-size:10px!important;
+}
+@media(max-width:760px){
+  .account-benefit-menu{
+    grid-template-columns:1fr!important;
+  }
+  .completed-order-row{
+    padding:10px!important;
+  }
+}
