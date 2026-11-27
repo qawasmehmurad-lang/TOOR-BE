@@ -3973,7 +3973,7 @@ body{padding-bottom:0!important}
   display:flex!important;align-items:center!important;justify-content:center!important;gap:5px!important;
   min-height:37px!important;padding:0 11px!important;border:1px solid #d4af37!important;
   border-radius:8px!important;background:linear-gradient(135deg,#e5c568,#b78b2d)!important;
-  color:#100e09!important;font:700 10px inherit!important;white-space:nowrap!important;
+  color:#100e09!important;font-family:inherit!important;font-size:10px!important;font-weight:700!important;white-space:nowrap!important;
 }
 .benefit-coupon-card>.gold-btn svg{width:14px!important;height:14px!important}
 .benefit-points-summary{display:grid!important;justify-items:center!important;gap:6px!important;padding:16px!important;text-align:center!important}
