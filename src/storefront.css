@@ -2081,3 +2081,20 @@ body{padding-bottom:0!important}
   box-sizing:border-box!important;
   mix-blend-mode:normal!important;
 }
+
+
+/* Assigned coupon discount marker on eligible product cards. */
+.product-image>.coupon-product-badge{
+ top:10px!important;right:10px!important;left:auto!important;
+ background:linear-gradient(135deg,#f8e7ad,#d4aa4d 58%,#fff0bd)!important;
+ color:#241a08!important;border:1px solid #f5df9b!important;
+ border-radius:6px!important;padding:6px 9px!important;
+ font-size:10px!important;font-weight:900!important;letter-spacing:.2px;
+ box-shadow:0 3px 12px #0005,0 0 12px #e5bd5b45;
+ z-index:3;white-space:nowrap
+}
+.product-image>.coupon-product-badge.has-existing-badge{top:43px!important}
+@media(max-width:760px){
+ .product-image>.coupon-product-badge{top:7px!important;right:7px!important;padding:4px 6px!important;font-size:8px!important}
+ .product-image>.coupon-product-badge.has-existing-badge{top:34px!important}
+}
