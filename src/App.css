@@ -406,7 +406,7 @@
 
 /* TOOR BE order lifecycle: animated royal-gold text and icons, never card backgrounds */
 .order-category-tabs{display:flex;gap:7px;overflow-x:auto;padding:8px 0 12px;scrollbar-width:thin}
-.order-category-tabs button{flex:0 0 auto;border:1px solid #3a3323;background:#111;color:#c9c2b2;border-radius:999px;padding:9px 13px;font:700 11px inherit;white-space:nowrap}
+.order-category-tabs button{flex:0 0 auto;border:1px solid #3a3323;background:#111;color:#c9c2b2;border-radius:999px;padding:9px 13px;font:inherit;font-size:11px;font-weight:700;white-space:nowrap}
 .order-category-tabs button.active{border-color:#c6a24a;color:#f0d27a;box-shadow:0 0 12px #c6a24a22}
 .lifecycle-order-card{display:grid;gap:12px}
 .lifecycle-order-summary,.admin-order-history-head{width:100%;display:flex;align-items:center;justify-content:space-between;gap:9px;text-align:right;border:0;background:transparent;color:inherit;padding:2px 0;cursor:pointer}
@@ -449,7 +449,7 @@
 .admin-order-history-card>small{font-size:9px;color:#999}
 .merchant-order-journey{border-top:1px solid #302a20;padding-top:9px;display:grid;gap:7px}
 .merchant-order-journey>b{font-size:10px;color:#e1bf64}
-.order-lifecycle-progress.compact{grid-template-columns:repeat(5,minmax(0,1fr));padding-top:5px}
+.order-lifecycle-progress.compact{grid-template-columns:repeat(9,minmax(0,1fr));padding-top:5px}
 .order-lifecycle-progress.compact .order-lifecycle-track{top:10px}
 .order-lifecycle-progress.compact>span{font-size:8px;text-align:center;color:#777;position:relative;z-index:1}
 .order-lifecycle-progress.compact>span.complete{color:#e1bf64}
