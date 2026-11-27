@@ -464,3 +464,40 @@
 .order-lifecycle-stage.pending .order-lifecycle-icon{background:#111;color:#70654b}
 
 .order-lifecycle-stage.complete:not(.current) b{animation:none;background-position:50% center}.order-lifecycle-stage.complete:not(.current) .order-lifecycle-icon{animation:none;filter:none}.order-lifecycle-stage.current .order-lifecycle-icon{animation:toorGoldPulse 3.8s ease-in-out infinite}
+
+/* Courier delivery details, completed archive, and delivery-speed checkout */
+.delivery-speed-picker{display:grid;gap:10px;margin:16px 0;padding:14px;border:1px solid #34302a;border-radius:16px;background:#101010}
+.delivery-speed-picker> b{color:#f1d38a}
+.delivery-speed-picker label{display:flex;align-items:center;gap:10px;padding:12px;border:1px solid #343434;border-radius:12px;cursor:pointer}
+.delivery-speed-picker label.selected{border-color:#c9a44b;background:rgba(201,164,75,.08)}
+.delivery-speed-picker input{accent-color:#c9a44b}
+.delivery-speed-picker label span{display:grid;gap:4px;flex:1}
+.delivery-speed-picker label strong{color:#f4f0e7}
+.delivery-speed-picker label small{color:#aaa;font-size:12px}
+.delivery-speed-picker label>b{color:#e7c16a;white-space:nowrap}
+.courier-earnings-summary{display:grid;gap:8px;border-color:#8d7138}
+.courier-earnings-summary strong{font-size:26px;color:#e8c66f}
+.courier-earnings-summary small{color:#aaa;line-height:1.7}
+.courier-delivery-card{display:grid;gap:14px}
+.courier-delivery-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.courier-delivery-head strong{color:#e8c66f;font-size:13px}
+.courier-delivery-total{display:flex;gap:8px 18px;flex-wrap:wrap;padding:12px;border-radius:12px;background:#171717;color:#ddd}
+.courier-delivery-total b{color:#e8c66f}
+.courier-delivery-columns{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.courier-delivery-columns>section{min-width:0;padding:12px;border:1px solid #292929;border-radius:12px}
+.courier-delivery-columns>section>b{display:block;color:#e8c66f;margin-bottom:8px}
+.courier-delivery-columns p{margin:6px 0;color:#ccc;line-height:1.6}
+.courier-delivery-columns a{display:inline-block;color:#e8c66f;text-decoration:underline;margin:4px 0;overflow-wrap:anywhere}
+.courier-delivery-columns small{display:block;color:#aaa;line-height:1.6}
+.courier-product-row{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid #292929}
+.courier-product-row:last-child{border-bottom:0}
+.courier-product-row img{width:58px;height:68px;object-fit:contain;border-radius:8px;background:#222}
+.courier-product-row>div{display:grid;gap:4px;min-width:0}
+.courier-product-row strong{color:#eee}
+.courier-product-row small{color:#aaa}
+.courier-product-row b{color:#e8c66f}
+.courier-store-row{padding:8px 0;border-bottom:1px solid #292929}
+.courier-store-row:last-child{border-bottom:0}
+.courier-delivery-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;color:#aaa;font-size:12px;line-height:1.6}
+.courier-delivery-card.completed{border-color:#66532e}
+@media(max-width:560px){.courier-delivery-total{display:grid}.courier-delivery-columns{grid-template-columns:1fr}.courier-delivery-meta{grid-template-columns:1fr 1fr}.delivery-speed-picker label{align-items:flex-start}}
