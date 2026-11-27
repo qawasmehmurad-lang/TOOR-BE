@@ -2098,3 +2098,54 @@ body{padding-bottom:0!important}
  .product-image>.coupon-product-badge{top:7px!important;right:7px!important;padding:4px 6px!important;font-size:8px!important}
  .product-image>.coupon-product-badge.has-existing-badge{top:34px!important}
 }
+
+
+/* Product grid: remove inner image gutters so both sides align edge-to-edge. */
+.product-card{
+  padding:0!important;
+  box-sizing:border-box!important;
+  min-width:0!important;
+}
+.product-image{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  aspect-ratio:3/4!important;
+  margin:0!important;
+  padding:0!important;
+  box-sizing:border-box!important;
+  overflow:hidden!important;
+  position:relative!important;
+}
+.product-image>img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  max-height:none!important;
+  margin:0 auto!important;
+  padding:0!important;
+  box-sizing:border-box!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  background:transparent!important;
+  mix-blend-mode:normal!important;
+}
+@media(max-width:760px){
+  .product-image{
+    width:100%!important;
+    aspect-ratio:3/4!important;
+    height:auto!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  .product-image>img{
+    width:100%!important;
+    height:100%!important;
+    margin:0 auto!important;
+    padding:0!important;
+    object-fit:cover!important;
+    object-position:center center!important;
+  }
+}
