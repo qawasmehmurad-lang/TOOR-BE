@@ -3731,3 +3731,87 @@ body{padding-bottom:0!important}
 .buyer-order-otp{display:grid;gap:8px;padding-top:10px;border-top:1px solid #332b1c}
 @keyframes buyerOrderIconFill{0%,100%{height:32%}55%{height:82%}}
 @media(max-width:390px){.buyer-order-progress-card{padding:11px!important}.buyer-order-progress-icon{width:32px;height:32px}.buyer-order-progress-track{top:25px}.buyer-order-progress-step>b{font-size:8px}}
+
+
+/* Homepage product layout: aligned side-by-side cards with edge-to-edge imagery. */
+.home-products-section>.product-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  align-items:stretch!important;
+  grid-auto-rows:1fr!important;
+  gap:14px 10px!important;
+}
+.home-products-section>.product-grid>.product-card:nth-child(even){
+  margin-top:0!important;
+}
+.home-products-section>.product-grid>.product-card{
+  min-width:0!important;
+  width:100%!important;
+}
+.home-products-section .product-image{
+  width:100%!important;
+  aspect-ratio:4/5!important;
+  height:auto!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  border-radius:0!important;
+}
+.home-products-section .product-image>img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  padding:0!important;
+  margin:0!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+@media(max-width:760px){
+  .home-products-section>.product-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    column-gap:9px!important;
+    row-gap:12px!important;
+  }
+  .home-products-section .product-image{
+    aspect-ratio:4/5!important;
+    height:auto!important;
+  }
+}
+
+/* Product detail image: larger display while preserving the complete image. */
+.product-modal-media .product-main-image,
+.product-modal-media>img{
+  display:block!important;
+  width:100%!important;
+  height:clamp(320px,58dvh,600px)!important;
+  min-height:280px!important;
+  max-height:58dvh!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  padding:0!important;
+}
+@media(max-width:650px){
+  .product-modal{
+    max-height:calc(100dvh - 10px)!important;
+  }
+  .product-modal-media{
+    width:100%!important;
+    min-height:0!important;
+    padding:8px!important;
+  }
+  .product-modal-media .product-main-image,
+  .product-modal-media>img{
+    height:clamp(300px,54dvh,560px)!important;
+    min-height:260px!important;
+    max-height:54dvh!important;
+    object-fit:contain!important;
+  }
+}
+
+/* Favorites opens as a clean full page without the top navigation bar. */
+.app-shell.favorites-mode>.site-header{
+  display:none!important;
+}
+.app-shell.favorites-mode>main{
+  padding-top:0!important;
+  margin-top:0!important;
+}
