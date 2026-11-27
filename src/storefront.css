@@ -1912,3 +1912,61 @@ body{padding-bottom:0!important}
  .trust-row-lowered{margin-top:56px!important;margin-bottom:0!important;padding-top:12px!important;padding-bottom:10px!important}
  .home-auth-entry{margin-top:0!important}
 }
+
+
+/* Refined home BUY NOW callout and centered split wordmark */
+.home-brand-word{
+ position:static!important;left:auto!important;top:auto!important;transform:none!important;
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ gap:3px!important;direction:ltr!important;white-space:nowrap!important;
+ margin-inline:auto!important;flex:1 1 auto!important;min-width:0!important;
+ font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(21px,6vw,29px)!important;
+ font-weight:900!important;letter-spacing:1.2px!important;line-height:1!important;
+ text-shadow:none!important
+}
+.home-brand-word>span{color:#d4af37!important}
+.home-brand-word>i{color:#fff!important;font-style:normal!important}
+.home-overlay-header .header-notifications{order:0!important}
+.home-overlay-header .home-brand-word{order:1!important}
+.home-overlay-header .header-actions{justify-content:space-between!important}
+.home-buy-cta-row{
+ display:flex!important;justify-content:flex-start!important;align-items:center!important;
+ width:100%!important;min-height:76px!important;padding:0 10px 3px!important;
+ box-sizing:border-box!important
+}
+.home-buy-pointer{
+ direction:ltr!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;
+ gap:8px!important;width:min(100%,270px)!important;height:70px!important;
+ margin:0!important;padding:0!important;position:relative!important;overflow:visible!important;
+ pointer-events:auto!important
+}
+.home-buy-pointer>button{
+ flex:0 0 auto!important;min-height:38px!important;height:38px!important;
+ padding:0 15px!important;border-radius:8px!important;font-size:11px!important;
+ font-weight:900!important;letter-spacing:1px!important;box-shadow:0 3px 12px rgba(212,175,55,.12)!important
+}
+.home-buy-pointer>button svg{width:15px!important;height:15px!important;margin-left:5px!important}
+.home-buy-pointer>svg{
+ display:block!important;flex:1 1 auto!important;min-width:90px!important;max-width:160px!important;
+ height:66px!important;overflow:visible!important
+}
+.home-buy-pointer .buy-arrow-trail,.home-buy-pointer .buy-arrow-head{
+ fill:none!important;stroke:#d4af37!important;stroke-width:3.2!important;
+ stroke-linecap:round!important;stroke-linejoin:round!important;filter:none!important;
+ stroke-dasharray:11 8!important;animation:buyArrowFlow 2.2s linear infinite!important
+}
+.home-buy-pointer .buy-arrow-head{stroke-dasharray:7 5!important;animation:buyArrowHeadFlow 2.2s linear infinite!important}
+@keyframes buyArrowFlow{0%{stroke-dashoffset:0;opacity:.15}12%{opacity:1}78%{opacity:1}100%{stroke-dashoffset:-76;opacity:.12}}
+@keyframes buyArrowHeadFlow{0%,70%{opacity:0;stroke-dashoffset:0}82%{opacity:1}100%{opacity:.1;stroke-dashoffset:-24}}
+.trust-row-lowered{margin-top:88px!important}
+@media(max-width:760px){
+ .home-brand-word{font-size:22px!important;gap:2px!important;letter-spacing:1px!important}
+ .home-buy-cta-row{min-height:68px!important;padding:0 8px 2px!important}
+ .home-buy-pointer{width:min(100%,235px)!important;height:62px!important;gap:5px!important}
+ .home-buy-pointer>button{height:35px!important;min-height:35px!important;padding:0 11px!important;font-size:10px!important}
+ .home-buy-pointer>svg{min-width:76px!important;height:58px!important}
+ .trust-row-lowered{margin-top:82px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .home-buy-pointer .buy-arrow-trail,.home-buy-pointer .buy-arrow-head{animation:none!important;stroke-dasharray:none!important}
+}
