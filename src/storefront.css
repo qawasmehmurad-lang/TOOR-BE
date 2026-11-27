@@ -3110,7 +3110,7 @@ body{padding-bottom:0!important}
   color:#e5c36b!important;
   border-color:transparent!important;
   box-shadow:none!important;
-  text-shadow:0 0 10px #d4af3720!important;
+  text-shadow:none!important;
 }
 .category-hierarchy-subnav button.selected{
   background:transparent!important;
