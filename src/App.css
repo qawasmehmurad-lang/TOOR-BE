@@ -1077,3 +1077,7 @@ body::before{
 .drawer:not(.dashboard-drawer):has(.auth-switch) .auth-social-divider:after{background:#6b5429!important}
 .drawer:not(.dashboard-drawer):has(.auth-switch) .account-help{border-top:1px solid #725727!important}
 @media(prefers-reduced-motion:reduce){.drawer:not(.dashboard-drawer):has(.auth-switch):before{animation:none!important}}
+
+/* Respect section visibility state after normalizing dashboard layout */
+.dashboard-panel>.dashboard-overview[style*="display: none"],
+.dashboard-panel>.admin-reference-overview[style*="display: none"]{display:none!important}
