@@ -2,10 +2,10 @@
 :root{
  --tb-black:#080808;--tb-gold:#d4af37;--tb-gold-deep:#9b741c;--tb-gold-pale:#fff0a6;
  --tb-white:#fff;--tb-gray:#f2f2f2;--tb-line:#e7e4dc;--tb-muted:#77736b;
- font-family:Alexandria,Arial,sans-serif;
+ font-family:'Noto Sans Arabic',Arial,sans-serif;
 }
 html{scroll-behavior:smooth;scroll-padding-top:150px}
-body{background:#f1f1f1;color:var(--tb-black);font-family:Alexandria,Arial,sans-serif}
+body{background:#f1f1f1;color:var(--tb-black);font-family:'Noto Sans Arabic',Arial,sans-serif}
 button,a,input,textarea,select{font-family:inherit}
 .app-shell{max-width:1500px;margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 0 35px #00000008}
 .top-strip{height:27px;background:var(--tb-black);color:#e9e5da;font-size:9px}
@@ -2168,3 +2168,17 @@ body{padding-bottom:0!important}
 }
 .category-hierarchy-subnav{padding-top:2px!important;margin-top:-4px!important;margin-bottom:16px!important}
 .category-hierarchy-subnav button{font-size:12px!important;padding:8px 12px!important;background:#101010!important;border-color:#292929!important}
+
+/* TOOR BE unified Arabic typography */
+:root,body,button,input,textarea,select,.app-shell{font-family:'Noto Sans Arabic',Arial,sans-serif!important}
+.round-category b{
+ font-size:clamp(9px,1vw,11px)!important;font-weight:600!important;line-height:1.45!important;
+ min-height:0!important;padding:0!important;border:0!important;border-radius:0!important;
+ background:transparent!important;box-shadow:none!important
+}
+.visual-categories{padding:14px 13px 12px!important}
+.visual-categories .round-category-grid{gap:14px 9px!important}
+.products-section{border:0!important}
+.products-footer{display:none!important;border:0!important}
+.home-category-scroll{border-bottom:0!important}
+.home-category-scroll button{font-size:10px!important;min-height:33px!important;padding:0 11px!important}
