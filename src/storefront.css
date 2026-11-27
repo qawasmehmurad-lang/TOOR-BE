@@ -3227,3 +3227,248 @@ body{padding-bottom:0!important}
   .product-quantity-picker{margin:10px 0 4px!important;padding:8px 0!important}
   .cart-page{padding-bottom:calc(78px + env(safe-area-inset-bottom))!important}
 }
+
+
+/* Responsive layout correction — home, account, cart and bottom navigation */
+.app-shell,
+.app-shell *{
+  box-sizing:border-box;
+}
+.app-shell{
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  overflow-x:clip;
+}
+.app-shell img,
+.app-shell video,
+.app-shell canvas,
+.app-shell svg{
+  max-width:100%;
+}
+.app-shell button,
+.app-shell input,
+.app-shell select,
+.app-shell textarea{
+  min-width:0;
+  max-width:100%;
+}
+
+/* Keep the three home benefits aligned below the hero frame. */
+.trust-row-lowered{
+  width:min(100% - 28px,1180px)!important;
+  margin:clamp(88px,12vh,116px) auto 0!important;
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  align-items:stretch!important;
+  justify-content:center!important;
+  gap:clamp(8px,1.8vw,18px)!important;
+  min-width:0!important;
+}
+.trust-row-lowered>div{
+  min-width:0!important;
+  min-height:68px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  overflow-wrap:anywhere!important;
+}
+
+/* Product cards use equal grid tracks and stretch to the same row height. */
+.home-products-section>.product-grid,
+.products-section>.product-grid{
+  align-items:stretch!important;
+  grid-auto-rows:1fr!important;
+}
+.products-section .product-grid>.product-card{
+  width:100%!important;
+  height:100%!important;
+  min-width:0!important;
+  align-self:stretch!important;
+  display:flex!important;
+  flex-direction:column!important;
+}
+.products-section .product-grid>.product-card>.product-image{
+  flex:0 0 auto!important;
+  width:100%!important;
+  min-width:0!important;
+}
+.products-section .product-grid>.product-card>.product-info{
+  flex:1 1 auto!important;
+  min-width:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+}
+.products-section .product-grid>.product-card .price-row{
+  margin-top:auto!important;
+}
+
+/* Account content ends with its real content; it does not fill an artificial viewport. */
+.account-page{
+  min-height:0!important;
+  height:auto!important;
+  margin-bottom:0!important;
+  padding-bottom:14px!important;
+  align-content:start!important;
+}
+.account-page>*:last-child{
+  margin-bottom:0!important;
+}
+
+/* Purchase summary remains in document flow in every cart stage. */
+.cart-mode .cart-page{
+  min-height:0!important;
+  height:auto!important;
+  padding-bottom:16px!important;
+}
+.cart-mode .cart-bottom-checkout{
+  position:relative!important;
+  inset:auto!important;
+  top:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  left:auto!important;
+  transform:none!important;
+  z-index:1!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin:16px 0 0!important;
+  padding:12px max(12px,env(safe-area-inset-left,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-right,0px))!important;
+}
+.cart-mode .cart-checkout-panel{
+  min-height:0!important;
+  height:auto!important;
+  margin-bottom:0!important;
+  padding-bottom:12px!important;
+}
+.cart-mode .cart-bottom-actions{
+  width:100%!important;
+  min-width:0!important;
+  justify-content:space-between!important;
+  gap:10px!important;
+}
+.cart-mode .cart-bottom-actions .cart-primary-checkout{
+  flex:1 1 0!important;
+  min-width:0!important;
+  max-width:100%!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+}
+.cart-mode .cart-bottom-actions>strong{
+  flex:0 0 auto!important;
+  max-width:42%!important;
+  white-space:nowrap!important;
+}
+
+/* Center the bottom navigation inside the physical viewport and remove its gold frame. */
+@media(max-width:760px){
+  .mobile-bottom,
+  .cart-mode .mobile-bottom{
+    position:fixed!important;
+    left:max(8px,env(safe-area-inset-left,0px))!important;
+    right:max(8px,env(safe-area-inset-right,0px))!important;
+    bottom:max(8px,env(safe-area-inset-bottom,0px))!important;
+    width:auto!important;
+    max-width:620px!important;
+    margin:0 auto!important;
+    transform:none!important;
+    box-sizing:border-box!important;
+    height:66px!important;
+    padding:5px 6px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:2px!important;
+    border:0!important;
+    outline:0!important;
+    border-radius:16px!important;
+    background:rgba(15,15,15,.94)!important;
+    box-shadow:0 8px 24px rgba(0,0,0,.34)!important;
+    overflow:visible!important;
+  }
+  .mobile-bottom button,
+  .cart-mode .mobile-bottom button{
+    flex:1 1 0!important;
+    min-width:0!important;
+    max-width:none!important;
+    height:54px!important;
+    padding:3px 1px!important;
+    border:0!important;
+    outline:0!important;
+    border-radius:10px!important;
+    box-shadow:none!important;
+    background:transparent!important;
+    overflow:visible!important;
+  }
+  .mobile-bottom button.on,
+  .cart-mode .mobile-bottom button.on{
+    border:0!important;
+    outline:0!important;
+    box-shadow:none!important;
+    background:transparent!important;
+  }
+  .mobile-bottom button>svg{
+    flex:0 0 auto!important;
+    width:clamp(17px,5vw,21px)!important;
+    height:clamp(17px,5vw,21px)!important;
+  }
+  .mobile-bottom button:after{
+    max-width:100%!important;
+    white-space:nowrap!important;
+    font-size:clamp(7px,2vw,8px)!important;
+  }
+  .mobile-bottom button i{
+    right:calc(50% - 20px)!important;
+  }
+  .trust-row-lowered{
+    width:calc(100% - 20px)!important;
+    margin-top:clamp(72px,10vh,96px)!important;
+    gap:5px!important;
+  }
+  .trust-row-lowered>div{
+    min-height:64px!important;
+    padding:5px 2px!important;
+  }
+  .trust-row-lowered>div b{
+    font-size:clamp(7px,2.15vw,9px)!important;
+    line-height:1.5!important;
+  }
+  .trust-row-lowered>div small{
+    font-size:clamp(6px,1.8vw,7px)!important;
+    line-height:1.4!important;
+  }
+  .account-page{
+    padding-bottom:12px!important;
+  }
+  .cart-mode .cart-page{
+    padding-bottom:12px!important;
+  }
+  .cart-mode .cart-bottom-checkout{
+    padding-left:max(12px,env(safe-area-inset-left,0px))!important;
+    padding-right:max(12px,env(safe-area-inset-right,0px))!important;
+    padding-bottom:12px!important;
+  }
+}
+@media(max-width:360px){
+  .mobile-bottom{
+    left:max(5px,env(safe-area-inset-left,0px))!important;
+    right:max(5px,env(safe-area-inset-right,0px))!important;
+    padding-right:3px!important;
+    padding-left:3px!important;
+    gap:0!important;
+  }
+  .mobile-bottom button:after{
+    font-size:7px!important;
+  }
+  .trust-row-lowered>div b{
+    font-size:7px!important;
+  }
+}
+@media(min-width:761px){
+  .mobile-bottom{display:none!important}
+  .trust-row-lowered{margin-top:clamp(88px,12vh,116px)!important}
+}
+@supports not (overflow:clip){
+  .app-shell{overflow-x:hidden}
+}
