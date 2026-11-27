@@ -462,3 +462,5 @@
 .order-lifecycle-stage.complete b{background:linear-gradient(90deg,#9b7628 0%,#f8df98 42%,#b48a30 70%,#9b7628 100%);background-size:220% auto;background-clip:text;-webkit-background-clip:text;color:transparent;animation:toorGoldShine 5.5s linear infinite}
 @keyframes toorGoldShine{to{background-position:220% center}}
 .order-lifecycle-stage.pending .order-lifecycle-icon{background:#111;color:#70654b}
+
+.order-lifecycle-stage.complete:not(.current) b{animation:none;background-position:50% center}.order-lifecycle-stage.complete:not(.current) .order-lifecycle-icon{animation:none;filter:none}.order-lifecycle-stage.current .order-lifecycle-icon{animation:toorGoldPulse 3.8s ease-in-out infinite}
