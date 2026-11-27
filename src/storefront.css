@@ -4469,3 +4469,108 @@ body{padding-bottom:0!important}
 .onboarding-step-actions>button{flex:1!important;min-height:46px!important}
 .onboarding-step-actions>.outline-btn{background:#111!important;color:#e6c778!important;border:1px solid #51452b!important}
 .onboarding-panel .auth-form>b{display:block!important;text-align:right!important;color:#f0d17e!important;font-size:13px!important;margin:5px 0!important}
+
+
+/* TOOR-BE unified merchant & courier dashboard refresh — complete responsive visual system */
+.dashboard-panel:has(.merchant-dashboard-nav),.dashboard-panel:has(.courier-dashboard-nav){
+ direction:rtl!important;display:grid!important;grid-template-columns:250px minmax(0,1fr)!important;grid-template-areas:"head nav" "overview nav" "content nav"!important;align-items:start!important;gap:18px 22px!important;padding:24px!important;background:radial-gradient(ellipse at 90% 0%,#fff9e8 0%,#f5f3ed 42%,#eceae3 100%)!important;color:#17140d!important;min-width:0!important
+}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-role-head,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-role-head{grid-area:head!important;display:flex!important;align-items:center!important;gap:14px!important;padding:20px!important;border:1px solid #d7c18a!important;border-radius:20px!important;background:linear-gradient(125deg,#fff 0%,#fbf7eb 58%,#f0e4c1 100%)!important;box-shadow:0 10px 30px #4a371410!important;min-width:0!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-sidebar,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-sidebar{grid-area:nav!important;display:grid!important;position:sticky!important;top:14px!important;align-self:start!important;width:100%!important;max-height:calc(100dvh - 150px)!important;overflow:auto!important;padding:13px!important;border:1px solid #5a4823!important;border-radius:19px!important;background:linear-gradient(165deg,#211b0d,#080808 76%)!important;box-shadow:0 14px 32px #0002!important;grid-template-columns:1fr!important;gap:7px!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-sidebar>button,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-sidebar>button{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;min-height:49px!important;padding:11px 13px!important;border:1px solid transparent!important;border-radius:12px!important;background:transparent!important;color:#e4ddca!important;text-align:right!important;font-size:11px!important;font-weight:800!important;white-space:normal!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-sidebar>button svg,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-sidebar>button svg{width:19px!important;height:19px!important;color:#d4af37!important;flex:0 0 19px!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-sidebar>button.active,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-sidebar>button.active{background:linear-gradient(110deg,#d4af37,#f3e5ab 52%,#c49a32)!important;color:#17130a!important;border-color:#f6e7b4!important;box-shadow:0 5px 15px #d4af3730!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-sidebar>button.active svg,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-sidebar>button.active svg{color:#17130a!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-overview,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-overview{grid-area:overview!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:13px!important;margin:0!important;padding:0!important;background:transparent!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-metric,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-metric{min-width:0!important;min-height:116px!important;padding:18px!important;border:1px solid #e3d6b5!important;border-radius:17px!important;background:#fff!important;box-shadow:0 6px 20px #30230b0b!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:5px!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-metric:nth-child(2n),.dashboard-panel:has(.courier-dashboard-nav) .dashboard-metric:nth-child(2n){background:linear-gradient(145deg,#fff,#fbf5e5)!important;border-color:#d4af3780!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-metric span,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-metric span{font-size:11px!important;color:#796b4e!important;font-weight:800!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-metric b,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-metric b{font-size:28px!important;line-height:1.2!important;color:#17140d!important;font-weight:900!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-metric small,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-metric small{font-size:10px!important;color:#93866b!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-overview-foot,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-overview-foot{grid-column:1/-1!important;padding:14px 17px!important;border:1px dashed #c9ae68!important;border-radius:14px!important;background:#fffaf0!important;color:#76643c!important;font-size:11px!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-section,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-section{grid-area:content!important;min-width:0!important;display:block!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-intro,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-intro{padding:20px!important;margin:0 0 15px!important;border:1px solid #e2d5b5!important;border-right:5px solid #d4af37!important;border-radius:17px!important;background:linear-gradient(120deg,#fff,#fbf6e8)!important;box-shadow:0 7px 22px #34260d0b!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-intro h3,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-intro h3{font-size:17px!important;color:#17140d!important;font-weight:900!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-intro p,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-intro p{font-size:11px!important;line-height:1.9!important;color:#776d59!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-card,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-card{padding:18px!important;margin:0 0 13px!important;border:1px solid #e5dcc8!important;border-radius:17px!important;background:#fff!important;box-shadow:0 7px 22px #30230b0a!important;gap:12px!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-card b,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-card b{font-size:13px!important;color:#211b0d!important;font-weight:900!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-card p,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-card p{font-size:11px!important;line-height:1.9!important;color:#6d6659!important;overflow-wrap:anywhere!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-card small,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-card small{font-size:10px!important;line-height:1.8!important;color:#8a806d!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .gold-btn,.dashboard-panel:has(.courier-dashboard-nav) .gold-btn{min-height:43px!important;border-radius:12px!important;font-weight:900!important;box-shadow:0 5px 15px #d4af3725!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-role-head h3,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-role-head h3{font-size:19px!important;color:#17140d!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-role-head p,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-role-head p{font-size:10px!important;color:#776d59!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-role-mark,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-role-mark{width:52px!important;height:52px!important;flex:0 0 52px!important;border-radius:16px!important;background:linear-gradient(145deg,#17130a,#403014)!important;border:1px solid #d4af37!important;color:#f3e5ab!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-menu-toggle,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-menu-toggle{display:none!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-live,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-live{margin-inline-start:auto!important;padding:7px 11px!important;border:1px solid #d4af3780!important;border-radius:99px!important;background:#fff!important;color:#78602b!important;font-size:10px!important;font-weight:900!important}
+.dashboard-panel:has(.merchant-dashboard-nav) .dashboard-live i,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-live i{background:#c79c32!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-stat-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;margin:14px 0!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-stat-grid article{min-height:112px!important;padding:17px!important;border:1px solid #e1d4b4!important;border-radius:16px!important;background:#fff!important;box-shadow:0 6px 18px #0000000a!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-stat-grid article b{font-size:25px!important;color:#211b0d!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-stat-grid article span{font-size:10px!important;color:#786d58!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-card{padding:19px!important;border:1px solid #ddcfaa!important;border-radius:18px!important;background:#fff!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-head{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;flex-wrap:wrap!important;padding-bottom:12px!important;border-bottom:1px solid #eee6d5!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-head>b{font-size:14px!important;color:#211b0d!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-head>strong{padding:6px 10px!important;border:1px solid #d4af3780!important;border-radius:99px!important;background:#fbf5e4!important;color:#765916!important;font-size:10px!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-total{display:flex!important;flex-wrap:wrap!important;gap:9px 16px!important;padding:13px!important;border-radius:13px!important;background:#17140d!important;color:#f5e7bd!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-total span{font-size:10px!important;color:#d2c6a8!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-total b{font-size:12px!important;color:#f3d77f!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-columns{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-columns>section{min-width:0!important;padding:14px!important;border:1px solid #eee6d5!important;border-radius:13px!important;background:#fffdf8!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-columns>section>b{display:block!important;margin-bottom:8px!important;color:#80642c!important;font-size:11px!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-columns a,.dashboard-panel:has(.courier-dashboard-nav) .courier-store-row a{color:#87671f!important;font-weight:800!important;overflow-wrap:anywhere!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-product-row,.dashboard-panel:has(.courier-dashboard-nav) .courier-store-row{display:flex!important;align-items:flex-start!important;gap:10px!important;padding:10px 0!important;border-bottom:1px solid #eee8dc!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-product-row img{width:58px!important;height:68px!important;object-fit:contain!important;border-radius:9px!important;background:#f7f4ec!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-meta{display:flex!important;flex-wrap:wrap!important;gap:8px!important;margin-top:13px!important}
+.dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-meta span{padding:7px 9px!important;border:1px solid #e9dfc9!important;border-radius:9px!important;background:#faf8f2!important;color:#776b53!important;font-size:9px!important}
+@media(max-width:850px){
+ .dashboard-panel:has(.merchant-dashboard-nav),.dashboard-panel:has(.courier-dashboard-nav){grid-template-columns:minmax(0,1fr)!important;grid-template-areas:"head" "nav" "overview" "content"!important;padding:13px!important;gap:12px!important}
+ .dashboard-panel:has(.merchant-dashboard-nav) .dashboard-sidebar,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-sidebar{position:static!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;max-height:none!important;overflow:visible!important;padding:9px!important;gap:7px!important}
+ .dashboard-panel:has(.merchant-dashboard-nav) .dashboard-sidebar>button,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-sidebar>button{min-height:46px!important;padding:8px!important;font-size:10px!important}
+ .dashboard-panel:has(.merchant-dashboard-nav) .dashboard-menu-toggle,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-menu-toggle{display:inline-flex!important}
+ .dashboard-panel:has(.merchant-dashboard-nav) .dashboard-overview,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-overview{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:520px){
+ .dashboard-panel:has(.merchant-dashboard-nav) .dashboard-role-head,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-role-head{padding:13px!important;gap:9px!important;border-radius:15px!important}
+ .dashboard-panel:has(.merchant-dashboard-nav) .dashboard-role-mark,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-role-mark{width:42px!important;height:42px!important;flex-basis:42px!important}
+ .dashboard-panel:has(.merchant-dashboard-nav) .dashboard-role-head h3,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-role-head h3{font-size:15px!important}
+ .dashboard-panel:has(.merchant-dashboard-nav) .dashboard-role-head p,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-role-head p{font-size:9px!important}
+ .dashboard-panel:has(.merchant-dashboard-nav) .dashboard-overview,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-overview{gap:8px!important}
+ .dashboard-panel:has(.merchant-dashboard-nav) .dashboard-metric,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-metric{min-height:94px!important;padding:12px!important}
+ .dashboard-panel:has(.merchant-dashboard-nav) .dashboard-metric b,.dashboard-panel:has(.courier-dashboard-nav) .dashboard-metric b{font-size:23px!important}
+ .dashboard-panel:has(.courier-dashboard-nav) .courier-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+ .dashboard-panel:has(.courier-dashboard-nav) .courier-stat-grid article{min-height:90px!important;padding:12px!important}
+ .dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-columns{grid-template-columns:minmax(0,1fr)!important}
+ .dashboard-panel:has(.courier-dashboard-nav) .courier-delivery-total{display:grid!important;grid-template-columns:minmax(0,1fr)!important}
+}
+
+
+/* Notification inbox: complete readable cards for text and image notifications on every role */
+.notification-inbox{display:flex!important;flex-direction:column!important;gap:12px!important;min-height:55vh!important;padding:12px!important;overflow:visible!important}
+.notification-inbox-head{position:relative!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:14px!important;min-height:104px!important;padding:18px!important;border:1px solid rgba(212,175,55,.42)!important;border-radius:18px!important;background:linear-gradient(120deg,#17140d,#101010 72%)!important;box-shadow:0 8px 22px #0003!important}
+.notification-inbox-head>div{display:grid!important;gap:7px!important;min-width:0!important}
+.notification-inbox-head b{font-size:16px!important;line-height:1.5!important;color:#f1d37d!important;font-weight:900!important}
+.notification-inbox-head small{font-size:11px!important;line-height:1.9!important;color:#bcb4a3!important;white-space:normal!important}
+.notification-item{display:grid!important;grid-template-columns:minmax(0,1fr) 10px!important;align-items:start!important;justify-content:stretch!important;gap:12px!important;width:100%!important;min-width:0!important;min-height:unset!important;height:auto!important;max-height:none!important;padding:17px!important;overflow:visible!important;border:1px solid rgba(212,175,55,.24)!important;border-radius:17px!important;background:linear-gradient(145deg,#181818,#101010)!important;box-shadow:0 5px 16px #0002!important;white-space:normal!important;text-align:right!important}
+.notification-item.unread{border-color:#c5a14b!important;background:linear-gradient(130deg,#211b0d,#141414 72%)!important;box-shadow:0 6px 20px #d4af3715!important}
+.notification-item-action{cursor:pointer!important;transition:border-color .2s,transform .2s,background .2s!important}
+.notification-item-action:active{transform:scale(.995)!important}
+.notification-item-copy{display:grid!important;grid-column:1!important;grid-row:1!important;gap:8px!important;min-width:0!important;width:100%!important;flex:initial!important;overflow:visible!important}
+.notification-item-copy>b,.notification-item b{display:block!important;max-width:100%!important;font-size:14px!important;line-height:1.85!important;color:#f1d37d!important;font-weight:900!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere!important;word-break:normal!important}
+.notification-item-copy>p,.notification-item p{display:block!important;max-width:100%!important;margin:0!important;font-size:12px!important;line-height:2!important;color:#e1ddd4!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important;overflow-wrap:anywhere!important;word-break:normal!important;display:-webkit-box!important;-webkit-line-clamp:unset!important;-webkit-box-orient:vertical!important}
+.notification-item-copy>small,.notification-item small{display:block!important;font-size:10px!important;line-height:1.8!important;color:#a99f8c!important;white-space:normal!important;overflow-wrap:anywhere!important}
+.notification-item-copy .notification-open-hint{color:#d8b45d!important;margin-top:2px!important}
+.notification-item>.notification-image,.notification-item>img.notification-image{grid-column:1/-1!important;grid-row:2!important;display:block!important;width:100%!important;max-width:100%!important;height:auto!important;max-height:340px!important;min-width:0!important;aspect-ratio:16/9!important;object-fit:contain!important;object-position:center!important;padding:5px!important;margin:0!important;border:1px solid rgba(216,180,93,.45)!important;border-radius:13px!important;background:#080808!important}
+.notification-item:has(.notification-image){grid-template-columns:minmax(0,1fr) 10px!important}
+.notification-item:has(.notification-image) .notification-item-copy{grid-row:1!important}
+.notification-unread-dot{grid-column:2!important;grid-row:1!important;width:9px!important;height:9px!important;margin:8px 0 0!important;border-radius:50%!important;background:#e6c36d!important;box-shadow:0 0 0 4px #e6c36d20,0 0 12px #e6c36d88!important}
+@media(max-width:760px){
+ .notification-inbox{padding:8px!important;gap:10px!important}
+ .notification-inbox-head{min-height:90px!important;padding:14px!important;border-radius:15px!important}
+ .notification-inbox-head b{font-size:14px!important}
+ .notification-inbox-head small{font-size:10px!important}
+ .notification-item{padding:14px!important;gap:9px!important;border-radius:15px!important}
+ .notification-item-copy>b,.notification-item b{font-size:12px!important;line-height:1.9!important}
+ .notification-item-copy>p,.notification-item p{font-size:11px!important;line-height:2!important}
+ .notification-item-copy>small,.notification-item small{font-size:9px!important}
+ .notification-item>.notification-image,.notification-item>img.notification-image{max-height:280px!important;aspect-ratio:4/3!important}
+}
