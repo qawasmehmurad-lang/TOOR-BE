@@ -4337,3 +4337,13 @@ body{padding-bottom:0!important}
   .dashboard-section .location-actions{grid-template-columns:1fr!important}
   .dashboard-section .admin-order-history-details{grid-template-columns:1fr!important}
 }
+
+/* Notifications without an attached image use the full message width. */
+.notification-item-action:not(:has(.notification-image)){
+  grid-template-columns:minmax(0,1fr) 10px!important;
+}
+@media(max-width:600px){
+  .notification-item-action:not(:has(.notification-image)){
+    grid-template-columns:minmax(0,1fr) 8px!important;
+  }
+}
