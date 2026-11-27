@@ -1740,12 +1740,13 @@ body{padding-bottom:0!important}
  background:transparent!important;border:0!important;color:#f4d77c!important;text-shadow:0 0 12px #d4af3740!important
 }
 .search-page{
- min-height:70vh!important;padding:5px max(16px,4vw) 80px!important;
+ min-height:70vh!important;padding:0 max(16px,4vw) 80px!important;
+ display:block!important;align-content:start!important;
  background:#090909!important;color:#f4efdf!important
 }
 .search-page-head{
  position:sticky!important;top:0!important;z-index:5!important;
- padding:5px 0 12px!important;margin:0!important;background:#090909!important
+ padding:0 0 12px!important;margin:0!important;background:#090909!important
 }
 .search-back{
  width:40px!important;height:40px!important;flex:0 0 40px!important;
@@ -1853,8 +1854,8 @@ body{padding-bottom:0!important}
  .trust-row-lowered>div small{font-size:7px!important;line-height:1.4!important}
  .home-category-scroll{gap:14px!important;padding:8px 12px!important}
  .home-category-scroll button{font-size:10px!important;min-height:30px!important}
- .search-page{padding:3px 12px 76px!important}
- .search-page-head{padding:3px 0 10px!important}
+ .search-page{padding:0 12px 76px!important}
+ .search-page-head{padding:0 0 10px!important}
  .search-page-field{height:42px!important}
  .cart-primary-checkout{min-height:43px!important;font-size:11px!important}
  .quick-add,.favorite{width:27px!important;height:27px!important;min-width:27px!important;min-height:27px!important}
