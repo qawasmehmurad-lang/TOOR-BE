@@ -2182,3 +2182,21 @@ body{padding-bottom:0!important}
 .products-footer{display:none!important;border:0!important}
 .home-category-scroll{border-bottom:0!important}
 .home-category-scroll button{font-size:10px!important;min-height:33px!important;padding:0 11px!important}
+
+
+/* Final storefront hierarchy, typography and vertical browsing */
+*,*::before,*::after{font-family:'Noto Sans Arabic',Arial,sans-serif!important}
+.category-hierarchy-nav.category-hierarchy-subnav{
+ display:flex!important;flex-wrap:wrap!important;gap:7px 15px!important;overflow:visible!important;
+ padding:5px 2px 16px!important;margin:0 0 12px!important;background:transparent!important;
+}
+.category-hierarchy-subnav button{
+ flex:0 0 auto!important;min-height:0!important;padding:3px 0!important;
+ border:0!important;border-radius:0!important;background:transparent!important;
+ color:#71684f!important;font-size:10px!important;font-weight:500!important;
+ box-shadow:none!important;white-space:nowrap!important
+}
+.category-hierarchy-subnav button.selected{color:#9b741c!important;text-decoration:underline!important;text-underline-offset:4px!important}
+.products-section{padding-top:12px!important;border:0!important}
+.section.visual-categories{margin-top:0!important}
+.products-footer{display:none!important;border:0!important}
