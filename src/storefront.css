@@ -2766,3 +2766,250 @@ body{padding-bottom:0!important}
 .app-shell :where(.drawer,.modal,.product-modal,.review-modal,.admin-ad-form,.video-admin-section,.coupon-admin-form){
  border-radius:14px!important;
 }
+
+
+/* Checkout refinement: borderless dark surfaces and non-overlapping purchase actions. */
+.app-shell .cart-page{
+  background:#080808!important;
+  padding-bottom:calc(126px + env(safe-area-inset-bottom))!important;
+}
+.app-shell .cart-page :is(
+  .cart-benefit-strip,.cart-toolbar,.cart-store-group,.cart-product-row,
+  .cart-coupons-rewards,.cart-available-coupon,.cart-available-rewards,
+  .cart-coupon-entry,.cart-promo-strip,.cart-summary,.cart-page-summary,
+  .cart-bottom-checkout,.cart-checkout-panel,.checkout-form,.saved-address-picker,
+  .cod-note,.free-delivery-note,.cart-checkout-total,.cart-total-line
+){
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:#080808!important;
+}
+.app-shell .cart-page .cart-store-group{
+  padding:8px 0!important;
+  margin:0 0 14px!important;
+  border-radius:0!important;
+}
+.app-shell .cart-page .cart-product-row{
+  border-radius:0!important;
+  padding:12px 0!important;
+  border-top:1px solid rgba(255,255,255,.055)!important;
+  background:transparent!important;
+}
+.app-shell .cart-page .cart-product-row:first-child{border-top:0!important}
+.app-shell .cart-page .cart-coupons-rewards,
+.app-shell .cart-page .cart-coupon-entry,
+.app-shell .cart-page .cart-checkout-panel{
+  margin:14px 0!important;
+  padding:14px 0!important;
+  border-radius:0!important;
+  background:#080808!important;
+}
+.app-shell .cart-page .cart-available-coupon{
+  padding:11px 0!important;
+  border-radius:0!important;
+  border-bottom:1px solid rgba(255,255,255,.055)!important;
+  background:#0d0d0d!important;
+}
+.app-shell .cart-page .cart-coupon-entry>div{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto!important;
+  align-items:stretch!important;
+  gap:9px!important;
+}
+.app-shell .cart-page .cart-coupon-entry input,
+.app-shell .cart-page .checkout-form input,
+.app-shell .cart-page .checkout-form textarea,
+.app-shell .cart-page .checkout-form select{
+  min-width:0!important;
+  width:100%!important;
+  min-height:45px!important;
+  padding:10px 12px!important;
+  border:0!important;
+  outline:1px solid rgba(212,175,55,.12)!important;
+  outline-offset:-1px!important;
+  border-radius:10px!important;
+  background:#151515!important;
+  color:#f5f0e4!important;
+  box-shadow:none!important;
+  font-size:12px!important;
+}
+.app-shell .cart-page .cart-coupon-entry input:focus,
+.app-shell .cart-page .checkout-form input:focus,
+.app-shell .cart-page .checkout-form textarea:focus,
+.app-shell .cart-page .checkout-form select:focus{
+  outline:1px solid rgba(212,175,55,.5)!important;
+}
+.app-shell .cart-page .cart-coupon-entry .outline-btn{
+  min-width:84px!important;
+  min-height:45px!important;
+  border:0!important;
+  border-radius:10px!important;
+  background:linear-gradient(105deg,#a47b20,#e4c66d)!important;
+  color:#151108!important;
+}
+.app-shell .cart-page .cart-checkout-heading{
+  margin-bottom:14px!important;
+  padding-bottom:10px!important;
+  border-bottom:1px solid rgba(255,255,255,.07)!important;
+}
+.app-shell .cart-page .checkout-form{
+  display:grid!important;
+  gap:11px!important;
+  background:transparent!important;
+}
+.app-shell .cart-page .checkout-form .location-actions{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:8px!important;
+}
+.app-shell .cart-page .checkout-form .outline-btn,
+.app-shell .cart-page .cart-topbar .cart-back,
+.app-shell .cart-page .cart-topbar .cart-edit{
+  min-height:42px!important;
+  border:0!important;
+  border-radius:10px!important;
+  background:#171717!important;
+  color:#e7c96e!important;
+}
+.app-shell .cart-page .cod-note{
+  display:flex!important;
+  align-items:center!important;
+  gap:10px!important;
+  padding:12px 0!important;
+  border-radius:0!important;
+  background:linear-gradient(90deg,rgba(212,175,55,.075),transparent)!important;
+}
+.app-shell .cart-page .cart-checkout-total{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:10px!important;
+  padding:13px 0!important;
+  border-radius:0!important;
+  border-top:1px solid rgba(255,255,255,.07)!important;
+  background:transparent!important;
+}
+.app-shell .cart-page .cart-checkout-total>span,
+.app-shell .cart-page .cart-checkout-total>b{
+  min-width:0!important;
+}
+.app-shell .cart-page .cart-checkout-total>span strong,
+.app-shell .cart-page .cart-checkout-total>b strong{
+  display:block!important;
+  white-space:nowrap!important;
+  font-variant-numeric:tabular-nums!important;
+}
+.app-shell .cart-page .cart-checkout-total>b{
+  grid-column:1/-1!important;
+  display:flex!important;
+  justify-content:space-between!important;
+  gap:12px!important;
+  padding-top:12px!important;
+  border-top:1px solid rgba(255,255,255,.08)!important;
+}
+.app-shell .cart-page .cart-primary-checkout,
+.app-shell .cart-page .cart-bottom-actions .cart-primary-checkout{
+  min-height:49px!important;
+  border:0!important;
+  border-radius:12px!important;
+  background:linear-gradient(105deg,#a47b20,#e1c15f 52%,#f0d77b)!important;
+  color:#100e08!important;
+  font-weight:900!important;
+  box-shadow:none!important;
+}
+.app-shell .cart-page .cart-bottom-checkout{
+  /* Keep the coupon above this block and let the page scroll naturally. */
+  position:relative!important;
+  inset:auto!important;
+  top:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  left:auto!important;
+  z-index:auto!important;
+  width:100%!important;
+  margin:18px 0 12px!important;
+  padding:14px 0 12px!important;
+  border:0!important;
+  border-top:1px solid rgba(255,255,255,.08)!important;
+  border-radius:0!important;
+  background:#080808!important;
+  box-shadow:none!important;
+}
+.app-shell .cart-page .cart-bottom-checkout .cart-total-line,
+.app-shell .cart-page .cart-bottom-checkout .cart-bottom-actions{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:12px!important;
+  min-width:0!important;
+  background:transparent!important;
+}
+.app-shell .cart-page .cart-bottom-actions .cart-primary-checkout{
+  flex:1 1 auto!important;
+  min-width:0!important;
+}
+.app-shell .cart-page .cart-bottom-actions>strong,
+.app-shell .cart-page .cart-total-line>strong{
+  flex:0 0 auto!important;
+  white-space:nowrap!important;
+  font-variant-numeric:tabular-nums!important;
+}
+.app-shell .cart-page .cart-bottom-checkout>small{
+  display:flex!important;
+  align-items:flex-start!important;
+  gap:6px!important;
+  margin-top:9px!important;
+  line-height:1.7!important;
+}
+.app-shell .cart-page .cart-promo-strip{
+  padding:10px 0!important;
+  border-radius:0!important;
+  background:transparent!important;
+}
+.app-shell .cart-page .cart-topbar{
+  border:0!important;
+  border-radius:0!important;
+  background:#080808!important;
+  box-shadow:none!important;
+}
+.app-shell .cart-page .cart-topbar .cart-back,
+.app-shell .cart-page .cart-topbar .cart-edit{
+  border:0!important;
+  box-shadow:none!important;
+}
+.app-shell .cart-page .cart-product-row img{
+  border:0!important;
+  box-shadow:none!important;
+}
+@media(max-width:760px){
+  .app-shell .cart-page{
+    padding:0 12px calc(142px + env(safe-area-inset-bottom))!important;
+  }
+  .app-shell .cart-page .cart-bottom-checkout{
+    position:relative!important;
+    margin-bottom:14px!important;
+    padding-bottom:16px!important;
+  }
+  .app-shell .cart-page .cart-bottom-actions{
+    gap:9px!important;
+  }
+  .app-shell .cart-page .cart-bottom-actions .cart-primary-checkout{
+    min-height:48px!important;
+    font-size:11px!important;
+  }
+  .app-shell .cart-page .cart-checkout-total{
+    gap:6px!important;
+  }
+  .app-shell .cart-page .cart-checkout-total>span small{font-size:8px!important}
+  .app-shell .cart-page .cart-checkout-total>span strong{font-size:9px!important}
+  .app-shell .cart-page .cart-checkout-total>b{font-size:11px!important}
+  .app-shell .cart-page .cart-checkout-total>b strong{font-size:14px!important}
+  .app-shell .cart-page .checkout-form .location-actions{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  .app-shell .cart-page .checkout-form .location-actions button{
+    min-width:0!important;
+    white-space:normal!important;
+    line-height:1.5!important;
+  }
+}
