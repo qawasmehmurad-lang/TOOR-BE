@@ -2359,3 +2359,397 @@ body{padding-bottom:0!important}
  background:#fff9e8!important;color:#8a6415!important;font-size:10px!important;font-weight:800!important
 }
 @media(max-width:760px){.courier-order-discount{font-size:8px!important;padding:5px 7px!important}}
+
+
+/* TOOR BE premium border reduction, trend tiles and checkout rhythm */
+.app-shell :is(
+ .product-card,.cart-checkout-panel,.cart-coupon-entry,.cart-store-group,
+ .cart-toolbar,.cart-benefit-strip,.cart-promo-strip,.cart-summary,
+ .cart-page-summary,.cart-product-row,.cart-store-heading,.cart-total-line,
+ .cart-available-coupon,.cart-checkout-total,.cod-note,.free-delivery-note,
+ .saved-address-picker,.review-form,.account-panel-card,.account-profile-head,
+ .dashboard-card,.dashboard-intro,.dashboard-metric,.search-page-field,
+ .search-suggestions button,.coupon-ticket,.policy-dialog
+){
+ border-color:rgba(212,175,55,.13)!important;
+ box-shadow:0 5px 18px rgba(0,0,0,.10)!important;
+}
+.app-shell .product-card{
+ border:0!important;
+ border-radius:0!important;
+ background:transparent!important;
+ box-shadow:none!important;
+}
+.app-shell .cart-checkout-panel{
+ border:0!important;
+ border-radius:18px!important;
+ padding:clamp(14px,2.5vw,24px)!important;
+ background:linear-gradient(155deg,#141414 0%,#0b0b0b 72%)!important;
+ box-shadow:0 12px 30px rgba(0,0,0,.18)!important;
+}
+.app-shell .cart-checkout-heading{
+ gap:12px!important;
+ padding-bottom:13px!important;
+ margin-bottom:16px!important;
+ border-bottom:1px solid rgba(212,175,55,.12)!important;
+}
+.app-shell .cart-checkout-heading h2{
+ color:#f0d273!important;
+ font-size:clamp(16px,2vw,20px)!important;
+ font-weight:800!important;
+}
+.app-shell .cart-checkout-heading button{
+ min-height:38px!important;
+ padding:0 11px!important;
+ border-radius:10px!important;
+ background:rgba(212,175,55,.07)!important;
+ color:#e4c46b!important;
+ font-size:10px!important;
+}
+.app-shell .cart-checkout-panel .checkout-form{
+ width:100%!important;
+ max-width:760px!important;
+ grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ align-items:start!important;
+ gap:12px!important;
+}
+.app-shell .cart-checkout-panel .checkout-form input,
+.app-shell .cart-checkout-panel .checkout-form textarea,
+.app-shell .cart-checkout-panel .checkout-form select{
+ min-width:0!important;
+ min-height:46px!important;
+ padding:11px 13px!important;
+ border:1px solid rgba(212,175,55,.16)!important;
+ border-radius:11px!important;
+ background:linear-gradient(145deg,#171717,#111)!important;
+ color:#f3ead5!important;
+ font-size:12px!important;
+ line-height:1.6!important;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.025)!important;
+}
+.app-shell .cart-checkout-panel .checkout-form input:focus,
+.app-shell .cart-checkout-panel .checkout-form textarea:focus,
+.app-shell .cart-checkout-panel .checkout-form select:focus{
+ outline:1px solid rgba(212,175,55,.42)!important;
+ outline-offset:1px!important;
+}
+.app-shell .cart-checkout-panel .checkout-form input::placeholder,
+.app-shell .cart-checkout-panel .checkout-form textarea::placeholder{
+ color:#968a70!important;
+ opacity:1!important;
+}
+.app-shell .saved-address-picker{
+ grid-column:1/-1!important;
+ display:grid!important;
+ gap:8px!important;
+ padding:12px!important;
+ border:0!important;
+ border-radius:12px!important;
+ background:rgba(212,175,55,.055)!important;
+ color:#e6d6ae!important;
+ font-size:11px!important;
+ font-weight:700!important;
+}
+.app-shell .saved-address-picker select{width:100%!important}
+.app-shell .cart-checkout-panel .checkout-form>input:nth-of-type(5),
+.app-shell .cart-checkout-panel .checkout-form>input:nth-of-type(6),
+.app-shell .cart-checkout-panel .checkout-form>textarea,
+.app-shell .cart-checkout-panel .checkout-form>small,
+.app-shell .cart-checkout-panel .location-actions,
+.app-shell .cart-checkout-panel .checkout-form>.outline-btn.full,
+.app-shell .cart-checkout-panel .cod-note,
+.app-shell .cart-checkout-panel .free-delivery-note,
+.app-shell .cart-checkout-panel .cart-checkout-total,
+.app-shell .cart-checkout-panel .cart-primary-checkout{
+ grid-column:1/-1!important;
+}
+.app-shell .cart-checkout-panel .location-actions{
+ display:grid!important;
+ grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ gap:9px!important;
+}
+.app-shell .cart-checkout-panel .checkout-form button{
+ min-width:0!important;
+ min-height:43px!important;
+ border-radius:11px!important;
+ font-size:11px!important;
+ font-weight:700!important;
+ line-height:1.5!important;
+}
+.app-shell .cart-checkout-panel .checkout-form .outline-btn{
+ border:1px solid rgba(212,175,55,.20)!important;
+ background:rgba(212,175,55,.055)!important;
+ color:#e7cb7d!important;
+}
+.app-shell .cart-checkout-panel .checkout-form>.outline-btn.full{
+ width:100%!important;
+}
+.app-shell .cart-checkout-panel .checkout-form>small{
+ padding:8px 10px!important;
+ border-radius:9px!important;
+ background:rgba(212,175,55,.055)!important;
+ color:#d8c48f!important;
+ font-size:10px!important;
+ direction:ltr!important;
+ text-align:center!important;
+ font-variant-numeric:tabular-nums!important;
+}
+.app-shell .cart-checkout-total{
+ display:grid!important;
+ grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ gap:10px!important;
+ padding:14px!important;
+ border:0!important;
+ border-radius:13px!important;
+ background:linear-gradient(120deg,#19170f,#101010)!important;
+}
+.app-shell .cart-checkout-total>span{
+ display:flex!important;
+ flex-direction:column!important;
+ gap:5px!important;
+ min-width:0!important;
+}
+.app-shell .cart-checkout-total>span small{
+ color:#a99b7d!important;
+ font-size:10px!important;
+}
+.app-shell .cart-checkout-total>span strong{
+ color:#eee4cf!important;
+ font-size:12px!important;
+ font-weight:800!important;
+ white-space:nowrap!important;
+ font-variant-numeric:tabular-nums!important;
+}
+.app-shell .cart-checkout-total>b{
+ grid-column:1/-1!important;
+ display:flex!important;
+ align-items:center!important;
+ justify-content:space-between!important;
+ gap:12px!important;
+ padding-top:11px!important;
+ border-top:1px solid rgba(212,175,55,.15)!important;
+ color:#f0d273!important;
+ font-size:13px!important;
+}
+.app-shell .cart-checkout-total>b strong{
+ color:#f4d77e!important;
+ font-size:17px!important;
+ white-space:nowrap!important;
+ font-variant-numeric:tabular-nums!important;
+}
+.app-shell .cart-checkout-panel .cod-note{
+ border:0!important;
+ border-radius:12px!important;
+ background:linear-gradient(120deg,rgba(212,175,55,.09),rgba(255,255,255,.025))!important;
+}
+.app-shell .cart-checkout-panel .cart-primary-checkout{
+ min-height:49px!important;
+ border:0!important;
+ border-radius:12px!important;
+ background:linear-gradient(105deg,#a47b20,#e1c15f 52%,#f0d77b)!important;
+ color:#100e08!important;
+ font-size:12px!important;
+ font-weight:900!important;
+ box-shadow:0 7px 18px rgba(212,175,55,.13)!important;
+}
+.app-shell .cart-checkout-panel .cart-primary-checkout:disabled{opacity:.45!important}
+.app-shell .cart-coupon-entry{
+ padding:14px!important;
+ border:0!important;
+ border-radius:13px!important;
+ background:linear-gradient(125deg,#17150f,#101010)!important;
+}
+.app-shell .cart-coupon-entry>label{
+ display:block!important;
+ margin-bottom:9px!important;
+ color:#e8cd82!important;
+ font-size:11px!important;
+ font-weight:800!important;
+}
+.app-shell .cart-coupon-entry>div{
+ display:grid!important;
+ grid-template-columns:minmax(0,1fr) auto!important;
+ gap:9px!important;
+}
+.app-shell .cart-coupon-entry input{
+ min-width:0!important;
+ min-height:43px!important;
+ border:1px solid rgba(212,175,55,.16)!important;
+ border-radius:10px!important;
+ background:#121212!important;
+ color:#f5ead0!important;
+ text-align:left!important;
+ direction:ltr!important;
+}
+.app-shell .cart-coupon-entry .outline-btn{
+ min-width:88px!important;
+ min-height:43px!important;
+ padding:0 17px!important;
+ border:0!important;
+ border-radius:10px!important;
+ background:linear-gradient(105deg,#a47b20,#e4c66d)!important;
+ color:#151108!important;
+ font-size:11px!important;
+ font-weight:900!important;
+}
+.app-shell .cart-coupon-entry p{
+ display:flex!important;
+ align-items:center!important;
+ flex-wrap:wrap!important;
+ gap:8px!important;
+ color:#e3c875!important;
+}
+.app-shell .cart-coupon-entry p button{
+ padding:5px 9px!important;
+ border-radius:8px!important;
+ background:rgba(212,175,55,.08)!important;
+ color:#e9ca72!important;
+ text-decoration:none!important;
+}
+.app-shell .cart-store-group{
+ padding:0 13px!important;
+ border:0!important;
+ border-radius:13px!important;
+ background:linear-gradient(145deg,#141414,#0c0c0c)!important;
+}
+.app-shell .cart-store-heading{
+ border-bottom:1px solid rgba(212,175,55,.12)!important;
+}
+.app-shell .cart-product-row{
+ border-top:1px solid rgba(212,175,55,.10)!important;
+ border-bottom:0!important;
+}
+.app-shell .cart-bottom-checkout{
+ border-top:1px solid rgba(212,175,55,.12)!important;
+ box-shadow:0 -8px 22px rgba(0,0,0,.16)!important;
+}
+.app-shell .cart-topbar{
+ border:0!important;
+ border-radius:14px!important;
+ box-shadow:0 8px 24px rgba(0,0,0,.16)!important;
+}
+.app-shell .cart-topbar .cart-back,
+.app-shell .cart-topbar .cart-edit{
+ border:1px solid rgba(212,175,55,.14)!important;
+ border-radius:10px!important;
+ background:rgba(255,255,255,.045)!important;
+}
+.app-shell .cart-primary-checkout,
+.app-shell .cart-bottom-actions .cart-primary-checkout{
+ border:0!important;
+ border-radius:12px!important;
+}
+.app-shell .outline-btn{
+ border-color:rgba(212,175,55,.18)!important;
+ border-radius:10px!important;
+}
+.app-shell .gold-btn{border-radius:11px!important}
+.app-shell .product-sales-count{
+ display:block!important;
+ width:max-content!important;
+ max-width:100%!important;
+ margin:5px auto 0!important;
+ padding:3px 8px!important;
+ border:0!important;
+ border-radius:999px!important;
+ background:rgba(212,175,55,.09)!important;
+ color:#e7c96e!important;
+ font-size:9px!important;
+ font-weight:800!important;
+ line-height:1.4!important;
+ white-space:nowrap!important;
+ direction:rtl!important;
+}
+.app-shell .trends-products-grid{
+ grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ align-items:start!important;
+ column-gap:clamp(8px,2vw,18px)!important;
+ row-gap:22px!important;
+}
+.app-shell .trends-products-grid .product-card{
+ display:flex!important;
+ flex-direction:column!important;
+ min-width:0!important;
+ padding:0!important;
+ border:0!important;
+ border-radius:0!important;
+ background:transparent!important;
+ box-shadow:none!important;
+}
+.app-shell .trends-products-grid .product-image{
+ width:100%!important;
+ height:auto!important;
+ aspect-ratio:1/1!important;
+ overflow:hidden!important;
+ border:0!important;
+ border-radius:12px!important;
+ background:linear-gradient(145deg,#171717,#0d0d0d)!important;
+}
+.app-shell .trends-products-grid .product-image>img{
+ width:100%!important;
+ height:100%!important;
+ padding:7px!important;
+ object-fit:contain!important;
+ mix-blend-mode:normal!important;
+}
+.app-shell .trends-products-grid .product-info{
+ display:flex!important;
+ flex-direction:column!important;
+ align-items:stretch!important;
+ gap:5px!important;
+ padding:8px 1px 0!important;
+ text-align:center!important;
+}
+.app-shell .trends-products-grid .product-category{display:none!important}
+.app-shell .trends-products-grid .product-info h3{
+ min-height:0!important;
+ margin:0!important;
+ color:#f0eadc!important;
+ font-size:11px!important;
+ font-weight:700!important;
+ line-height:1.65!important;
+}
+.app-shell .trends-products-grid .price-row{
+ justify-content:center!important;
+ gap:6px!important;
+ margin-top:2px!important;
+}
+.app-shell .trends-products-grid .rating{justify-content:center!important}
+.app-shell .trends-products-grid .product-review-comment{
+ min-height:18px!important;
+ margin:0!important;
+ padding:0!important;
+ border:0!important;
+ background:transparent!important;
+ color:#a99d83!important;
+ font-size:8px!important;
+}
+.app-shell .trends-products-grid .product-sales-count{
+ margin:1px auto 0!important;
+ font-size:8px!important;
+}
+@media(max-width:760px){
+ .app-shell .cart-checkout-panel{padding:13px 10px!important;border-radius:14px!important}
+ .app-shell .cart-checkout-panel .checkout-form{grid-template-columns:minmax(0,1fr)!important;gap:9px!important}
+ .app-shell .cart-checkout-panel .checkout-form input,
+ .app-shell .cart-checkout-panel .checkout-form textarea,
+ .app-shell .cart-checkout-panel .checkout-form select{min-height:43px!important;font-size:11px!important}
+ .app-shell .cart-checkout-panel .location-actions{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important}
+ .app-shell .cart-checkout-panel .checkout-form button{min-height:41px!important;font-size:9px!important;padding:8px!important}
+ .app-shell .cart-checkout-total{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important;padding:11px 9px!important}
+ .app-shell .cart-checkout-total>span small{font-size:8px!important}
+ .app-shell .cart-checkout-total>span strong{font-size:9px!important}
+ .app-shell .cart-checkout-total>b{font-size:11px!important}
+ .app-shell .cart-checkout-total>b strong{font-size:14px!important}
+ .app-shell .cart-coupon-entry{padding:11px!important}
+ .app-shell .cart-coupon-entry>div{grid-template-columns:minmax(0,1fr) auto!important;gap:6px!important}
+ .app-shell .cart-coupon-entry .outline-btn{min-width:70px!important;padding:0 11px!important;font-size:10px!important}
+ .app-shell .trends-products-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;column-gap:8px!important;row-gap:17px!important}
+ .app-shell .trends-products-grid .product-image{border-radius:9px!important}
+ .app-shell .trends-products-grid .product-info{gap:4px!important;padding-top:6px!important}
+ .app-shell .trends-products-grid .product-info h3{font-size:9px!important;line-height:1.55!important}
+ .app-shell .trends-products-grid .price-row strong{font-size:10px!important}
+ .app-shell .trends-products-grid .product-sales-count{font-size:7px!important;padding:2px 6px!important}
+ .app-shell .cart-checkout-heading{align-items:center!important}
+ .app-shell .cart-checkout-heading h2{font-size:15px!important}
+}
