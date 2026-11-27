@@ -2149,3 +2149,22 @@ body{padding-bottom:0!important}
     object-position:center center!important;
   }
 }
+
+
+/* Hierarchical category navigation */
+.category-hierarchy-nav{
+ display:flex!important;flex-wrap:nowrap!important;gap:8px!important;overflow-x:auto!important;
+ padding:10px 2px 14px!important;margin:0 0 8px!important;scrollbar-width:none!important;
+}
+.category-hierarchy-nav::-webkit-scrollbar{display:none!important}
+.category-hierarchy-nav button{
+ flex:0 0 auto!important;white-space:nowrap!important;border:1px solid #393326!important;
+ border-radius:999px!important;padding:9px 15px!important;background:#151515!important;
+ color:#eee8d8!important;font-size:13px!important;font-weight:700!important;
+}
+.category-hierarchy-nav button.selected{
+ background:linear-gradient(110deg,#a47b20,#f0d47b)!important;color:#111!important;
+ border-color:#e6c15a!important;box-shadow:0 3px 14px #d4af3728!important;
+}
+.category-hierarchy-subnav{padding-top:2px!important;margin-top:-4px!important;margin-bottom:16px!important}
+.category-hierarchy-subnav button{font-size:12px!important;padding:8px 12px!important;background:#101010!important;border-color:#292929!important}
