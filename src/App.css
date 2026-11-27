@@ -456,3 +456,9 @@
 .merchant-order-journey>small{font-size:9px;color:#aaa;line-height:1.6}
 @keyframes toorGoldPulse{0%,100%{filter:drop-shadow(0 0 1px #b78b32);opacity:.82}50%{filter:drop-shadow(0 0 7px #f0d27a);opacity:1}}
 @media(max-width:600px){.order-lifecycle-stage b{font-size:6px}.order-lifecycle-icon{width:21px;height:21px}.order-lifecycle-track{top:20px}.lifecycle-order-summary{flex-wrap:wrap}.lifecycle-order-summary>span:last-child{width:100%;justify-content:flex-start}.admin-order-history-head{flex-wrap:wrap}}
+
+
+.order-lifecycle-stage.complete .order-lifecycle-icon{background:linear-gradient(135deg,#8f6a20,#f5d77d 52%,#b68c32);color:#17130b;box-shadow:0 0 7px #c6a24a35}
+.order-lifecycle-stage.complete b{background:linear-gradient(90deg,#9b7628 0%,#f8df98 42%,#b48a30 70%,#9b7628 100%);background-size:220% auto;background-clip:text;-webkit-background-clip:text;color:transparent;animation:toorGoldShine 5.5s linear infinite}
+@keyframes toorGoldShine{to{background-position:220% center}}
+.order-lifecycle-stage.pending .order-lifecycle-icon{background:#111;color:#70654b}
