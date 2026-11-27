@@ -504,3 +504,52 @@
 
 .courier-dashboard-nav{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:420px){.courier-dashboard-nav{grid-template-columns:repeat(3,minmax(0,1fr))}.courier-dashboard-nav button{padding:9px 4px;font-size:11px}}
+
+
+/* TOOR BE brand image placements: footer, authentication and startup splash. */
+.footer-logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+}
+.footer-logo img{
+  display:block;
+  width:88px;
+  height:72px;
+  object-fit:contain;
+  flex:0 0 auto;
+}
+.footer-logo>span small{
+  color:#d2bd86;
+  font-size:9px;
+  white-space:nowrap;
+}
+.auth-brand-logo{
+  display:block;
+  width:132px;
+  height:132px;
+  max-width:55vw;
+  object-fit:contain;
+  margin:0 auto 3px;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  pointer-events:none;
+  background:#080808 url('/toor.png') center center / min(62vw,260px) auto no-repeat;
+  animation:toor-brand-splash 1.55s ease 0.15s forwards;
+}
+@keyframes toor-brand-splash{
+  0%,68%{opacity:1;visibility:visible}
+  100%{opacity:0;visibility:hidden}
+}
+@media(max-width:760px){
+  .footer-logo img{width:76px;height:64px}
+  .auth-brand-logo{width:118px;height:118px}
+}
+@media(prefers-reduced-motion:reduce){
+  body::before{animation-duration:.7s}
+}
