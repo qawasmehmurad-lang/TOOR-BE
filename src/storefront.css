@@ -4347,3 +4347,103 @@ body{padding-bottom:0!important}
     grid-template-columns:minmax(0,1fr) 8px!important;
   }
 }
+
+
+/* TOOR BE authentication and onboarding — full black and royal gold */
+.drawer:has(.auth-account-panel),.drawer:has(.onboarding-panel){
+  background:#050505!important;color:#f5f0e5!important;border:0!important;
+}
+.drawer:has(.auth-account-panel)>.drawer-head,.drawer:has(.onboarding-panel)>.drawer-head{
+  background:#050505!important;color:#f3d47d!important;border:0!important;
+}
+.drawer:has(.auth-account-panel)>.drawer-head h2,.drawer:has(.onboarding-panel)>.drawer-head h2{color:#f3d47d!important}
+.drawer:has(.auth-account-panel) .account-panel,.drawer:has(.onboarding-panel) .account-panel{
+  width:100%!important;max-width:520px!important;min-height:100%!important;justify-content:center!important;
+  padding:22px 12px!important;background:#050505!important;color:#f4f0e5!important;
+}
+.auth-account-panel h3,.onboarding-panel h3{color:#f3d47d!important;font-size:20px!important;letter-spacing:.1px}
+.auth-account-panel p,.onboarding-panel p{color:#aaa49a!important;line-height:1.9!important}
+.auth-account-panel .auth-brand-logo,.onboarding-panel .auth-brand-logo{
+  width:116px!important;height:116px!important;object-fit:contain!important;margin:0 auto 7px!important;
+  filter:drop-shadow(0 8px 24px rgba(212,175,55,.16))!important;
+}
+.auth-account-panel .auth-switch{
+  background:#101010!important;border:1px solid rgba(212,175,55,.22)!important;border-radius:12px!important;padding:4px!important;
+}
+.auth-account-panel .auth-switch button{color:#aaa!important;background:transparent!important;border-radius:9px!important}
+.auth-account-panel .auth-switch button.active{
+  color:#f7dfa0!important;background:linear-gradient(135deg,#4a3918,#17130b)!important;
+  box-shadow:inset 0 0 0 1px rgba(212,175,55,.42),0 5px 18px #000!important;
+}
+.auth-account-panel .auth-form,.onboarding-panel .auth-form{gap:11px!important}
+.auth-account-panel .auth-form input,.auth-account-panel .auth-form textarea,
+.onboarding-panel .auth-form input,.onboarding-panel .auth-form textarea,
+.onboarding-panel .dashboard-select{
+  width:100%!important;min-height:49px!important;background:#101010!important;color:#f5f0e5!important;
+  border:1px solid #343027!important;border-radius:10px!important;padding:0 14px!important;
+  font-size:13px!important;outline:none!important;box-shadow:none!important;
+}
+.auth-account-panel .auth-form input::placeholder,.onboarding-panel .auth-form input::placeholder,
+.auth-account-panel .auth-form textarea::placeholder,.onboarding-panel .auth-form textarea::placeholder{color:#817b70!important}
+.auth-account-panel .auth-form input:focus,.onboarding-panel .auth-form input:focus,
+.auth-account-panel .auth-form textarea:focus,.onboarding-panel .auth-form textarea:focus,
+.onboarding-panel .dashboard-select:focus{
+  border-color:#c9a44b!important;box-shadow:0 0 0 2px rgba(201,164,75,.13)!important;
+}
+.auth-password-field{position:relative!important;width:100%!important;display:flex!important;align-items:center!important}
+.auth-password-field>input{padding-left:72px!important}
+.auth-password-toggle{
+  position:absolute!important;left:9px!important;top:50%!important;transform:translateY(-50%)!important;
+  min-width:48px!important;height:32px!important;border:1px solid rgba(212,175,55,.28)!important;
+  border-radius:8px!important;background:#211b10!important;color:#e8c875!important;font-size:11px!important;
+}
+.auth-inline-error{display:block!important;width:100%!important;text-align:right!important;color:#ff8c83!important;
+  font-size:11px!important;line-height:1.7!important;margin:-4px 2px 1px!important}
+.auth-forgot-link{align-self:flex-start!important;background:transparent!important;border:0!important;color:#e1bd69!important;
+  padding:3px 0!important;font-size:11px!important;text-decoration:underline!important}
+.auth-forgot-link:disabled{opacity:.6!important}
+.auth-role-picker{width:100%!important;text-align:right!important;color:#d8c99f!important;display:grid!important;gap:8px!important}
+.auth-role-picker>div{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important}
+.auth-role-picker button{min-height:40px!important;border:1px solid #393328!important;border-radius:9px!important;background:#111!important;color:#c6c0b4!important}
+.auth-role-picker button.active{border-color:#c9a44b!important;background:#211a0d!important;color:#f0d17e!important}
+.auth-note{display:block!important;color:#928b7d!important;font-size:10px!important;line-height:1.8!important;text-align:right!important}
+.auth-social-divider{display:flex!important;align-items:center!important;gap:10px!important;color:#8e877a!important;font-size:10px!important}
+.auth-social-divider:before,.auth-social-divider:after{content:""!important;height:1px!important;flex:1!important;background:#29251d!important}
+.auth-social-actions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important}
+.auth-social-actions button{min-height:46px!important;border:1px solid #3b3427!important;border-radius:10px!important;background:#101010!important;color:#eee!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;gap:9px!important;font-size:12px!important}
+.auth-social-actions button b{font:800 17px Arial,sans-serif!important;color:#e5c36f!important}
+.auth-account-panel .account-help,.onboarding-panel .account-help{
+  background:#101010!important;color:#aaa18e!important;border:1px solid #29251d!important;border-radius:10px!important;
+}
+.onboarding-upload{display:flex!important;flex-direction:column!important;gap:8px!important;text-align:right!important;
+  padding:13px!important;border:1px dashed rgba(212,175,55,.48)!important;border-radius:10px!important;
+  background:#0d0d0d!important;color:#e8ca7d!important;font-size:12px!important}
+.onboarding-upload input{min-height:38px!important;padding:7px!important;color:#c9c1b3!important;border:0!important;background:#151515!important}
+.onboarding-location{display:grid!important;gap:8px!important;width:100%!important}
+.onboarding-location small{color:#d6bd7e!important;text-align:right!important;direction:ltr!important}
+.onboarding-panel .outline-btn{background:#111!important;border:1px solid #51452b!important;color:#e6c778!important}
+.auth-account-panel .gold-btn,.onboarding-panel .gold-btn{background:linear-gradient(120deg,#a77d29,#e2c16b,#9d7426)!important;color:#090909!important;border:0!important}
+.auth-account-panel .outline-btn{background:#111!important;color:#e6c778!important;border:1px solid #4a402b!important}
+.auth-account-panel .account-help{width:100%!important}
+@media(max-width:760px){
+ .drawer:has(.auth-account-panel),.drawer:has(.onboarding-panel){padding:16px!important}
+ .drawer:has(.auth-account-panel)>.drawer-head,.drawer:has(.onboarding-panel)>.drawer-head{top:-16px!important}
+ .auth-account-panel .auth-brand-logo,.onboarding-panel .auth-brand-logo{width:98px!important;height:98px!important}
+ .auth-account-panel .auth-form input,.onboarding-panel .auth-form input,
+ .auth-account-panel .auth-form textarea,.onboarding-panel .auth-form textarea,
+ .onboarding-panel .dashboard-select{min-height:47px!important;font-size:12px!important}
+}
+/* Image-only campaign: no frame, caption, close icon, or action button. */
+.notification-campaign-image-link{
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  width:min(96vw,1100px)!important;max-width:96vw!important;height:100dvh!important;max-height:100dvh!important;
+  padding:0!important;margin:0!important;border:0!important;outline:0!important;border-radius:0!important;
+  background:transparent!important;box-shadow:none!important;cursor:pointer!important;
+}
+.notification-campaign-image-link>img{
+  display:block!important;width:100%!important;height:100%!important;max-height:100dvh!important;
+  object-fit:contain!important;border:0!important;border-radius:0!important;outline:0!important;
+  box-shadow:none!important;background:transparent!important;
+}
+.notification-campaign-overlay{padding:0!important;background:rgba(0,0,0,.94)!important}
