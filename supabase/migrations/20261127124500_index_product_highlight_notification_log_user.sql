@@ -1,0 +1,1 @@
+create index if not exists product_highlight_notification_log_user_idx on private.product_highlight_notification_log(user_id);
