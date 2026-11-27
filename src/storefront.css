@@ -2059,3 +2059,24 @@ body{padding-bottom:0!important}
  .home-products-section>.product-grid>.home-buy-cta-row .buy-arrow-accent,
  .home-products-section>.product-grid>.home-buy-cta-row .buy-arrow-head{animation:none!important}
 }
+
+
+/* Product imagery: show the complete source image, centered horizontally and vertically. */
+.product-image{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+}
+.product-image>img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:100%!important;
+  max-height:100%!important;
+  object-fit:contain!important;
+  object-position:50% 50%!important;
+  padding:8px!important;
+  box-sizing:border-box!important;
+  mix-blend-mode:normal!important;
+}
