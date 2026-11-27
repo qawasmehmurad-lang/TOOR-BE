@@ -1645,20 +1645,33 @@ export type Database = {
         Args: never
         Returns: {
           area: string
-          building: string
+          building: string | null
+          buyer_name: string
+          buyer_phone: string
           city: string
-          delivery_notes: string
-          latitude: number
-          longitude: number
+          courier_earning_jod: number
+          created_at: string
+          delivered_at: string | null
+          delivery_fee_jod: number
+          delivery_notes: string | null
+          delivery_speed: string
+          discount_jod: number
+          hub_received_at: string | null
+          items: Json
+          latitude: number | null
+          longitude: number | null
           order_id: string
           order_number: string
           order_status: Database["public"]["Enums"]["order_status"]
-          recipient_name: string
-          recipient_phone: string
+          recipient_name: string | null
+          recipient_phone: string | null
           shipment_id: string
           shipment_status: string
-          street: string
+          stores: Json
+          street: string | null
+          subtotal_jod: number
           total_jod: number
+          picked_up_at: string | null
         }[]
       }
       mark_store_settlement_paid: {
