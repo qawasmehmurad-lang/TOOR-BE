@@ -3918,3 +3918,97 @@ body{padding-bottom:0!important}
     padding:10px!important;
   }
 }
+
+
+/* Unified TOOR BE benefit dialogs: black, royal gold, Arabic typography. */
+.account-benefit-modal-overlay{
+  position:fixed!important;inset:0!important;z-index:1700!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  padding:16px!important;background:rgba(0,0,0,.82)!important;
+  backdrop-filter:blur(8px)!important;
+}
+.account-benefit-modal{
+  width:min(100%,540px)!important;max-height:min(88dvh,780px)!important;
+  overflow:auto!important;padding:0!important;border:1px solid rgba(212,175,55,.48)!important;
+  border-radius:18px!important;background:linear-gradient(155deg,#191919,#090909)!important;
+  color:#f4efdf!important;box-shadow:0 24px 80px #000c!important;
+  font-family:inherit!important;animation:tbReviewRise .24s ease-out both;
+}
+.account-benefit-modal-head{
+  position:sticky!important;top:0!important;z-index:2!important;
+  display:flex!important;align-items:center!important;justify-content:space-between!important;
+  gap:12px!important;padding:17px 18px!important;
+  border-bottom:1px solid rgba(212,175,55,.24)!important;
+  background:rgba(15,15,15,.97)!important;backdrop-filter:blur(10px)!important;
+}
+.account-benefit-modal-head>div{display:grid!important;gap:5px!important}
+.account-benefit-modal-head small{color:#a99565!important;font-size:9px!important;letter-spacing:.4px}
+.account-benefit-modal-head h2{margin:0!important;color:#f0d273!important;font-size:17px!important;font-weight:800!important}
+.account-benefit-modal-head>button{
+  display:grid!important;place-items:center!important;width:36px!important;height:36px!important;
+  flex:0 0 36px!important;border:1px solid #51452b!important;border-radius:50%!important;
+  background:#171717!important;color:#f0d273!important;cursor:pointer!important;
+}
+.account-benefit-modal-head>button svg{width:17px!important;height:17px!important}
+.account-benefit-modal-content{display:grid!important;gap:12px!important;padding:16px!important}
+.benefit-rule-card,.benefit-coupon-card,.benefit-points-summary,.benefit-status-note{
+  border:1px solid rgba(212,175,55,.25)!important;border-radius:12px!important;
+  background:linear-gradient(145deg,#1a180f,#101010)!important;
+}
+.benefit-rule-card{display:grid!important;gap:8px!important;padding:14px!important}
+.benefit-rule-card>b{color:#f0d273!important;font-size:12px!important}
+.benefit-rule-card>strong{color:#fff0a6!important;font-size:13px!important}
+.benefit-rule-card>p{margin:0!important;color:#c2b9a5!important;font-size:10px!important;line-height:1.9!important}
+.benefit-status-note{display:flex!important;align-items:flex-start!important;gap:9px!important;padding:12px!important;color:#e5d7b4!important;font-size:10px!important;line-height:1.8!important}
+.benefit-status-note svg{width:19px!important;height:19px!important;flex:0 0 auto!important;color:#d4af37!important}
+.benefit-footnote{color:#9d9584!important;font-size:9px!important;line-height:1.8!important}
+.benefit-modal-intro{margin:0!important;color:#bdb4a1!important;font-size:10px!important;line-height:1.8!important}
+.benefit-coupon-card{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:12px!important;padding:13px!important}
+.benefit-coupon-info{display:grid!important;gap:6px!important;min-width:0!important}
+.benefit-coupon-info>b{color:#f0d273!important;font-size:12px!important}
+.benefit-coupon-info>strong{color:#fff0a6!important;font-size:17px!important}
+.benefit-coupon-info>small,.benefit-coupon-info>p{margin:0!important;color:#b7ad98!important;font-size:9px!important;line-height:1.7!important}
+.benefit-coupon-code{width:max-content!important;max-width:100%!important;padding:4px 8px!important;border:1px dashed #80652c!important;border-radius:6px!important;background:#17130a!important;color:#f4d77c!important;font:700 10px 'DM Sans','Tajawal',sans-serif!important;letter-spacing:1px!important}
+.benefit-coupon-card>.gold-btn,.benefit-reward-info>.gold-btn{
+  display:flex!important;align-items:center!important;justify-content:center!important;gap:5px!important;
+  min-height:37px!important;padding:0 11px!important;border:1px solid #d4af37!important;
+  border-radius:8px!important;background:linear-gradient(135deg,#e5c568,#b78b2d)!important;
+  color:#100e09!important;font:700 10px inherit!important;white-space:nowrap!important;
+}
+.benefit-coupon-card>.gold-btn svg{width:14px!important;height:14px!important}
+.benefit-points-summary{display:grid!important;justify-items:center!important;gap:6px!important;padding:16px!important;text-align:center!important}
+.benefit-points-summary>span{color:#bdb29b!important;font-size:10px!important}
+.benefit-points-summary>strong{color:#ffe69a!important;font-size:25px!important}
+.benefit-points-summary>small{color:#a99b78!important;font-size:9px!important}
+.benefit-reward-card{
+  display:grid!important;grid-template-columns:100px minmax(0,1fr)!important;gap:12px!important;
+  padding:11px!important;border:1px solid rgba(212,175,55,.25)!important;border-radius:12px!important;
+  background:linear-gradient(145deg,#1a180f,#101010)!important;
+}
+.benefit-reward-card>img{width:100px!important;height:116px!important;object-fit:contain!important;border-radius:8px!important;background:#f2f0e9!important}
+.benefit-reward-info{display:grid!important;align-content:start!important;gap:6px!important;min-width:0!important}
+.benefit-reward-info>b{color:#f0d273!important;font-size:11px!important;line-height:1.7!important}
+.benefit-reward-info>strong{color:#fff0a6!important;font-size:13px!important}
+.benefit-reward-info>small{color:#b7ad98!important;font-size:9px!important;line-height:1.7!important}
+.benefit-reward-info>.gold-btn:disabled{opacity:.42!important;filter:grayscale(.55)!important;cursor:not-allowed!important}
+.benefit-empty-state{display:grid!important;justify-items:center!important;gap:8px!important;padding:28px 14px!important;text-align:center!important;border:1px dashed rgba(212,175,55,.28)!important;border-radius:12px!important;background:#111!important}
+.benefit-empty-state>svg{width:28px!important;height:28px!important;color:#d4af37!important}
+.benefit-empty-state>b{color:#f0d273!important;font-size:12px!important}
+.benefit-empty-state>span{color:#aaa397!important;font-size:9px!important;line-height:1.8!important}
+@media(max-width:600px){
+  .account-benefit-modal-overlay{align-items:center!important;padding:10px!important}
+  .account-benefit-modal{width:100%!important;max-height:90dvh!important;border-radius:15px!important}
+  .account-benefit-modal-head{padding:14px!important}
+  .account-benefit-modal-content{padding:12px!important;gap:10px!important}
+  .benefit-coupon-card{grid-template-columns:1fr!important}
+  .benefit-coupon-card>.gold-btn{width:100%!important}
+  .benefit-reward-card{grid-template-columns:84px minmax(0,1fr)!important;gap:9px!important}
+  .benefit-reward-card>img{width:84px!important;height:104px!important}
+}
+/* Remove the artificial dark tail below the buyer account page. */
+.app-shell:has(.account-page){padding-bottom:0!important}
+.app-shell:has(.account-page)>main{padding-bottom:calc(61px + env(safe-area-inset-bottom))!important}
+.account-page{min-height:0!important;height:auto!important;margin-bottom:0!important;padding-bottom:12px!important}
+@media(min-width:761px){
+  .app-shell:has(.account-page)>main{padding-bottom:0!important}
+}
