@@ -402,3 +402,57 @@
 .round-category b{font-size:clamp(9px,1vw,11px);font-weight:600;line-height:1.45;min-height:0;background:transparent;border:0;box-shadow:none;padding:0}
 .products-section{border:0!important}
 .products-footer{display:none!important}
+
+
+/* TOOR BE order lifecycle: animated royal-gold text and icons, never card backgrounds */
+.order-category-tabs{display:flex;gap:7px;overflow-x:auto;padding:8px 0 12px;scrollbar-width:thin}
+.order-category-tabs button{flex:0 0 auto;border:1px solid #3a3323;background:#111;color:#c9c2b2;border-radius:999px;padding:9px 13px;font:700 11px inherit;white-space:nowrap}
+.order-category-tabs button.active{border-color:#c6a24a;color:#f0d27a;box-shadow:0 0 12px #c6a24a22}
+.lifecycle-order-card{display:grid;gap:12px}
+.lifecycle-order-summary,.admin-order-history-head{width:100%;display:flex;align-items:center;justify-content:space-between;gap:9px;text-align:right;border:0;background:transparent;color:inherit;padding:2px 0;cursor:pointer}
+.lifecycle-order-summary>span:first-child{display:grid;gap:4px}
+.lifecycle-order-summary small,.lifecycle-order-summary>span:last-child{font-size:9px;color:#aaa}
+.lifecycle-order-summary>span:last-child{display:flex;align-items:center;gap:3px}
+.order-lifecycle-progress{position:relative;display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:4px;padding:10px 0 3px;cursor:pointer}
+.order-lifecycle-track{position:absolute;top:21px;right:5.5%;left:5.5%;height:2px;background:#39342a;overflow:hidden}
+.order-lifecycle-track i{display:block;height:100%;background:linear-gradient(90deg,#8b6824,#f5d77d,#c49a3d);transition:width 1.2s ease}
+.order-lifecycle-stage{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0;color:#777}
+.order-lifecycle-icon{width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:#111;color:#71664c}
+.order-lifecycle-icon svg{width:15px;height:15px}
+.order-lifecycle-stage b{font-size:7px;line-height:1.4;text-align:center;font-weight:600}
+.order-lifecycle-stage.complete{color:#d9b85f}
+.order-lifecycle-stage.complete .order-lifecycle-icon{color:#f4d67b;animation:toorGoldPulse 3.8s ease-in-out infinite}
+.order-lifecycle-stage.current .order-lifecycle-icon{color:#fff0b4;filter:drop-shadow(0 0 5px #d4ad4f)}
+.order-lifecycle-details{border-top:1px solid #302a20;padding-top:13px;display:grid;gap:10px}
+.order-lifecycle-details h4{margin:0;color:#e5c36b;font-size:13px}
+.order-lifecycle-event{display:grid;grid-template-columns:13px 1fr;gap:9px;position:relative}
+.order-lifecycle-event:before{content:"";position:absolute;right:5px;top:13px;bottom:-12px;width:1px;background:#39342a}
+.order-lifecycle-event:last-of-type:before{display:none}
+.order-lifecycle-event-dot{width:11px;height:11px;border-radius:50%;border:1px solid #75623b;background:#171717;z-index:1}
+.order-lifecycle-event.complete .order-lifecycle-event-dot{background:#d5ad4c;border-color:#f0d27a;box-shadow:0 0 8px #c6a24a55}
+.order-lifecycle-event b{font-size:11px;color:#d7b75f}
+.order-lifecycle-event.pending b{color:#777}
+.order-lifecycle-event p,.order-lifecycle-event small{display:block;margin:3px 0;color:#aaa;font-size:9px;line-height:1.7}
+.order-detail-products,.order-detail-total,.order-event-history,.admin-order-history-details>div{border-top:1px solid #302a20;padding-top:9px;display:grid;gap:7px}
+.order-detail-products>b,.order-event-history>b,.admin-order-history-details>div>b{color:#e2c16b;font-size:11px}
+.order-detail-products>div,.order-detail-total{display:flex;justify-content:space-between;gap:10px;font-size:10px;color:#ddd}
+.order-detail-total{font-size:12px;color:#f0d27a}
+.order-event-history p,.admin-order-history-details p{font-size:9px;color:#aaa;margin:0;line-height:1.7}
+.cash-received-note{display:flex;align-items:center;gap:7px;color:#e5c36b!important;font-size:10px!important}
+.cash-received-note svg{width:16px;height:16px;flex:none}
+.admin-order-history-card{margin-bottom:10px}
+.admin-order-history-head{margin-bottom:7px}
+.admin-order-history-head b{color:#e5c36b}
+.admin-order-history-head strong{font-size:10px}
+.admin-order-history-head span{font-size:11px}
+.admin-order-history-details{display:grid;gap:12px;margin-top:12px}
+.admin-order-history-card>small{font-size:9px;color:#999}
+.merchant-order-journey{border-top:1px solid #302a20;padding-top:9px;display:grid;gap:7px}
+.merchant-order-journey>b{font-size:10px;color:#e1bf64}
+.order-lifecycle-progress.compact{grid-template-columns:repeat(5,minmax(0,1fr));padding-top:5px}
+.order-lifecycle-progress.compact .order-lifecycle-track{top:10px}
+.order-lifecycle-progress.compact>span{font-size:8px;text-align:center;color:#777;position:relative;z-index:1}
+.order-lifecycle-progress.compact>span.complete{color:#e1bf64}
+.merchant-order-journey>small{font-size:9px;color:#aaa;line-height:1.6}
+@keyframes toorGoldPulse{0%,100%{filter:drop-shadow(0 0 1px #b78b32);opacity:.82}50%{filter:drop-shadow(0 0 7px #f0d27a);opacity:1}}
+@media(max-width:600px){.order-lifecycle-stage b{font-size:6px}.order-lifecycle-icon{width:21px;height:21px}.order-lifecycle-track{top:20px}.lifecycle-order-summary{flex-wrap:wrap}.lifecycle-order-summary>span:last-child{width:100%;justify-content:flex-start}.admin-order-history-head{flex-wrap:wrap}}
