@@ -3835,3 +3835,14 @@ body{padding-bottom:0!important}
     padding-top:0!important;
   }
 }
+
+
+/* Remove both separator lines around the three trust highlights. */
+.trust-row-lowered,
+.trust-row-lowered.trust-row{
+  border-top:0!important;
+  border-bottom:0!important;
+  border-block:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+}
