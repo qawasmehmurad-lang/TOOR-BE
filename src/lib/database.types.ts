@@ -1608,6 +1608,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      regenerate_delivery_otp: { Args: { p_order_id: string }; Returns: string }
       admin_assign_courier: { Args: { p_user_id: string }; Returns: boolean }
       approve_merchant_application: {
         Args: { p_application_id: string; p_store_slug: string }
