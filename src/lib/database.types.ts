@@ -366,6 +366,136 @@ export type Database = {
           },
         ]
       }
+      courier_applications: {
+        Row: {
+          admin_note: string | null
+          alternate_phone: string | null
+          city: string
+          created_at: string
+          id: string
+          license_back_url: string
+          license_front_url: string
+          reviewed_at: string | null
+          reviewed_by: string | null
+          status: string
+          updated_at: string
+          user_id: string
+          vehicle_plate: string
+          vehicle_registration_back_url: string
+          vehicle_registration_front_url: string
+          vehicle_type: string
+        }
+        Insert: {
+          admin_note?: string | null
+          alternate_phone?: string | null
+          city: string
+          created_at?: string
+          id?: string
+          license_back_url: string
+          license_front_url: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          status?: string
+          updated_at?: string
+          user_id: string
+          vehicle_plate: string
+          vehicle_registration_back_url: string
+          vehicle_registration_front_url: string
+          vehicle_type: string
+        }
+        Update: {
+          admin_note?: string | null
+          alternate_phone?: string | null
+          city?: string
+          created_at?: string
+          id?: string
+          license_back_url?: string
+          license_front_url?: string
+          reviewed_at?: string | null
+          reviewed_by?: string | null
+          status?: string
+          updated_at?: string
+          user_id?: string
+          vehicle_plate?: string
+          vehicle_registration_back_url?: string
+          vehicle_registration_front_url?: string
+          vehicle_type?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "courier_applications_reviewed_by_fkey"
+            columns: ["reviewed_by"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "courier_applications_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: true
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      courier_earnings: {
+        Row: {
+          amount_jod: number
+          courier_id: string
+          created_at: string
+          earned_at: string
+          id: string
+          order_id: string
+          paid_at: string | null
+          shipment_id: string
+          status: string
+        }
+        Insert: {
+          amount_jod: number
+          courier_id: string
+          created_at?: string
+          earned_at?: string
+          id?: string
+          order_id: string
+          paid_at?: string | null
+          shipment_id: string
+          status?: string
+        }
+        Update: {
+          amount_jod?: number
+          courier_id?: string
+          created_at?: string
+          earned_at?: string
+          id?: string
+          order_id?: string
+          paid_at?: string | null
+          shipment_id?: string
+          status?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "courier_earnings_courier_id_fkey"
+            columns: ["courier_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "courier_earnings_order_id_fkey"
+            columns: ["order_id"]
+            isOneToOne: false
+            referencedRelation: "orders"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "courier_earnings_shipment_id_fkey"
+            columns: ["shipment_id"]
+            isOneToOne: true
+            referencedRelation: "shipments"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       favorites: {
         Row: {
           created_at: string
@@ -489,33 +619,33 @@ export type Database = {
       loyalty_rewards: {
         Row: {
           created_at: string
+          expires_at: string
           id: string
           is_active: boolean
           points_cost: number
           product_id: string
           reward_value_jod: number
           store_id: string
-          expires_at: string
         }
         Insert: {
           created_at?: string
+          expires_at?: string
           id?: string
           is_active?: boolean
           points_cost?: number
           product_id: string
           reward_value_jod?: number
           store_id: string
-          expires_at?: string | null
         }
         Update: {
           created_at?: string
+          expires_at?: string
           id?: string
           is_active?: boolean
           points_cost?: number
           product_id?: string
           reward_value_jod?: number
           store_id?: string
-          expires_at?: string | null
         }
         Relationships: [
           {
@@ -614,44 +744,72 @@ export type Database = {
       merchant_applications: {
         Row: {
           admin_note: string | null
+          alternate_phone: string | null
           business_description: string | null
+          category_id: string | null
           city: string
           contact_phone: string
           created_at: string
           id: string
+          latitude: number | null
+          license_document_url: string | null
+          logo_url: string | null
+          longitude: number | null
           proposed_store_name: string
           reviewed_at: string | null
           reviewed_by: string | null
           status: string
+          street_address: string | null
           user_id: string
         }
         Insert: {
           admin_note?: string | null
+          alternate_phone?: string | null
           business_description?: string | null
+          category_id?: string | null
           city: string
           contact_phone: string
           created_at?: string
           id?: string
+          latitude?: number | null
+          license_document_url?: string | null
+          logo_url?: string | null
+          longitude?: number | null
           proposed_store_name: string
           reviewed_at?: string | null
           reviewed_by?: string | null
           status?: string
+          street_address?: string | null
           user_id: string
         }
         Update: {
           admin_note?: string | null
+          alternate_phone?: string | null
           business_description?: string | null
+          category_id?: string | null
           city?: string
           contact_phone?: string
           created_at?: string
           id?: string
+          latitude?: number | null
+          license_document_url?: string | null
+          logo_url?: string | null
+          longitude?: number | null
           proposed_store_name?: string
           reviewed_at?: string | null
           reviewed_by?: string | null
           status?: string
+          street_address?: string | null
           user_id?: string
         }
         Relationships: [
+          {
+            foreignKeyName: "merchant_applications_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "categories"
+            referencedColumns: ["id"]
+          },
           {
             foreignKeyName: "merchant_applications_reviewed_by_fkey"
             columns: ["reviewed_by"]
@@ -891,8 +1049,8 @@ export type Database = {
           created_at: string
           delivered_at: string | null
           delivery_fee_jod: number
-          delivery_speed: string
           delivery_otp_hash: string | null
+          delivery_speed: string
           discount_jod: number
           id: string
           order_number: string
@@ -910,8 +1068,8 @@ export type Database = {
           created_at?: string
           delivered_at?: string | null
           delivery_fee_jod?: number
-          delivery_speed?: string
           delivery_otp_hash?: string | null
+          delivery_speed?: string
           discount_jod?: number
           id?: string
           order_number?: string
@@ -930,6 +1088,7 @@ export type Database = {
           delivered_at?: string | null
           delivery_fee_jod?: number
           delivery_otp_hash?: string | null
+          delivery_speed?: string
           discount_jod?: number
           id?: string
           order_number?: string
@@ -1417,13 +1576,17 @@ export type Database = {
       stores: {
         Row: {
           address: string | null
+          alternate_phone: string | null
+          category_id: string | null
           city: string | null
           commission_percent: number
           contact_phone: string | null
           created_at: string
           description: string | null
           id: string
+          is_verified: boolean
           latitude: number | null
+          license_document_url: string | null
           logo_url: string | null
           longitude: number | null
           name: string
@@ -1434,13 +1597,17 @@ export type Database = {
         }
         Insert: {
           address?: string | null
+          alternate_phone?: string | null
+          category_id?: string | null
           city?: string | null
           commission_percent?: number
           contact_phone?: string | null
           created_at?: string
           description?: string | null
           id?: string
+          is_verified?: boolean
           latitude?: number | null
+          license_document_url?: string | null
           logo_url?: string | null
           longitude?: number | null
           name: string
@@ -1451,13 +1618,17 @@ export type Database = {
         }
         Update: {
           address?: string | null
+          alternate_phone?: string | null
+          category_id?: string | null
           city?: string | null
           commission_percent?: number
           contact_phone?: string | null
           created_at?: string
           description?: string | null
           id?: string
+          is_verified?: boolean
           latitude?: number | null
+          license_document_url?: string | null
           logo_url?: string | null
           longitude?: number | null
           name?: string
@@ -1467,6 +1638,13 @@ export type Database = {
           updated_at?: string
         }
         Relationships: [
+          {
+            foreignKeyName: "stores_category_id_fkey"
+            columns: ["category_id"]
+            isOneToOne: false
+            referencedRelation: "categories"
+            referencedColumns: ["id"]
+          },
           {
             foreignKeyName: "stores_owner_id_fkey"
             columns: ["owner_id"]
@@ -1610,15 +1788,22 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      regenerate_delivery_otp: { Args: { p_order_id: string }; Returns: string }
-      buyer_set_order_delivery_speed: {
-        Args: { p_delivery_speed: string; p_order_id: string }
-        Returns: { delivery_fee_jod: number; delivery_speed: string; total_jod: number }[]
-      }
       admin_assign_courier: { Args: { p_user_id: string }; Returns: boolean }
+      approve_courier_application: {
+        Args: { p_application_id: string }
+        Returns: string
+      }
       approve_merchant_application: {
         Args: { p_application_id: string; p_store_slug: string }
         Returns: string
+      }
+      buyer_set_order_delivery_speed: {
+        Args: { p_delivery_speed: string; p_order_id: string }
+        Returns: {
+          delivery_fee_jod: number
+          delivery_speed: string
+          total_jod: number
+        }[]
       }
       courier_update_shipment: {
         Args: {
@@ -1637,42 +1822,53 @@ export type Database = {
         }
         Returns: string
       }
-      get_my_delivery_discounts: {
-        Args: never
-        Returns: { discount_jod: number; order_number: string }[]
-      }
       get_my_deliveries: {
         Args: never
         Returns: {
           area: string
-          building: string | null
+          building: string
           buyer_name: string
           buyer_phone: string
           city: string
           courier_earning_jod: number
           created_at: string
-          delivered_at: string | null
+          delivered_at: string
           delivery_fee_jod: number
-          delivery_notes: string | null
+          delivery_notes: string
           delivery_speed: string
           discount_jod: number
-          hub_received_at: string | null
+          hub_received_at: string
           items: Json
-          latitude: number | null
-          longitude: number | null
+          latitude: number
+          longitude: number
           order_id: string
           order_number: string
           order_status: Database["public"]["Enums"]["order_status"]
-          recipient_name: string | null
-          recipient_phone: string | null
+          picked_up_at: string
+          recipient_name: string
+          recipient_phone: string
           shipment_id: string
           shipment_status: string
           stores: Json
-          street: string | null
+          street: string
           subtotal_jod: number
           total_jod: number
-          picked_up_at: string | null
         }[]
+      }
+      get_my_delivery_discounts: {
+        Args: never
+        Returns: {
+          discount_jod: number
+          order_number: string
+        }[]
+      }
+      is_profile_name_available: {
+        Args: { p_full_name: string }
+        Returns: boolean
+      }
+      is_store_name_available: {
+        Args: { p_store_name: string }
+        Returns: boolean
       }
       mark_store_settlement_paid: {
         Args: { p_settlement_id: string }
@@ -1715,6 +1911,7 @@ export type Database = {
           total_jod: number
         }[]
       }
+      regenerate_delivery_otp: { Args: { p_order_id: string }; Returns: string }
     }
     Enums: {
       app_role: "buyer" | "merchant" | "courier" | "admin"
