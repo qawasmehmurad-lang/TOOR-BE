@@ -1863,3 +1863,52 @@ body{padding-bottom:0!important}
  .trust-row-lowered>div b{font-size:7px!important}
  .trust-row-lowered>div small{font-size:6px!important}
 }
+
+
+/* TOOR BE home layout — final requested composition */
+.home-overlay-header{position:relative!important}
+.home-brand-word{
+ position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;
+ display:block!important;width:max-content!important;padding:0!important;margin:0!important;
+ border:0!important;background:transparent!important;box-shadow:none!important;
+ color:#f0d273!important;font-size:clamp(17px,4.5vw,23px)!important;
+ font-weight:900!important;letter-spacing:1.5px!important;line-height:1!important;
+ text-shadow:0 0 12px rgba(212,175,55,.3)!important;pointer-events:none!important
+}
+.home-products-section{padding-top:5px!important;margin-top:0!important}
+.home-products-section>.section-heading{display:none!important}
+.home-products-section>.product-grid{position:relative!important;padding-top:0!important}
+.home-buy-pointer{
+ position:absolute!important;z-index:4!important;left:3%!important;top:0!important;
+ width:clamp(105px,31vw,155px)!important;height:clamp(76px,23vw,108px)!important;
+ display:flex!important;flex-direction:column!important;align-items:center!important;gap:0!important;
+ pointer-events:none!important;overflow:visible!important
+}
+.home-buy-pointer b{
+ align-self:flex-start!important;margin-left:7px!important;color:#f5d66f!important;
+ font-size:clamp(10px,2.8vw,14px)!important;font-weight:900!important;letter-spacing:2px!important;
+ text-shadow:0 0 5px #f0c84c,0 0 12px #d4af37,0 0 22px #d4af37!important;
+ animation:homeBuyNeon 1.5s ease-in-out infinite alternate!important
+}
+.home-buy-pointer svg{width:100%!important;height:calc(100% - 18px)!important;overflow:visible!important}
+.home-buy-pointer svg path{
+ fill:none!important;stroke:#f2ca50!important;stroke-width:4!important;stroke-linecap:round!important;
+ stroke-linejoin:round!important;filter:drop-shadow(0 0 3px #f5d66f) drop-shadow(0 0 8px #d4af37)!important;
+ animation:homeArrowNeon 1.5s ease-in-out infinite alternate!important
+}
+@keyframes homeBuyNeon{from{opacity:.72;text-shadow:0 0 3px #f0c84c,0 0 7px #d4af37}to{opacity:1;text-shadow:0 0 7px #fff0a6,0 0 16px #f0c84c,0 0 28px #d4af37}}
+@keyframes homeArrowNeon{from{stroke-width:3;filter:drop-shadow(0 0 2px #f5d66f)}to{stroke-width:4.5;filter:drop-shadow(0 0 6px #fff0a6) drop-shadow(0 0 13px #d4af37)}}
+.trust-row-lowered{
+ margin-top:62px!important;margin-bottom:0!important;padding-bottom:12px!important;
+ border:0!important;outline:0!important;box-shadow:none!important
+}
+.trust-row-lowered>div{border:0!important;box-shadow:none!important}
+.home-auth-entry{margin-top:0!important}
+.ad-image-slide .ad-copy-overlay{display:none!important}
+@media(max-width:760px){
+ .home-brand-word{font-size:18px!important;letter-spacing:1.2px!important}
+ .home-products-section{padding-top:2px!important}
+ .home-buy-pointer{left:2%!important;top:0!important;width:clamp(100px,31vw,125px)!important;height:clamp(72px,22vw,88px)!important}
+ .trust-row-lowered{margin-top:56px!important;margin-bottom:0!important;padding-top:12px!important;padding-bottom:10px!important}
+ .home-auth-entry{margin-top:0!important}
+}
