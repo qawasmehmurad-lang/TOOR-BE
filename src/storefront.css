@@ -3013,3 +3013,66 @@ body{padding-bottom:0!important}
     line-height:1.5!important;
   }
 }
+
+
+/* Compact cart drawer checkout follows the same borderless purchase language. */
+.app-shell .drawer:has(.cart-items){
+  max-height:calc(100dvh - env(safe-area-inset-top) - 10px)!important;
+  overflow-y:auto!important;
+  overscroll-behavior:contain!important;
+  background:#080808!important;
+  border:0!important;
+  box-shadow:-12px 0 38px rgba(0,0,0,.35)!important;
+}
+.app-shell .drawer:has(.cart-items) .drawer-head,
+.app-shell .drawer:has(.cart-items) .cart-items,
+.app-shell .drawer:has(.cart-items) .cart-line,
+.app-shell .drawer:has(.cart-items) .checkout-form,
+.app-shell .drawer:has(.cart-items) .cart-summary{
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:#080808!important;
+}
+.app-shell .drawer:has(.cart-items) .cart-line{
+  border-bottom:1px solid rgba(255,255,255,.06)!important;
+  padding:12px 0!important;
+}
+.app-shell .drawer:has(.cart-items) .checkout-form{
+  display:grid!important;
+  gap:10px!important;
+  padding:14px 0 calc(24px + env(safe-area-inset-bottom))!important;
+}
+.app-shell .drawer:has(.cart-items) .checkout-form input,
+.app-shell .drawer:has(.cart-items) .checkout-form textarea{
+  min-height:44px!important;
+  border:0!important;
+  outline:1px solid rgba(212,175,55,.14)!important;
+  outline-offset:-1px!important;
+  border-radius:10px!important;
+  background:#151515!important;
+  color:#f5f0e4!important;
+}
+.app-shell .drawer:has(.cart-items) .checkout-form .checkout-total{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:12px!important;
+  padding:12px 0!important;
+  border-top:1px solid rgba(255,255,255,.07)!important;
+  background:transparent!important;
+}
+.app-shell .drawer:has(.cart-items) .checkout-form .gold-btn,
+.app-shell .drawer:has(.cart-items) .checkout-form .outline-btn{
+  min-height:47px!important;
+  border:0!important;
+  border-radius:11px!important;
+}
+.app-shell .drawer:has(.cart-items) .checkout-form .gold-btn{
+  background:linear-gradient(105deg,#a47b20,#e1c15f 52%,#f0d77b)!important;
+  color:#100e08!important;
+}
+.app-shell .drawer:has(.cart-items) .checkout-form .outline-btn{
+  background:#171717!important;
+  color:#e7c96e!important;
+}
