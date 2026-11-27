@@ -2337,3 +2337,18 @@ body{padding-bottom:0!important}
  .cart-topbar h1{font-size:15px!important}
  .cart-topbar span{font-size:8px!important}
 }
+
+.merchant-order-discount{
+ display:inline-flex!important;align-items:center!important;width:max-content!important;
+ max-width:100%!important;padding:6px 9px!important;border:1px solid #d8bc6b!important;
+ border-radius:7px!important;background:#fff9e8!important;color:#8a6415!important;
+ font-weight:800!important;font-size:10px!important
+}
+.visual-categories{padding-top:14px!important;padding-bottom:12px!important}
+.products-section{padding-top:12px!important}
+@media(max-width:760px){
+ .visual-categories{padding:10px 8px!important}
+ .round-category-grid{row-gap:9px!important}
+ .products-section{padding:9px 8px 25px!important}
+ .merchant-order-discount{font-size:8px!important;padding:5px 7px!important}
+}
