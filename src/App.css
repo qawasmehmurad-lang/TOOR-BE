@@ -501,3 +501,6 @@
 .courier-delivery-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;color:#aaa;font-size:12px;line-height:1.6}
 .courier-delivery-card.completed{border-color:#66532e}
 @media(max-width:560px){.courier-delivery-total{display:grid}.courier-delivery-columns{grid-template-columns:1fr}.courier-delivery-meta{grid-template-columns:1fr 1fr}.delivery-speed-picker label{align-items:flex-start}}
+
+.courier-dashboard-nav{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:420px){.courier-dashboard-nav{grid-template-columns:repeat(3,minmax(0,1fr))}.courier-dashboard-nav button{padding:9px 4px;font-size:11px}}
