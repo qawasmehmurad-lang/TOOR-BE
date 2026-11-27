@@ -1630,6 +1630,10 @@ export type Database = {
         }
         Returns: string
       }
+      get_my_delivery_discounts: {
+        Args: never
+        Returns: { discount_jod: number; order_number: string }[]
+      }
       get_my_deliveries: {
         Args: never
         Returns: {
