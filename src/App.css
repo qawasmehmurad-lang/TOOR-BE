@@ -608,7 +608,7 @@ body::before{
 }
 
 /* TOOR-BE LUXURY CONTROL SUITE — complete visual replacement for admin, merchant and courier dashboards. Presentation only: preserve React actions, data and access control. */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+
 .dashboard-drawer{--tb-gold:#D4AF37;--tb-gold-light:#F3E5AB;--tb-gold-dark:#AA8022;--tb-ink:#0A0A0A;--tb-line:#E5E5EA;--tb-muted:#6E6E73;--tb-canvas:#F5F5F7;font-family:'Cairo',sans-serif!important;background:var(--tb-canvas)!important;color:var(--tb-ink)!important}
 .dashboard-drawer,.dashboard-drawer *{font-family:'Cairo',sans-serif}
 .dashboard-drawer .drawer-head{height:68px!important;min-height:68px!important;padding:0 clamp(14px,2.4vw,34px)!important;background:linear-gradient(180deg,#0A0A0A,#161616)!important;border-bottom:1px solid #2A2A2A!important;color:#fff!important;box-shadow:0 5px 18px #0002!important}
