@@ -891,6 +891,7 @@ export type Database = {
           created_at: string
           delivered_at: string | null
           delivery_fee_jod: number
+          delivery_speed: string
           delivery_otp_hash: string | null
           discount_jod: number
           id: string
@@ -909,6 +910,7 @@ export type Database = {
           created_at?: string
           delivered_at?: string | null
           delivery_fee_jod?: number
+          delivery_speed?: string
           delivery_otp_hash?: string | null
           discount_jod?: number
           id?: string
@@ -1609,6 +1611,10 @@ export type Database = {
     }
     Functions: {
       regenerate_delivery_otp: { Args: { p_order_id: string }; Returns: string }
+      buyer_set_order_delivery_speed: {
+        Args: { p_delivery_speed: string; p_order_id: string }
+        Returns: { delivery_fee_jod: number; delivery_speed: string; total_jod: number }[]
+      }
       admin_assign_courier: { Args: { p_user_id: string }; Returns: boolean }
       approve_merchant_application: {
         Args: { p_application_id: string; p_store_slug: string }
