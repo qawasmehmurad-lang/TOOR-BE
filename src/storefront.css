@@ -4460,3 +4460,12 @@ body{padding-bottom:0!important}
 .courier-document-actions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
 .courier-document-actions .outline-btn{min-height:40px!important;font-size:10px!important}
 @media(max-width:420px){.courier-document-actions{grid-template-columns:1fr!important}}
+
+
+.onboarding-progress{display:grid!important;gap:8px!important;width:100%!important;text-align:right!important;color:#e8ca7d!important;font-size:11px!important}
+.onboarding-progress>div{height:5px!important;width:100%!important;background:#29251d!important;border-radius:10px!important;overflow:hidden!important}
+.onboarding-progress>div>i{display:block!important;height:100%!important;border-radius:10px!important;background:linear-gradient(90deg,#9d7426,#f0d17e)!important;transition:width .2s ease!important}
+.onboarding-step-actions{display:flex!important;gap:9px!important;width:100%!important;margin-top:8px!important}
+.onboarding-step-actions>button{flex:1!important;min-height:46px!important}
+.onboarding-step-actions>.outline-btn{background:#111!important;color:#e6c778!important;border:1px solid #51452b!important}
+.onboarding-panel .auth-form>b{display:block!important;text-align:right!important;color:#f0d17e!important;font-size:13px!important;margin:5px 0!important}
