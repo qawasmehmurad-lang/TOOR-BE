@@ -2245,3 +2245,95 @@ body{padding-bottom:0!important}
   grid-template-columns:repeat(3,minmax(0,1fr))!important;column-gap:7px!important;row-gap:12px!important
  }
 }
+
+
+/* TOOR BE storefront polish: transparent sticky headers and balanced visual rhythm */
+.site-header.new-store-header.catalog-glass-header{
+ background:rgba(8,8,8,.58)!important;color:#fff!important;
+ -webkit-backdrop-filter:blur(13px) saturate(135%)!important;
+ backdrop-filter:blur(13px) saturate(135%)!important;
+ border-bottom:1px solid rgba(212,175,55,.18)!important;
+ box-shadow:0 5px 22px rgba(0,0,0,.09)!important
+}
+.catalog-glass-header .header-actions .icon-btn{
+ background:rgba(255,255,255,.10)!important;
+ border-color:rgba(255,255,255,.24)!important;color:#fff!important
+}
+.site-header.new-store-header.home-overlay-header{
+ position:sticky!important;top:0!important;z-index:100!important;
+ margin-bottom:-64px!important;
+ background:linear-gradient(180deg,rgba(0,0,0,.26),rgba(0,0,0,0))!important
+}
+.home-brand-word{
+ font-family:'Orbitron','DM Sans',sans-serif!important;
+ font-size:clamp(16px,4.3vw,22px)!important;font-weight:900!important;
+ letter-spacing:2.2px!important;text-transform:uppercase!important;
+ text-shadow:0 0 8px rgba(240,210,115,.45),0 0 20px rgba(212,175,55,.28)!important
+}
+.home-brand-word span,.home-brand-word i{
+ font-family:'Orbitron','DM Sans',sans-serif!important;font-style:normal!important
+}
+.round-category-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.round-category.active>span{
+ border:2px solid #d4af37!important;box-shadow:0 0 0 3px #d4af3726!important
+}
+.round-category.active b{color:#9b741c!important;font-weight:800!important}
+.category-hierarchy-subnav button.selected{
+ color:#d4af37!important;border-bottom:2px solid #d4af37!important;font-weight:800!important
+}
+.three-column-products>.product-grid,
+.three-column-products .suggestions-section .product-grid{
+ grid-template-columns:repeat(3,minmax(0,1fr))!important
+}
+.trends-nav-heart{
+ color:#d4af37;stroke:#d4af37;transform-origin:center;
+ animation:trends-heart-pulse 1.45s ease-in-out infinite
+}
+.mobile-bottom button.on .trends-nav-heart{
+ color:#f0d273;filter:drop-shadow(0 0 5px #d4af37aa)
+}
+@keyframes trends-heart-pulse{
+ 0%,100%{transform:scale(1);fill:transparent}
+ 42%{transform:scale(1.2);fill:#d4af37}
+ 62%{transform:scale(1.08);fill:#f0d273}
+}
+.cart-topbar{
+ position:relative!important;display:grid!important;
+ grid-template-columns:auto minmax(0,1fr) auto!important;
+ align-items:center!important;gap:12px!important;padding:17px 18px!important;
+ margin:0 0 16px!important;border:1px solid #e5d7b2!important;
+ border-radius:16px!important;
+ background:linear-gradient(112deg,#111 0%,#201b10 58%,#3a2d12 100%)!important;
+ box-shadow:0 10px 28px rgba(0,0,0,.12)!important;color:#fff!important
+}
+.cart-topbar>div{text-align:center!important;min-width:0}
+.cart-topbar h1{
+ margin:0 0 4px!important;color:#f3d77e!important;
+ font-size:clamp(17px,3.5vw,23px)!important;font-weight:900!important
+}
+.cart-topbar span{color:#e5dfd1!important;font-size:10px!important}
+.cart-topbar .cart-back,.cart-topbar .cart-edit{
+ min-height:38px!important;padding:0 12px!important;
+ border:1px solid rgba(240,210,125,.35)!important;border-radius:9px!important;
+ background:rgba(255,255,255,.08)!important;color:#f5e7bd!important;
+ font-size:10px!important;font-weight:700!important
+}
+.cart-topbar .cart-edit:disabled{opacity:.4!important}
+@media(max-width:760px){
+ .site-header.new-store-header.home-overlay-header{margin-bottom:-55px!important}
+ .round-category-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:12px 5px!important}
+ .round-category>span{max-width:74px!important}
+ .three-column-products>.product-grid,
+ .three-column-products .suggestions-section .product-grid{
+  column-gap:6px!important;row-gap:12px!important
+ }
+ .cart-topbar{
+  grid-template-columns:auto minmax(0,1fr) auto!important;
+  gap:6px!important;padding:11px 8px!important;border-radius:12px!important
+ }
+ .cart-topbar .cart-back,.cart-topbar .cart-edit{
+  min-height:34px!important;padding:0 7px!important;font-size:8px!important
+ }
+ .cart-topbar h1{font-size:15px!important}
+ .cart-topbar span{font-size:8px!important}
+}
