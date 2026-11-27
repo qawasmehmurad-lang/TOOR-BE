@@ -965,3 +965,115 @@ body::before{
 .auth-form input,.auth-form textarea{border:1px solid #ded2b7!important;border-radius:10px!important;background:#fff!important}
 .auth-form input:focus{border-color:#c7a34c!important;box-shadow:0 0 0 3px #d4af3720!important}
 
+
+
+/* TOOR BE dashboard reset: one clean layout, no legacy grid-area overlap */
+.dashboard-drawer{background:#080808!important}
+.dashboard-drawer .dashboard-panel{
+  display:flex!important;flex-direction:column!important;align-items:stretch!important;
+  gap:18px!important;grid-template:none!important;grid-template-areas:none!important;
+  grid-template-columns:minmax(0,1fr)!important;grid-template-rows:none!important;
+  height:100%!important;min-height:0!important;overflow-y:auto!important;overflow-x:hidden!important;
+  padding:24px clamp(14px,2.5vw,34px) 40px!important;
+  background:#f3f2ee!important;color:#171717!important;isolation:isolate
+}
+.dashboard-panel>.dashboard-role-head,
+.dashboard-panel>.dashboard-action-grid,
+.dashboard-panel>.admin-reference-overview,
+.dashboard-panel>.dashboard-overview,
+.dashboard-panel>.dashboard-section,
+.dashboard-panel>section{
+  grid-area:auto!important;position:relative!important;inset:auto!important;
+  width:100%!important;min-width:0!important;max-width:none!important;
+  margin:0!important;align-self:stretch!important;transform:none!important;float:none!important
+}
+.dashboard-panel>.dashboard-role-head{order:0!important;flex:0 0 auto!important}
+.dashboard-panel>.dashboard-action-grid{order:1!important;display:grid!important;grid-template-columns:repeat(auto-fit,minmax(145px,1fr))!important;align-items:stretch!important;gap:9px!important;padding:13px!important;border-radius:15px!important;background:#111!important}
+.dashboard-panel>.dashboard-overview,
+.dashboard-panel>.admin-reference-overview{order:2!important;display:grid!important;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))!important;gap:12px!important;align-content:start!important}
+.dashboard-panel>.dashboard-section{order:3!important;display:block!important}
+.dashboard-panel>.dashboard-section[style*="display: none"]{display:none!important}
+.dashboard-panel>.admin-orders-workspace{order:3!important}
+.dashboard-panel>.dashboard-role-head{background:transparent!important;border-bottom:1px solid #d8d4c8!important;padding:0 0 16px!important}
+.dashboard-panel .dashboard-role-head h3{font-size:clamp(19px,2.5vw,25px)!important;color:#171717!important}
+.dashboard-panel .dashboard-role-head p{line-height:1.8!important}
+.dashboard-panel .dashboard-action-grid button{min-width:0!important;min-height:48px!important;justify-content:center!important;text-align:center!important;white-space:normal!important;line-height:1.6!important}
+.dashboard-panel .dashboard-action-grid button span{min-width:0!important}
+.dashboard-panel .dashboard-overview .dashboard-metric{min-width:0!important}
+.dashboard-panel .dashboard-section .dashboard-intro,
+.dashboard-panel .dashboard-section .dashboard-card,
+.dashboard-panel .dashboard-section article,
+.dashboard-panel .dashboard-section .admin-reference-recent,
+.dashboard-panel .dashboard-section .admin-reference-rules{max-width:100%!important;min-width:0!important}
+.dashboard-panel .admin-reference-kpis{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))!important;gap:12px!important}
+.dashboard-panel .admin-reference-lower-grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))!important;gap:14px!important}
+.dashboard-panel .admin-order-filter-grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(125px,1fr))!important;gap:9px!important}
+.dashboard-panel .admin-product-category-grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))!important;gap:10px!important}
+.dashboard-panel .dashboard-section *{min-width:0}
+.dashboard-panel .dashboard-section input,
+.dashboard-panel .dashboard-section select,
+.dashboard-panel .dashboard-section textarea{max-width:100%!important}
+.dashboard-panel .dashboard-section table{width:100%;max-width:100%;display:block;overflow-x:auto}
+.dashboard-panel .dashboard-overview.merchant-overview{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))!important}
+.dashboard-panel .courier-stat-grid{grid-template-columns:repeat(auto-fit,minmax(145px,1fr))!important}
+.dashboard-panel-admin>.admin-reference-overview{display:block!important}
+.dashboard-panel-admin>.admin-reference-overview .admin-reference-kpis{margin-bottom:14px}
+.dashboard-panel-admin>.dashboard-action-grid{order:1!important}
+@media(max-width:760px){
+  .dashboard-drawer .dashboard-panel{padding:16px 12px 30px!important;gap:13px!important}
+  .dashboard-panel>.dashboard-role-head{gap:10px!important;flex-wrap:wrap!important}
+  .dashboard-panel .dashboard-role-mark{width:43px!important;height:43px!important;flex-basis:43px!important}
+  .dashboard-panel .dashboard-role-head>div{flex:1 1 calc(100% - 65px)!important}
+  .dashboard-panel .dashboard-role-head h3{font-size:18px!important}
+  .dashboard-panel .dashboard-live{margin-inline-start:auto!important;padding:6px 9px!important}
+  .dashboard-panel>.dashboard-action-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;padding:9px!important;gap:7px!important}
+  .dashboard-panel .dashboard-action-grid button{min-height:44px!important;padding:7px 5px!important;font-size:10px!important}
+  .dashboard-panel>.dashboard-overview,
+  .dashboard-panel>.admin-reference-overview{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .dashboard-panel .admin-reference-kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .dashboard-panel .admin-reference-lower-grid{grid-template-columns:minmax(0,1fr)!important}
+  .dashboard-panel .admin-order-filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .dashboard-panel .admin-product-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .dashboard-panel .dashboard-overview.merchant-overview{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .dashboard-panel .courier-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+/* Auth drawer: deep black glass with a subtle animated royal-gold sheen */
+.drawer:not(.dashboard-drawer):has(.auth-switch){
+  position:relative!important;isolation:isolate!important;overflow:hidden!important;
+  background:#050505!important;color:#f6f1e5!important;
+  border:1px solid #8c6a25!important;
+  box-shadow:0 24px 90px #000c,0 0 35px #c69b3c20!important
+}
+.drawer:not(.dashboard-drawer):has(.auth-switch):before{
+  content:"";position:absolute;inset:-45%;z-index:-1;pointer-events:none;
+  background:radial-gradient(ellipse at 18% 22%,#d7b45b25 0%,transparent 34%),
+    radial-gradient(ellipse at 82% 68%,#b58a3020 0%,transparent 32%),
+    linear-gradient(115deg,transparent 35%,#e4c46b0b 48%,#d1a33a24 52%,transparent 66%);
+  background-size:100% 100%,100% 100%,240% 240%;
+  animation:toor-auth-gold-sheen 12s ease-in-out infinite alternate
+}
+@keyframes toor-auth-gold-sheen{0%{transform:translate3d(-3%, -2%,0) rotate(-4deg);background-position:0 0,100% 100%,0% 50%}100%{transform:translate3d(3%,2%,0) rotate(4deg);background-position:15% 10%,85% 90%,100% 50%}}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .drawer-head{background:#080808!important;border-bottom:1px solid #b38b3b55!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .drawer-head h2,
+.drawer:not(.dashboard-drawer):has(.auth-switch) h3{color:#f2dfad!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) p,
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-note,
+.drawer:not(.dashboard-drawer):has(.auth-switch) .account-help{color:#c1bba9!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-switch{display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important;padding:5px!important;background:#111!important;border:1px solid #59451f!important;border-radius:13px!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-switch button{min-height:43px!important;border:1px solid transparent!important;border-radius:9px!important;background:transparent!important;color:#c9c1af!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-switch button.active{background:linear-gradient(110deg,#a77c29,#f0d27c,#b88c36)!important;color:#171107!important;font-weight:900!important;box-shadow:0 5px 18px #c69b3c30!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-role-picker{background:linear-gradient(145deg,#111,#17130b)!important;border:1px solid #a17b31!important;box-shadow:inset 0 1px #ffffff0b,0 8px 22px #0007!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-role-picker>b{color:#e8c66e!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-role-picker button{background:#0b0b0b!important;border:1px solid #51401e!important;color:#ded6c4!important;border-radius:10px!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-role-picker button.active{background:linear-gradient(115deg,#9c7226,#efd17a,#b88a31)!important;color:#171107!important;border-color:#f0d27a!important;box-shadow:0 4px 16px #c49a3c30!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-form>input,
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-password-field{background:#101010!important;border:1px solid #5b4824!important;border-radius:10px!important;color:#fff!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-form input{color:#fff!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-form input::placeholder{color:#99917f!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-password-field input{background:transparent!important;border:0!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-social-actions button{background:#111!important;border:1px solid #665126!important;color:#eee5d1!important;border-radius:10px!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-social-divider{color:#c4b99f!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-social-divider:before,
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-social-divider:after{background:#6b5429!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .account-help{border-top:1px solid #725727!important}
+@media(prefers-reduced-motion:reduce){.drawer:not(.dashboard-drawer):has(.auth-switch):before{animation:none!important}}
