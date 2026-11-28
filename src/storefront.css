@@ -4575,6 +4575,22 @@ body{padding-bottom:0!important}
 .mobile-bottom button.on span,.mobile-bottom button.on svg{color:#e5c36d!important}
 .mobile-bottom button[aria-label="TRENDS"] span{font:700 9px 'DM Sans',sans-serif!important;letter-spacing:.13em!important}
 
+/* Moving soft royal-gold reflection on the unified auth surface */
+.drawer:has(.auth-account-panel){
+  background-color:#050505!important;
+  background-image:
+    radial-gradient(ellipse at 12% 18%,rgba(194,151,55,.16),transparent 42%),
+    radial-gradient(ellipse at 88% 72%,rgba(194,151,55,.11),transparent 38%),
+    linear-gradient(115deg,#050505 0%,#0b0905 38%,#050505 70%,#100d06 100%)!important;
+  background-size:180% 180%,160% 160%,220% 220%!important;
+  animation:toor-auth-gold-drift 13s ease-in-out infinite alternate!important;
+}
+@keyframes toor-auth-gold-drift{
+  0%{background-position:0% 0%,100% 100%,0% 50%}
+  50%{background-position:55% 35%,35% 70%,100% 50%}
+  100%{background-position:100% 70%,0% 10%,0% 50%}
+}
+@media(prefers-reduced-motion:reduce){.drawer:has(.auth-account-panel){animation:none!important}}
 /* Full-bleed matte-black sign-in and sign-up */
 .drawer:has(.auth-account-panel),.drawer:has(.onboarding-panel){
   background:#050505!important;color:#f4efe2!important;border:0!important;border-radius:0!important;
