@@ -1216,3 +1216,49 @@ body::before{
  .account-change-form{grid-template-columns:minmax(0,1fr)!important}
 }
 @media(prefers-reduced-motion:reduce){.mobile-bottom{transition:none!important}}
+
+
+/* Unified merchant and courier dashboards: same visual system as the admin control center. */
+.dashboard-panel-merchant,.dashboard-panel-courier{background:#f5f5f3!important;color:#171717!important}
+.dashboard-panel-merchant,.dashboard-panel-courier{height:100%;min-height:0;overflow:auto;padding:26px 30px 34px;display:grid;grid-template-columns:248px minmax(0,1fr);grid-template-rows:auto auto minmax(0,1fr);grid-template-areas:"nav head" "nav overview" "nav content";gap:20px 26px;align-content:start}
+.dashboard-panel-merchant>.dashboard-role-head,.dashboard-panel-courier>.dashboard-role-head{grid-area:head;min-width:0;display:flex;align-items:center;gap:15px;margin:0;padding:2px 0 20px;border:0;border-bottom:1px solid #e5e2da;background:transparent}
+.dashboard-panel-merchant>.dashboard-role-head h3,.dashboard-panel-courier>.dashboard-role-head h3{font-size:23px;line-height:1.4;margin:3px 0;color:#171717;font-weight:800}
+.dashboard-panel-merchant>.dashboard-role-head>div>small,.dashboard-panel-courier>.dashboard-role-head>div>small{font-size:9px;letter-spacing:1.5px;color:#9a7625;font-weight:800}
+.dashboard-panel-merchant>.dashboard-action-grid,.dashboard-panel-courier>.dashboard-action-grid{grid-area:nav;align-self:stretch;display:flex;flex-direction:column;gap:7px;padding:17px 13px;background:#101010;border:1px solid #292929;border-radius:17px;box-shadow:0 8px 26px #00000012;min-width:0}
+.dashboard-panel-merchant>.dashboard-section,.dashboard-panel-courier>.dashboard-section{grid-area:content;min-width:0}
+.dashboard-panel-merchant>.dashboard-overview,.dashboard-panel-courier>.dashboard-overview,.dashboard-panel-merchant>.merchant-overview,.dashboard-panel-courier>.courier-overview{grid-area:overview;min-width:0}
+.dashboard-panel-merchant .dashboard-action-grid:after{content:"MERCHANT PANEL"}
+.dashboard-panel-courier .dashboard-action-grid:after{content:"COURIER PANEL"}
+.dashboard-panel-merchant .dashboard-action-grid button,.dashboard-panel-courier .dashboard-action-grid button{min-height:45px;padding:0 12px;font-size:11px;border-radius:7px}
+.dashboard-panel-merchant .dashboard-action-grid button.active,.dashboard-panel-courier .dashboard-action-grid button.active{background:linear-gradient(105deg,#e7c76f,#c99b32);border-color:#f4dc91;color:#17130a;box-shadow:0 4px 13px #d1aa4a28}
+.dashboard-panel-merchant .dashboard-card,.dashboard-panel-courier .dashboard-card,.dashboard-panel-merchant .dashboard-intro,.dashboard-panel-courier .dashboard-intro{border-radius:9px;box-shadow:0 2px 8px #00000007}
+.dashboard-panel-merchant .dashboard-role-mark,.dashboard-panel-courier .dashboard-role-mark{background:#111;border:1px solid #cda747;color:#f0d47c}
+.dashboard-panel-merchant .dashboard-metric,.dashboard-panel-courier .dashboard-metric{border-radius:9px;border:1px solid #e8e5de;box-shadow:0 2px 8px #00000007}
+.dashboard-panel-merchant .dashboard-section,.dashboard-panel-courier .dashboard-section{background:transparent}
+.dashboard-panel-merchant .dashboard-section[style*="display: none"],.dashboard-panel-courier .dashboard-section[style*="display: none"]{display:none!important}
+.dashboard-panel-merchant .dashboard-sidebar-close,.dashboard-panel-courier .dashboard-sidebar-close{display:none}
+.dashboard-panel-merchant .dashboard-menu-toggle,.dashboard-panel-courier .dashboard-menu-toggle{display:none}
+
+/* Overlays and drawers must sit above the sticky storefront header on every screen. */
+.modal-backdrop,.drawer-backdrop,.notification-campaign-overlay{z-index:1000!important}
+.site-header{z-index:20}
+.app-shell:has(.drawer-backdrop) .site-header,.app-shell:has(.modal-backdrop) .site-header{z-index:1}
+
+/* Cleaner sign-in / registration surface: remove nested frames and excess outlines. */
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-account-panel{border:0!important;box-shadow:none!important;background:#fff!important;padding:10px 4px!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-role-picker{padding:2px 0 8px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-role-picker>b{margin-bottom:8px!important;color:#777!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-role-picker>div{gap:8px!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-role-picker button{border:1px solid #e8e4da!important;border-radius:9px!important;background:#faf9f6!important;box-shadow:none!important;color:#514b40!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-role-picker button.active{border-color:#c9a34b!important;background:#171717!important;color:#f1d37d!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-switch{border:0!important;border-radius:8px!important;background:#f4f2ed!important;box-shadow:none!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-form input,.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-form textarea{border:1px solid #e8e5de!important;border-radius:8px!important;background:#fff!important;box-shadow:none!important}
+.drawer:not(.dashboard-drawer):has(.auth-switch) .auth-social-actions button[aria-label="Facebook"]{color:#1877f2!important}
+.account-close-action{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:8px 14px;border:1px solid #e8e4da;border-radius:9px;background:#faf9f6;color:#61563f;font-size:11px;font-weight:700}
+@media(max-width:900px){
+.dashboard-panel-merchant,.dashboard-panel-courier{grid-template-columns:1fr;grid-template-rows:auto auto auto;grid-template-areas:"head" "nav" "content";padding:18px 16px 28px;gap:14px}
+.dashboard-panel-merchant>.dashboard-action-grid,.dashboard-panel-courier>.dashboard-action-grid{grid-area:nav;display:none}
+.dashboard-panel-merchant>.dashboard-action-grid.is-open,.dashboard-panel-courier>.dashboard-action-grid.is-open{display:flex;position:fixed;z-index:1100;top:0;right:0;bottom:0;width:min(300px,86vw);overflow:auto;border-radius:0 0 0 0}
+.dashboard-panel-merchant .dashboard-menu-toggle,.dashboard-panel-courier .dashboard-menu-toggle{display:grid;place-items:center}
+.dashboard-panel-merchant .dashboard-sidebar-close,.dashboard-panel-courier .dashboard-sidebar-close{display:flex}
+}
