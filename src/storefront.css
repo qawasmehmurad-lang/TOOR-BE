@@ -5107,3 +5107,24 @@ html::-webkit-scrollbar,body::-webkit-scrollbar,*::-webkit-scrollbar{display:non
  .coupon-popup-item>button{min-height:29px!important;padding:0 9px!important;font-size:8px!important}
 }
 @media(prefers-reduced-motion:reduce){.coupon-popup-item:after{animation:none!important;display:none!important}}
+
+
+/* Restore every coupon detail while keeping the ticket-only silhouette. */
+.coupon-ticket.coupon-ticket-list{width:min(430px,calc(100vw - 28px))!important;max-height:76dvh!important;overflow-y:auto!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+.coupon-popup-cards{display:flex!important;flex-direction:column!important;gap:12px!important;margin:0!important}
+.coupon-popup-item{position:relative!important;isolation:isolate!important;display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:7px!important;min-width:0!important;overflow:hidden!important;padding:8px 0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;text-align:right!important}
+.coupon-popup-item:before{display:none!important}
+.coupon-popup-item:after{content:""!important;position:absolute!important;z-index:0!important;left:-28%!important;bottom:-95%!important;width:28%!important;height:290%!important;pointer-events:none!important;background:linear-gradient(90deg,transparent,#f5d77a55,transparent)!important;transform:translate(-130%,130%) rotate(-35deg)!important;animation:toor-ticket-gold-glint 4.8s ease-in-out infinite!important}
+.coupon-popup-ticket-row{position:relative!important;z-index:1!important;display:flex!important;align-items:center!important;gap:10px!important;min-width:0!important}
+.coupon-popup-ticket-row>div{display:flex!important;flex:1!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;min-width:0!important}
+.coupon-popup-ticket-emoji{display:block!important;flex:none!important;width:auto!important;height:auto!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;font-size:34px!important;line-height:1!important;filter:drop-shadow(0 2px 5px #d5ad4b55)!important}
+.coupon-popup-item b{color:#fff2cd!important;font-size:12px!important;line-height:1.5!important;font-weight:850!important}
+.coupon-popup-item strong{flex:0 0 auto!important;color:#e8c76e!important;font-size:16px!important;line-height:1.2!important;font-weight:950!important}
+.coupon-popup-item>small{position:relative!important;z-index:1!important;margin:0!important;color:#d0c5aa!important;font-size:10px!important;line-height:1.75!important;white-space:normal!important}
+.coupon-popup-footer{position:relative!important;z-index:1!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:8px!important;padding:2px 0!important;border:0!important}
+.coupon-popup-footer>span{padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;color:#f3d98f!important;font-size:11px!important;font-weight:950!important;letter-spacing:1.2px!important}
+.coupon-popup-footer>small{color:#aaa18f!important;font-size:9px!important}
+.coupon-popup-item>button{position:relative!important;z-index:1!important;align-self:flex-start!important;min-height:30px!important;padding:0 14px!important;border:1px solid #dfbf69!important;border-radius:7px!important;background:linear-gradient(110deg,#f0d88f,#b7892e)!important;color:#17130b!important;font-size:10px!important;font-weight:950!important;box-shadow:none!important}
+.coupon-popup-heading,.coupon-popup-footer~.coupon-shop-now,.coupon-ticket.coupon-ticket-list .coupon-shop-now,.coupon-ticket.coupon-ticket-list .coupon-popup-close{display:none!important}
+@media(max-width:560px){.coupon-ticket.coupon-ticket-list{width:min(350px,calc(100vw - 28px))!important;max-height:70dvh!important}.coupon-popup-item{gap:6px!important;padding:7px 0!important}.coupon-popup-ticket-emoji{font-size:30px!important}.coupon-popup-item b{font-size:10px!important}.coupon-popup-item strong{font-size:13px!important}.coupon-popup-item>small{font-size:9px!important}.coupon-popup-item>button{min-height:28px!important;font-size:9px!important}}
+@media(prefers-reduced-motion:reduce){.coupon-popup-item:after{animation:none!important;display:none!important}}
