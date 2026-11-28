@@ -5306,3 +5306,80 @@ html::-webkit-scrollbar,body::-webkit-scrollbar,*::-webkit-scrollbar{display:non
 @media(prefers-reduced-motion:reduce){
  .benefit-coupon-card:after,.coupon-popup-item:after{animation:none!important;display:none!important}
 }
+
+
+/* Premium TOOR BE coupon system — replaces the reference ticket artwork entirely. */
+.benefit-coupon-card,.coupon-popup-item{
+ position:relative!important;isolation:isolate!important;overflow:hidden!important;
+ border:0!important;border-radius:0!important;
+ background:#080808 url('/coupon-ticket.svg') center/100% 100% no-repeat!important;
+ box-shadow:0 9px 26px rgba(0,0,0,.18)!important;
+}
+.benefit-coupon-card{
+ min-height:158px!important;padding:28px 42px!important;
+ grid-template-columns:minmax(0,1fr) auto!important;gap:16px!important;
+}
+.coupon-popup-item{
+ min-height:132px!important;padding:25px 42px!important;
+ display:flex!important;flex-direction:column!important;align-items:stretch!important;
+ gap:7px!important;text-align:right!important;
+}
+.coupon-popup-ticket-emoji{display:none!important}
+.coupon-popup-ticket-row{display:block!important;min-width:0!important}
+.coupon-popup-ticket-row>div{
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ gap:10px!important;min-width:0!important;
+}
+.benefit-coupon-info,.coupon-popup-info{position:relative!important;z-index:2!important;min-width:0!important}
+.benefit-coupon-info>b,.coupon-popup-item b{
+ color:#fff4d5!important;font-size:12px!important;font-weight:850!important;letter-spacing:.1px!important;
+}
+.benefit-coupon-info>strong,.coupon-popup-item strong{
+ color:#f2d27a!important;font-size:19px!important;font-weight:950!important;
+ text-shadow:0 0 14px rgba(226,190,96,.2)!important;
+}
+.benefit-coupon-info>small,.benefit-coupon-info>p,.coupon-popup-item>small{
+ color:#c9bea5!important;font-size:9px!important;line-height:1.65!important;
+}
+.benefit-coupon-code,.coupon-popup-footer>span{
+ display:inline-flex!important;align-items:center!important;width:max-content!important;
+ padding:4px 10px!important;border:1px dashed #d7b45f!important;border-radius:4px!important;
+ background:rgba(5,5,5,.72)!important;color:#f4dc9b!important;
+ font-size:10px!important;font-weight:900!important;letter-spacing:1.1px!important;
+}
+.coupon-popup-footer{
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ gap:8px!important;padding-top:5px!important;border-top:1px dashed rgba(215,180,95,.42)!important;
+}
+.coupon-popup-footer>small{color:#a99d84!important;font-size:8px!important}
+.benefit-coupon-card>.gold-btn,.coupon-popup-item>button{
+ position:relative!important;z-index:2!important;align-self:center!important;
+ min-height:35px!important;padding:0 14px!important;border:1px solid #f1d990!important;
+ border-radius:5px!important;background:linear-gradient(115deg,#f8e5a8 0%,#d7b45b 45%,#9c7125 100%)!important;
+ color:#171108!important;font-size:9px!important;font-weight:950!important;
+ box-shadow:0 4px 14px rgba(0,0,0,.35),inset 0 1px rgba(255,255,255,.65)!important;
+ white-space:nowrap!important;
+}
+.benefit-coupon-card:after,.coupon-popup-item:after{
+ content:""!important;position:absolute!important;z-index:1!important;pointer-events:none!important;
+ top:-125%!important;left:-48%!important;width:25%!important;height:350%!important;
+ background:linear-gradient(90deg,transparent,rgba(255,255,255,.05),rgba(255,231,165,.56),rgba(212,175,55,.12),transparent)!important;
+ transform:rotate(34deg) translateX(-300%)!important;
+ animation:toor-premium-coupon-sheen 6.4s cubic-bezier(.22,.61,.36,1) infinite!important;
+ -webkit-mask:url('/coupon-ticket.svg') center/100% 100% no-repeat!important;
+ mask:url('/coupon-ticket.svg') center/100% 100% no-repeat!important;
+}
+.benefit-coupon-card>* ,.coupon-popup-item>*{position:relative!important;z-index:2!important}
+@keyframes toor-premium-coupon-sheen{
+ 0%,16%{transform:rotate(34deg) translateX(-300%)}
+ 74%,100%{transform:rotate(34deg) translateX(650%)}
+}
+@media(max-width:760px){
+ .benefit-coupon-card{min-height:145px!important;padding:23px 30px!important;gap:9px!important}
+ .coupon-popup-item{min-height:120px!important;padding:20px 30px!important}
+ .benefit-coupon-info>strong,.coupon-popup-item strong{font-size:16px!important}
+ .benefit-coupon-card>.gold-btn,.coupon-popup-item>button{min-height:31px!important;padding:0 9px!important;font-size:8px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .benefit-coupon-card:after,.coupon-popup-item:after{animation:none!important;display:none!important}
+}
