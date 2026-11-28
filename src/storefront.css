@@ -4820,3 +4820,24 @@ body{padding-bottom:0!important}
  .mobile-bottom button:nth-child(3)>span{display:none!important}
  .mobile-bottom button:nth-child(3):after{content:"TRENDS"!important;font:600 8px Alexandria,sans-serif!important;letter-spacing:.4px!important;line-height:1!important}
 }
+
+
+/* Ensure role-specific dashboard grid wins over the generic collapsed-nav selector. */
+.dashboard-panel.dashboard-panel-merchant:has(.merchant-dashboard-nav:not(.is-open)),
+.dashboard-panel.dashboard-panel-courier:has(.courier-dashboard-nav:not(.is-open)){
+  grid-template-columns:248px minmax(0,1fr)!important;
+  grid-template-areas:"nav head" "nav overview" "nav content"!important
+}
+@media(max-width:640px){
+ .dashboard-panel.dashboard-panel-merchant:has(.merchant-dashboard-nav),
+ .dashboard-panel.dashboard-panel-courier:has(.courier-dashboard-nav){
+  grid-template-columns:minmax(0,1fr)!important;
+  grid-template-areas:"head" "overview" "content"!important;
+  grid-template-rows:auto auto minmax(0,1fr)!important
+ }
+ .dashboard-panel.dashboard-panel-merchant:has(.merchant-dashboard-nav.is-open),
+ .dashboard-panel.dashboard-panel-courier:has(.courier-dashboard-nav.is-open){
+  grid-template-areas:"head" "nav" "overview" "content"!important;
+  grid-template-rows:auto auto auto minmax(0,1fr)!important
+ }
+}
