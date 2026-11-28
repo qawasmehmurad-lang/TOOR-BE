@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" preserveAspectRatio="none">
-<defs>
- <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0b0"/><stop offset=".24" stop-color="#b98b2e"/><stop offset=".5" stop-color="#f8df91"/><stop offset=".76" stop-color="#9b741c"/><stop offset="1" stop-color="#e9c66d"/></linearGradient>
- <linearGradient id="face" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#211b10"/><stop offset=".48" stop-color="#090909"/><stop offset="1" stop-color="#191307"/></linearGradient>
- <radialGradient id="glow" cx="12%" cy="8%" r="90%"><stop stop-color="#d4af37" stop-opacity=".19"/><stop offset="1" stop-color="#d4af37" stop-opacity="0"/></radialGradient>
-</defs>
-<rect x="5" y="5" width="990" height="350" rx="30" fill="#080808" stroke="url(#gold)" stroke-width="9"/>
-<rect x="18" y="18" width="964" height="324" rx="23" fill="url(#face)"/>
-<rect x="18" y="18" width="964" height="324" rx="23" fill="url(#glow)"/>
-<rect x="28" y="28" width="944" height="304" rx="17" fill="none" stroke="#f2d98d" stroke-opacity=".16" stroke-width="1.5"/>
-<path d="M55 62h95" stroke="url(#gold)" stroke-width="2" stroke-linecap="round" opacity=".65"/>
-<path d="M850 298h95" stroke="url(#gold)" stroke-width="2" stroke-linecap="round" opacity=".55"/>
-<circle cx="164" cy="62" r="3" fill="#e8c978" opacity=".8"/>
-<circle cx="836" cy="298" r="3" fill="#e8c978" opacity=".8"/>
+  <defs>
+    <linearGradient id="ticketFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#211b0e"/>
+      <stop offset=".46" stop-color="#090909"/>
+      <stop offset="1" stop-color="#191307"/>
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="12%" cy="8%" r="90%">
+      <stop offset="0" stop-color="#d4af37" stop-opacity=".17"/>
+      <stop offset="1" stop-color="#d4af37" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path d="M112 8 H888 C888 55 922 90 992 90 V270 C922 270 888 305 888 352 H112 C112 305 78 270 8 270 V90 C78 90 112 55 112 8 Z" fill="url(#ticketFace)"/>
+  <path d="M112 8 H888 C888 55 922 90 992 90 V270 C922 270 888 305 888 352 H112 C112 305 78 270 8 270 V90 C78 90 112 55 112 8 Z" fill="url(#goldGlow)"/>
 </svg>
