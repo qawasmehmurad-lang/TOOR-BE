@@ -4841,3 +4841,77 @@ body{padding-bottom:0!important}
   grid-template-rows:auto auto auto minmax(0,1fr)!important
  }
 }
+
+
+/* 2026-11-28: role routing, side-drawer navigation, responsive density and media fit. */
+.auth-account-panel .auth-role-picker,.auth-account-panel .auth-role-picker>div{background:#050505!important;border:0!important;box-shadow:none!important}
+.auth-account-panel .auth-role-picker button,.auth-account-panel .auth-role-picker button.active{border:0!important;outline:0!important;box-shadow:none!important;background:#050505!important;border-radius:8px!important;color:#d8cfbb!important}
+.auth-account-panel .auth-role-picker button.active{color:#e6c879!important;background:#17140d!important}
+.drawer:has(.auth-account-panel) .auth-account-panel{gap:5px!important;padding:7px 14px 9px!important}
+.drawer:has(.auth-account-panel) .auth-brand-logo{width:52px!important;height:52px!important;max-height:52px!important}
+.drawer:has(.auth-account-panel) .auth-account-panel h3{font-size:15px!important}
+.drawer:has(.auth-account-panel) .auth-account-panel>p{font-size:9px!important}
+.drawer:has(.auth-account-panel) .auth-form{gap:5px!important}
+.drawer:has(.auth-account-panel) .auth-form input{height:34px!important;min-height:34px!important;font-size:10px!important}
+.drawer:has(.auth-account-panel) .password-strength-hints span{font-size:7px!important}
+.drawer:has(.auth-account-panel) .auth-role-picker button{height:27px!important;min-height:27px!important;font-size:9px!important}
+.drawer:has(.auth-account-panel) .gold-btn.full{height:33px!important;min-height:33px!important}
+.drawer:has(.auth-account-panel) .auth-social-actions button{height:31px!important;min-height:31px!important}
+.seller-cta{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;grid-template-areas:"copy action"!important;align-items:center!important;gap:clamp(10px,2vw,22px)!important;padding:clamp(14px,2vw,22px)!important}
+.seller-cta .seller-copy{grid-area:copy!important;min-width:0!important}
+.seller-cta .seller-icon{display:none!important}
+.seller-cta .seller-start-button{grid-area:action!important;justify-self:end!important;white-space:nowrap!important;min-height:42px!important;padding:0 16px!important;font-size:11px!important}
+.seller-cta .seller-copy .eyebrow{font-size:9px!important}
+.seller-cta .seller-copy h2{font-size:clamp(15px,2vw,21px)!important;margin:3px 0!important}
+.seller-cta .seller-copy p{font-size:10px!important;line-height:1.7!important;margin:0!important}
+@media(max-width:480px){.seller-cta{grid-template-columns:minmax(0,1fr) auto!important;gap:8px!important}.seller-cta .seller-start-button{min-height:36px!important;padding:0 10px!important;font-size:9px!important}.seller-cta .seller-copy h2{font-size:14px!important}.seller-cta .seller-copy p{font-size:8px!important}}
+.dashboard-panel .dashboard-sidebar{position:fixed!important;top:0!important;right:0!important;left:auto!important;bottom:0!important;z-index:10060!important;width:min(292px,84vw)!important;height:100dvh!important;max-height:100dvh!important;display:flex!important;flex-direction:column!important;align-content:flex-start!important;overflow-y:auto!important;overflow-x:hidden!important;padding:72px 14px 18px!important;margin:0!important;border:1px solid rgba(212,175,55,.34)!important;border-right:0!important;border-radius:0 0 0 18px!important;background:linear-gradient(165deg,#19170f,#080808 82%)!important;box-shadow:-20px 0 55px #000a!important;transform:translateX(110%)!important;transition:transform .24s cubic-bezier(.2,.7,.2,1)!important}
+.dashboard-panel .dashboard-sidebar.is-open{display:flex!important;transform:translateX(0)!important;pointer-events:auto!important}
+.dashboard-panel .dashboard-sidebar:not(.is-open){display:flex!important;visibility:visible!important;pointer-events:none!important}
+.dashboard-panel .dashboard-sidebar>button{flex:0 0 auto!important;width:100%!important;min-height:43px!important;justify-content:flex-start!important;text-align:right!important;font-size:10px!important}
+.dashboard-panel:has(.dashboard-sidebar.is-open)::before{content:"";position:fixed;inset:0;z-index:10050;background:rgba(0,0,0,.42);pointer-events:auto}
+.dashboard-panel .dashboard-sidebar{z-index:10060!important}
+.dashboard-panel .dashboard-menu-toggle{position:relative!important;z-index:10070!important;cursor:pointer!important}
+.dashboard-panel{font-size:12px!important;padding:13px!important;gap:11px!important;min-width:0!important;max-width:100%!important}
+.dashboard-panel .dashboard-role-head{padding:9px 10px!important;gap:8px!important}
+.dashboard-panel .dashboard-role-mark{width:38px!important;height:38px!important;flex-basis:38px!important}
+.dashboard-panel .dashboard-role-head h3{font-size:15px!important;margin:2px 0!important}
+.dashboard-panel .dashboard-role-head p{font-size:9px!important;line-height:1.5!important}
+.dashboard-panel .dashboard-role-head small{font-size:8px!important}
+.dashboard-panel .admin-reference-kpis{gap:8px!important}
+.dashboard-panel .admin-reference-kpi{min-height:82px!important;padding:10px!important;cursor:pointer!important}
+.dashboard-panel .admin-reference-kpi-copy small{font-size:9px!important}
+.dashboard-panel .admin-reference-kpi-copy b{font-size:20px!important}
+.dashboard-panel .dashboard-intro{padding:11px 13px!important;margin:8px 0!important}
+.dashboard-panel .dashboard-intro h3{font-size:14px!important}
+.dashboard-panel .dashboard-intro p{font-size:9px!important;line-height:1.7!important}
+.dashboard-panel .dashboard-card{padding:11px!important;margin:8px 0!important;border-radius:10px!important}
+.dashboard-panel .dashboard-card b{font-size:10px!important}
+.dashboard-panel .dashboard-card small,.dashboard-panel .dashboard-card p{font-size:9px!important}
+.dashboard-panel .dashboard-card .gold-btn,.dashboard-panel .dashboard-card .outline-btn{min-height:35px!important;font-size:10px!important}
+.dashboard-panel .dashboard-section{min-width:0!important;max-width:100%!important}
+.dashboard-panel .admin-reference-lower-grid{gap:10px!important}
+.dashboard-panel .dashboard-overview,.dashboard-panel .courier-stat-grid{gap:8px!important}
+.dashboard-panel .dashboard-metric{min-height:78px!important;padding:10px!important}
+.dashboard-panel .dashboard-metric b{font-size:19px!important}
+.dashboard-panel .dashboard-metric span,.dashboard-panel .dashboard-metric small{font-size:8px!important}
+.dashboard-panel .dashboard-section input:not([type=checkbox]):not([type=range]),.dashboard-panel .dashboard-section select,.dashboard-panel .dashboard-section textarea{min-height:36px!important;font-size:10px!important}
+.dashboard-panel .dashboard-section button{font-size:10px!important}
+.dashboard-panel .courier-delivery-columns{gap:8px!important}
+.dashboard-panel .courier-delivery-columns section{padding:9px!important}
+.dashboard-panel .courier-delivery-columns section b{font-size:10px!important}
+.dashboard-panel .courier-delivery-columns section p,.dashboard-panel .courier-delivery-columns section a{font-size:9px!important}
+.dashboard-panel .courier-delivery-meta{gap:6px!important;font-size:8px!important}
+.dashboard-panel .merchant-overview{gap:8px!important}
+.dashboard-panel .merchant-overview .dashboard-metric{min-height:74px!important}
+.dashboard-panel .admin-reference-kpi:focus-visible,.dashboard-panel .dashboard-sidebar button:focus-visible{outline:2px solid #d4af37!important;outline-offset:2px!important}
+.ad-image-slide>img{object-fit:fill!important;object-position:center!important;background:transparent!important}
+.ad-image-carousel{background:#080808!important}
+.admin-ad-preview-frame img{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:fill!important}
+.video-ad-space,.video-ad-space video,.video-ad-link,.video-ad-link video{background:transparent!important;object-fit:fill!important}
+.video-ad-link,.video-ad-link video{width:100%!important;height:100%!important;max-height:none!important}
+.ad-image-slide:after{display:none!important}
+@media(max-width:640px){.dashboard-panel{padding:9px!important;gap:8px!important}.dashboard-panel .dashboard-role-head{grid-template-columns:38px minmax(0,1fr) auto!important}.dashboard-panel .dashboard-role-head .dashboard-live{grid-column:2/-1!important;justify-self:start!important}.dashboard-panel .dashboard-overview,.dashboard-panel .courier-stat-grid,.dashboard-panel .admin-reference-kpis{grid-template-columns:repeat(2,minmax(0,1fr))!important}.dashboard-panel .dashboard-sidebar{width:min(280px,86vw)!important}.dashboard-panel .dashboard-section{overflow-x:hidden!important}}
+@media(max-height:690px){.drawer:has(.auth-account-panel){max-height:calc(100dvh - 12px)!important}.drawer:has(.auth-account-panel) .auth-account-panel{padding:5px 12px 7px!important;gap:3px!important}.drawer:has(.auth-account-panel) .auth-brand-logo{width:42px!important;height:42px!important;max-height:42px!important}.drawer:has(.auth-account-panel) .auth-form input{height:31px!important;min-height:31px!important}.drawer:has(.auth-account-panel) .auth-role-picker button{height:24px!important;min-height:24px!important}.drawer:has(.auth-account-panel) .gold-btn.full,.drawer:has(.auth-account-panel) .auth-social-actions button{height:29px!important;min-height:29px!important}}
+html,body,*,*::before,*::after{scrollbar-width:none!important;-ms-overflow-style:none!important}
+html::-webkit-scrollbar,body::-webkit-scrollbar,*::-webkit-scrollbar{display:none!important;width:0!important;height:0!important;background:transparent!important}
