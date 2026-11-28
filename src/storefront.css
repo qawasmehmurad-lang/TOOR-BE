@@ -5255,3 +5255,54 @@ html::-webkit-scrollbar,body::-webkit-scrollbar,*::-webkit-scrollbar{display:non
  .coupon-popup-item>button{min-height:31px!important;font-size:9px!important}
 }
 @media(prefers-reduced-motion:reduce){.coupon-popup-item:after{animation:none!important;display:none!important}}
+
+
+/* Custom TOOR BE coupon ticket frame: transparent outside, black face, gold border. */
+.benefit-coupon-card,.coupon-popup-item{
+ position:relative!important;isolation:isolate!important;overflow:hidden!important;
+ border:0!important;border-radius:0!important;
+ background:transparent url('/coupon-ticket.svg') center/100% 100% no-repeat!important;
+ box-shadow:none!important;
+}
+.benefit-coupon-card{
+ min-height:150px!important;padding:24px 34px!important;
+ grid-template-columns:minmax(0,1fr) auto!important;gap:14px!important;
+}
+.coupon-popup-item{
+ min-height:118px!important;padding:20px 30px!important;
+ grid-template-columns:26px minmax(0,1fr) auto!important;gap:10px!important;
+}
+.benefit-coupon-card:after,.coupon-popup-item:after{
+ content:"";position:absolute;z-index:0;pointer-events:none;top:-120%;left:-55%;
+ width:34%;height:340%;
+ background:linear-gradient(90deg,transparent,rgba(212,175,55,.04),rgba(255,226,132,.42),rgba(212,175,55,.08),transparent);
+ transform:rotate(35deg) translateX(-260%);
+ animation:toor-coupon-ticket-glint 5.8s ease-in-out infinite;
+ -webkit-mask:url('/coupon-ticket.svg') center/100% 100% no-repeat;
+ mask:url('/coupon-ticket.svg') center/100% 100% no-repeat;
+}
+.benefit-coupon-card>*,.coupon-popup-item>*{position:relative;z-index:1}
+@keyframes toor-coupon-ticket-glint{
+ 0%,12%{transform:rotate(35deg) translateX(-260%)}
+ 68%,100%{transform:rotate(35deg) translateX(520%)}
+}
+.benefit-coupon-info{gap:4px!important}
+.benefit-coupon-info>b{font-size:11px!important}
+.benefit-coupon-info>strong{font-size:16px!important}
+.benefit-coupon-info>small,.benefit-coupon-info>p{font-size:8px!important}
+.benefit-coupon-code{padding:3px 7px!important;font-size:9px!important}
+.benefit-coupon-card>.gold-btn,.coupon-popup-item>button{
+ min-height:33px!important;padding:0 10px!important;border-radius:4px!important;font-size:9px!important;white-space:nowrap!important;
+}
+.coupon-popup-item b{font-size:10px!important;color:#f0d273!important}
+.coupon-popup-item strong{font-size:15px!important;color:#fff0a6!important}
+.coupon-popup-item>small,.coupon-popup-item small{font-size:8px!important;color:#b7ad98!important}
+.coupon-popup-item>button{background:linear-gradient(135deg,#e5c568,#b78b2d)!important;color:#100e09!important;border:1px solid #d4af37!important}
+@media(max-width:760px){
+ .benefit-coupon-card{grid-template-columns:minmax(0,1fr) auto!important;min-height:142px!important;padding:21px 25px!important;gap:8px!important}
+ .coupon-popup-item{grid-template-columns:24px minmax(0,1fr) auto!important;min-height:108px!important;padding:17px 23px!important;gap:8px!important}
+ .benefit-coupon-card>.gold-btn,.coupon-popup-item>button{font-size:8px!important;padding:0 7px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .benefit-coupon-card:after,.coupon-popup-item:after{animation:none!important;display:none!important}
+}
