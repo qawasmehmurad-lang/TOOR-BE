@@ -1,4 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" preserveAspectRatio="none">
-<path d="M100 18H900C900 64 936 100 982 100V260C936 260 900 296 900 342H100C100 296 64 260 18 260V100C64 100 100 64 100 18Z" fill="#090909" stroke="#d4af37" stroke-width="4"/>
-<path d="M116 38H884C884 78 920 116 962 116V244C920 244 884 282 884 322H116C116 282 80 244 38 244V116C80 116 116 78 116 38Z" fill="none" stroke="#b99137" stroke-width="2.5" stroke-dasharray="2 13" stroke-linecap="round"/>
+<defs>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0b0"/><stop offset=".22" stop-color="#b98b2e"/><stop offset=".48" stop-color="#f8df91"/><stop offset=".72" stop-color="#8e641c"/><stop offset="1" stop-color="#e9c66d"/></linearGradient>
+ <linearGradient id="face" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#19160f"/><stop offset=".42" stop-color="#080808"/><stop offset="1" stop-color="#171209"/></linearGradient>
+ <pattern id="grain" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M0 34L34 0" stroke="#d7b45c" stroke-opacity=".035" stroke-width="1"/></pattern>
+</defs>
+<path d="M74 12H926Q942 12 942 28V105Q982 105 982 145V215Q982 255 942 255V332Q942 348 926 348H74Q58 348 58 332V255Q18 255 18 215V145Q18 105 58 105V28Q58 12 74 12Z" fill="#050505" stroke="url(#gold)" stroke-width="7"/>
+<path d="M83 29H917Q925 29 925 37V119Q964 119 964 158V202Q964 241 925 241V323Q925 331 917 331H83Q75 331 75 323V241Q36 241 36 202V158Q36 119 75 119V37Q75 29 83 29Z" fill="url(#face)" stroke="#d8b45b" stroke-opacity=".72" stroke-width="2"/>
+<path d="M83 29H917Q925 29 925 37V119Q964 119 964 158V202Q964 241 925 241V323Q925 331 917 331H83Q75 331 75 323V241Q36 241 36 202V158Q36 119 75 119V37Q75 29 83 29Z" fill="url(#grain)"/>
+<path d="M103 48H897V312H103Z" fill="none" stroke="#f2d98d" stroke-opacity=".36" stroke-width="1"/>
+<path d="M122 66H878M122 294H878" stroke="url(#gold)" stroke-opacity=".24" stroke-width="1"/>
+<path d="M790 80V280" stroke="#d6b45f" stroke-opacity=".52" stroke-width="2" stroke-dasharray="5 9"/>
+<circle cx="790" cy="80" r="4" fill="#e8c978"/><circle cx="790" cy="280" r="4" fill="#e8c978"/>
+<path d="M135 84h110M135 94h65" stroke="#e7c977" stroke-opacity=".16" stroke-width="3" stroke-linecap="round"/>
+<path d="M855 266h-35M855 276h-55" stroke="#e7c977" stroke-opacity=".2" stroke-width="2" stroke-linecap="round"/>
 </svg>
